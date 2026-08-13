@@ -1,0 +1,354 @@
+/* ============================================================
+   TCONGS — responsive.css  (FULL MOBILE OVERHAUL)
+   Breakpoints: ≤1024px | ≤768px | ≤480px | ≤360px
+   ============================================================ */
+
+/* ============================================================
+   TABLET — ≤ 1024px
+   ============================================================ */
+@media (max-width: 1024px) {
+  :root { --navbar-height: 70px; }
+
+  /* ── Navbar ── */
+  .nav-links         { display: none !important; }
+  .nav-actions-group { display: none !important; }
+  .hamburger         { display: flex !important; }
+
+  /* ── Services ── */
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px;
+  }
+  .services-img-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  /* ── FAQ ── */
+  .faq-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+  .faq-info-card {
+    position: static !important;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* ── Expert Banner ── */
+  .expert-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    align-items: center;
+  }
+  .expert-banner-text { text-align: center; }
+
+  /* ── Footer ── */
+  .footer-grid-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* ============================================================
+   MOBILE — ≤ 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  :root { --navbar-height: 64px; }
+
+  /* ── Global ── */
+  .container { padding: 0 18px; }
+
+  /* ── Navbar ── */
+  .navbar {
+    height: var(--navbar-height);
+  }
+  .nav-logo-img {
+    max-width: 140px;
+  }
+  .hamburger {
+    display: flex !important;
+    padding: 6px;
+  }
+  .hamburger span {
+    width: 22px;
+  }
+
+  /* ── Mobile Menu ── */
+  .mobile-menu {
+    top: var(--navbar-height);
+    padding: 20px 18px 28px;
+    gap: 4px;
+  }
+  .mobile-menu a {
+    font-size: 1rem;
+    padding: 12px 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: block;
+    width: 100%;
+  }
+  .mobile-menu-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .mobile-menu-actions .nav-cta-btn {
+    display: flex;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.9rem;
+    border-radius: 999px;
+  }
+  .mobile-phone-link {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--clr-text-muted) !important;
+    padding: 10px 0;
+    letter-spacing: 0.02em;
+  }
+  .mobile-phone-link:hover { color: var(--clr-primary) !important; }
+
+  /* ── Hero Section ── */
+  .hero-section {
+    min-height: auto;
+    padding-top: calc(var(--navbar-height) + 40px);
+    padding-bottom: 40px;
+    align-items: center;
+  }
+  .hero-content {
+    padding: 0 4px;
+    text-align: center;
+  }
+  .hero-tag-finkash {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    margin-bottom: 18px;
+  }
+  .hero-title-finkash {
+    font-size: clamp(1.85rem, 8.5vw, 2.8rem) !important;
+    line-height: 1.18;
+    margin-bottom: 22px;
+    letter-spacing: -0.3px;
+  }
+  .hero-sublinks-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+  }
+  .sublink-divider { display: none; }
+  .sublink-item {
+    padding: 5px 14px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 999px;
+    font-size: 13px;
+  }
+
+  /* ── Services Section ── */
+  .services-section { padding: 64px 0; }
+  .comp-services-section { padding: 48px 0 40px; }
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+  }
+  .services-img-wrap {
+    max-width: 100%;
+    border-radius: 16px;
+  }
+  .services-img {
+    aspect-ratio: 16/11;
+  }
+  .services-img-badge {
+    left: 12px;
+    bottom: 14px;
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .services-img-badge-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+  .services-img-badge strong { font-size: 0.95rem; }
+  .services-img-badge span  { font-size: 0.68rem; }
+  .services-content { padding: 0; }
+  .services-desc {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+  .skill-list { gap: 18px; margin-bottom: 30px; }
+  .expert-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    padding: 20px 18px;
+    align-items: center;
+  }
+  .expert-banner-text { text-align: center; }
+  .expert-banner-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+  }
+
+  /* ── FAQ Section ── */
+  .faq-section { padding: 64px 0; }
+  .faq-header { margin-bottom: 40px; }
+  .faq-header p { font-size: 0.93rem; }
+  .faq-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+  .faq-info-card {
+    position: static !important;
+    width: 100%;
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+  .faq-metric { font-size: 1.9rem; }
+  .faq-info-desc { font-size: 0.82rem; }
+  .faq-question {
+    font-size: 0.88rem;
+    padding: 16px 18px;
+    gap: 12px;
+  }
+  .faq-answer-inner {
+    font-size: 0.85rem;
+    padding: 0 18px 18px;
+  }
+  .faq-icon { width: 26px; height: 26px; font-size: 0.75rem; }
+
+  /* ── Footer ── */
+  .footer-corporate { padding: 56px 0 0; }
+  .footer-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 20px;
+    padding-bottom: 40px;
+  }
+  .footer-brand-column {
+    grid-column: span 2;
+  }
+  .footer-grid-layout > div:nth-child(3) {
+    padding-left: 24px;
+  }
+  .footer-grid-layout > div:nth-child(4),
+  .footer-grid-layout > div:nth-child(5) {
+    grid-column: span 2;
+  }
+  .footer-brand-column .footer-brand-logo {
+    max-width: 150px;
+  }
+  .footer-brand-column .footer-brand-tagline {
+    font-size: 0.88rem;
+  }
+  .footer-column-title {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+  .footer-list-items a { font-size: 0.88rem; }
+  .footer-marketplaces-split-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .contact-detail-item { font-size: 0.88rem; gap: 10px; }
+  .contact-detail-item p { font-size: 0.88rem; }
+  .footer-copyright-strip { padding: 18px 0; }
+  .footer-strip-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+  .footer-strip-flex .copyright-text {
+    justify-content: center;
+  }
+  .copyright-text  { font-size: 0.78rem; }
+  .marketing-text  { font-size: 0.8rem; }
+
+  /* ── Back to Top ── */
+  .back-to-top {
+    bottom: 18px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    font-size: 0.9rem;
+  }
+
+  /* ── Scroll Reveal – disable heavy transforms on touch ── */
+  .reveal, .reveal-left, .reveal-right {
+    transform: translateY(20px);
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE — ≤ 480px
+   ============================================================ */
+@media (max-width: 480px) {
+  :root { --navbar-height: 60px; }
+
+  .container { padding: 0 14px; }
+
+  /* Navbar */
+  .nav-logo-img { max-width: 120px; }
+
+  /* Hero */
+  .hero-title-finkash {
+    font-size: clamp(1.65rem, 9.5vw, 2.1rem) !important;
+    margin-bottom: 18px;
+  }
+  .hero-tag-finkash {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+  .sublink-item { font-size: 12px; padding: 4px 12px; }
+
+  /* Services */
+  .services-section { padding: 52px 0; }
+  .services-img { aspect-ratio: 4/3; }
+  .services-img-badge {
+    left: 10px;
+    bottom: 10px;
+    padding: 8px 12px;
+  }
+
+  /* FAQ */
+  .faq-section { padding: 52px 0; }
+  .faq-info-card { padding: 20px 16px; }
+  .faq-question { padding: 14px 16px; font-size: 0.85rem; }
+  .faq-answer-inner { padding: 0 16px 14px; }
+
+  /* Preloader */
+  .preloader-img { max-width: 160px; }
+  .preloader-bar-wrap { width: 140px; }
+
+  /* Expert banner */
+  .expert-banner { padding: 16px 14px; }
+
+  /* Footer */
+  .footer-corporate { padding: 44px 0 0; }
+  .footer-grid-layout { gap: 28px; }
+}
+
+/* ============================================================
+   EXTRA SMALL — ≤ 360px
+   ============================================================ */
+@media (max-width: 360px) {
+  .hero-title-finkash {
+    font-size: clamp(1.45rem, 10vw, 1.85rem) !important;
+  }
+  .nav-logo-img { max-width: 110px; }
+  .mobile-menu a { font-size: 0.95rem; }
+  .faq-question { font-size: 0.82rem; padding: 12px 14px; }
+  .services-desc { font-size: 0.9rem; }
+  .footer-marketplaces-split-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-list-items a { font-size: 0.85rem; }
+  .expert-banner-btn { font-size: 0.82rem; }
+}

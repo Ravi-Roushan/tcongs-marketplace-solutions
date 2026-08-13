@@ -1,0 +1,1776 @@
+/* ============================================================
+   TCONGS — popup.css
+   Lead Capture Popup — Modern light SaaS-style modal
+   ============================================================ */
+
+/* ── Overlay ─────────────────────────────────────────────── */
+#popupOverlay {
+  position: fixed;
+  inset: 0;
+  height: 100dvh;
+  background: rgba(13, 17, 23, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  overflow: hidden;
+  touch-action: none;
+}
+
+#popupOverlay.popup-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ── Centering Container ────────────────────────────────── */
+.popup-scroll-wrap {
+  width: 100%;
+  max-width: 440px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.6) inset,
+    0 24px 70px rgba(13, 17, 23, 0.35),
+    0 4px 16px rgba(13, 17, 23, 0.12);
+  transform: translateY(18px) scale(0.96);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#popupOverlay.popup-visible .popup-scroll-wrap {
+  transform: translateY(0) scale(1);
+}
+
+/* ── Modal Card ──────────────────────────────────────────── */
+.popup-card {
+  position: relative;
+  background: #ffffff;
+  border-top: 4px solid var(--clr-primary, #28558A);
+  border-radius: 18px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 32px 32px 26px;
+  box-sizing: border-box;
+}
+
+/* ── Close Button ────────────────────────────────────────── */
+.popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e4e9f0;
+  border-radius: 50%;
+  background: #f6f8fb;
+  color: #5b6b80;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 5;
+}
+
+.popup-close:hover {
+  background: rgba(40, 85, 138, 0.1);
+  border-color: #28558A;
+  color: #28558A;
+  transform: rotate(90deg);
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.popup-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-right: 16px;
+}
+
+.popup-header h2 {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0d1117;
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.popup-header p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #6b7a8d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Form Groups ─────────────────────────────────────────── */
+.popup-form-group {
+  margin-bottom: 14px;
+}
+
+.popup-form-group label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #33404f;
+  margin-bottom: 5px;
+  letter-spacing: 0.01em;
+}
+
+/* ── Inputs & Textarea ───────────────────────────────────── */
+.popup-input,
+.popup-select,
+.popup-textarea {
+  width: 100%;
+  background: #f7f9fc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  color: #0d1117;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-sizing: border-box;
+  display: block;
+}
+
+.popup-input::placeholder,
+.popup-textarea::placeholder {
+  color: #9aa8ba;
+}
+
+.popup-input:focus,
+.popup-select:focus,
+.popup-textarea:focus {
+  border-color: #28558A;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(40, 85, 138, 0.12);
+}
+
+.popup-input.input-error,
+.popup-select.input-error,
+.popup-textarea.input-error {
+  border-color: #e05252;
+  box-shadow: 0 0 0 3px rgba(224, 82, 82, 0.1);
+}
+
+/* Textarea */
+.popup-textarea {
+  resize: none;
+  height: 52px;
+}
+
+/* ── Phone Row ───────────────────────────────────────────── */
+.popup-phone-row {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f7f9fc;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.popup-phone-row:focus-within {
+  border-color: #28558A;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(40, 85, 138, 0.12);
+}
+
+.popup-phone-row.input-error {
+  border-color: #e05252;
+}
+
+.popup-phone-flag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  background: #eef2f7;
+  border-right: 1px solid #e2e8f0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.popup-phone-flag span { font-size: 1rem; line-height: 1; }
+
+.popup-phone-code {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #28558A;
+  font-weight: 700;
+}
+
+.popup-phone-row .popup-input {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none !important;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Select ──────────────────────────────────────────────── */
+.popup-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2328558A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 34px;
+  cursor: pointer;
+  color: #9aa8ba;
+}
+
+.popup-select.selected { color: #0d1117; }
+.popup-select option { background: #ffffff; color: #0d1117; }
+
+/* ── CAPTCHA ─────────────────────────────────────────────── */
+.popup-captcha-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: #33404f;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* ── Action Buttons ──────────────────────────────────────── */
+.popup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.popup-btn-submit {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--clr-primary, #28558A);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 16px rgba(40, 85, 138, 0.25);
+  white-space: nowrap;
+}
+
+.popup-btn-submit:hover {
+  background: var(--clr-hover, #21568e);
+  box-shadow: 0 8px 20px rgba(40, 85, 138, 0.32);
+}
+
+.popup-btn-submit:active {
+  transform: scale(0.98);
+}
+
+.popup-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.popup-btn-whatsapp {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #25d366;
+  border-radius: 8px;
+  background: #f2fdf6;
+  color: #1a9b4c;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.popup-btn-whatsapp:hover {
+  background: rgba(37, 211, 102, 0.14);
+  transform: translateY(-1px);
+}
+
+.popup-btn-whatsapp svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+/* ── Footer note ─────────────────────────────────────────── */
+.popup-footer-note {
+  text-align: center;
+  margin-top: 14px;
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  color: #8a97a8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* ── Field error ─────────────────────────────────────────── */
+.popup-field-error {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: #e05252;
+  margin-top: 4px;
+  display: none;
+}
+.popup-field-error.show { display: block; }
+
+/* ── Success State ───────────────────────────────────────── */
+.popup-success {
+  display: none;
+  text-align: center;
+  padding: 20px 0 8px;
+}
+.popup-success.show { display: block; }
+
+.popup-success-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(40, 85, 138, 0.1);
+  border: 2px solid #28558A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.popup-success h3 {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: #0d1117;
+  margin: 0 0 6px;
+  font-weight: 800;
+}
+
+.popup-success p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #6b7a8d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Mobile Keyboard Safety View ────────────────────────── */
+@media (max-width: 440px) {
+  #popupOverlay {
+    align-items: flex-start;
+    padding-top: 24px;
+  }
+  .popup-scroll-wrap { max-width: 100%; border-radius: 16px; }
+  .popup-card { border-radius: 16px; padding: 28px 22px 22px; }
+}
+
+
+/* ============================================================
+   CONSULTATION POPUP — NO INTERNAL SCROLL
+   The complete form stays inside the viewport.
+   ============================================================ */
+#popupOverlay {
+  padding: 12px;
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+.popup-scroll-wrap {
+  max-width: 540px;
+  max-height: calc(100dvh - 24px);
+  overflow: visible !important;
+}
+
+.popup-card {
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 22px 24px 18px;
+  border-radius: 16px;
+}
+
+/* Compact desktop form into two balanced columns. */
+#popupLeadForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 14px;
+  row-gap: 0;
+}
+
+.popup-header,
+.popup-success,
+.popup-actions,
+.popup-footer-note {
+  grid-column: 1 / -1;
+}
+
+.popup-header {
+  margin-bottom: 12px;
+}
+
+.popup-form-group {
+  margin-bottom: 9px;
+}
+
+.popup-form-group label {
+  font-size: .72rem;
+  margin-bottom: 3px;
+}
+
+.popup-input,
+.popup-select {
+  padding: 8px 10px;
+  min-height: 37px;
+  font-size: .82rem;
+  border-radius: 7px;
+}
+
+.popup-phone-flag {
+  padding: 0 8px;
+}
+
+.popup-phone-code {
+  font-size: .78rem;
+}
+
+.popup-captcha-label {
+  font-size: .72rem;
+  margin-bottom: 3px;
+}
+
+.popup-actions {
+  flex-direction: row;
+  gap: 9px;
+  margin-top: 5px;
+}
+
+.popup-btn-submit,
+.popup-btn-whatsapp {
+  flex: 1;
+  padding: 9px 12px;
+  font-size: .8rem;
+  min-height: 38px;
+}
+
+.popup-footer-note {
+  margin-top: 8px;
+  font-size: .67rem;
+}
+
+.popup-field-error {
+  font-size: .65rem;
+  margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+  #popupOverlay {
+    padding: 8px;
+  }
+
+  .popup-scroll-wrap {
+    max-width: 100%;
+    max-height: calc(100dvh - 16px);
+  }
+
+  .popup-card {
+    padding: 19px 16px 14px;
+    border-radius: 14px;
+  }
+
+  #popupLeadForm {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .popup-header {
+    margin-bottom: 9px;
+  }
+
+  .popup-header h2 {
+    font-size: 1.18rem;
+    margin-bottom: 3px;
+  }
+
+  .popup-header p {
+    font-size: .72rem;
+    line-height: 1.35;
+  }
+
+  .popup-form-group {
+    margin-bottom: 7px;
+  }
+
+  .popup-form-group label {
+    font-size: .69rem;
+  }
+
+  .popup-input,
+  .popup-select {
+    min-height: 35px;
+    padding: 7px 9px;
+    font-size: .78rem;
+  }
+
+  .popup-actions {
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 3px;
+  }
+
+  .popup-btn-submit,
+  .popup-btn-whatsapp {
+    min-height: 35px;
+    padding: 8px 10px;
+    font-size: .78rem;
+  }
+
+  .popup-footer-note {
+    margin-top: 6px;
+    font-size: .62rem;
+  }
+
+  .popup-close {
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}
+
+/* ============================================================
+   TCONGS AI CHATBOT — fixed bottom-right
+   ============================================================ */
+.tcongs-ai-widget {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 9990;
+  font-family: var(--font-body, Arial, sans-serif);
+}
+
+.tcongs-ai-launcher {
+  border: 0;
+  background: linear-gradient(135deg, #28558a, #3e8fc5);
+  color: #fff;
+  min-height: 52px;
+  padding: 0 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(40,85,138,.30);
+  font-size: .86rem;
+  font-weight: 700;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.tcongs-ai-launcher:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(40,85,138,.36);
+}
+
+.tcongs-ai-launcher-icon {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.16);
+  font-size: .95rem;
+}
+
+.tcongs-ai-panel {
+  position: absolute;
+  right: 0;
+  bottom: 64px;
+  width: min(350px, calc(100vw - 30px));
+  background: #fff;
+  border: 1px solid #e1e8ef;
+  border-radius: 16px;
+  box-shadow: 0 20px 55px rgba(13,17,23,.22);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(.98);
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+}
+
+.tcongs-ai-panel.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.tcongs-ai-header {
+  background: linear-gradient(135deg, #0d2942, #28558a);
+  color: #fff;
+  padding: 14px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.tcongs-ai-header strong {
+  display: block;
+  font-size: .9rem;
+}
+
+.tcongs-ai-header span {
+  display: block;
+  margin-top: 2px;
+  font-size: .68rem;
+  opacity: .78;
+}
+
+.tcongs-ai-close {
+  border: 0;
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.tcongs-ai-messages {
+  height: 230px;
+  overflow-y: auto;
+  padding: 14px;
+  background: #f7f9fc;
+}
+
+.tcongs-ai-message {
+  width: fit-content;
+  max-width: 86%;
+  padding: 9px 11px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  font-size: .76rem;
+  line-height: 1.45;
+}
+
+.tcongs-ai-message.bot {
+  background: #fff;
+  border: 1px solid #e4eaf0;
+  color: #33404f;
+  border-top-left-radius: 4px;
+}
+
+.tcongs-ai-message.user {
+  margin-left: auto;
+  background: #28558a;
+  color: #fff;
+  border-top-right-radius: 4px;
+}
+
+.tcongs-ai-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 9px 12px 5px;
+  background: #fff;
+}
+
+.tcongs-ai-quick button {
+  border: 1px solid #d8e3ed;
+  background: #f7fafd;
+  color: #28558a;
+  border-radius: 999px;
+  padding: 6px 9px;
+  font-size: .67rem;
+  cursor: pointer;
+}
+
+.tcongs-ai-form {
+  display: flex;
+  gap: 7px;
+  padding: 10px 12px 12px;
+  background: #fff;
+  border-top: 1px solid #edf1f5;
+}
+
+.tcongs-ai-form input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #dbe3eb;
+  border-radius: 9px;
+  padding: 9px 10px;
+  outline: none;
+  font-size: .76rem;
+}
+
+.tcongs-ai-form input:focus {
+  border-color: #3e8fc5;
+  box-shadow: 0 0 0 3px rgba(62,143,197,.10);
+}
+
+.tcongs-ai-form button {
+  width: 38px;
+  border: 0;
+  border-radius: 9px;
+  background: #28558a;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .tcongs-ai-widget {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .tcongs-ai-launcher {
+    width: 50px;
+    height: 50px;
+    min-height: 50px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .tcongs-ai-launcher-text {
+    display: none;
+  }
+
+  .tcongs-ai-panel {
+    right: 0;
+    bottom: 61px;
+    width: min(340px, calc(100vw - 24px));
+  }
+
+  .tcongs-ai-messages {
+    height: 210px;
+  }
+}
+
+
+/* ============================================================
+   POPUP FINAL — SAME STYLE, SMALLER SIZE, NO SCROLL
+   ============================================================ */
+#popupOverlay {
+  padding: 14px !important;
+  overflow: hidden !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.popup-scroll-wrap {
+  width: min(400px, calc(100vw - 28px)) !important;
+  max-width: 400px !important;
+  max-height: calc(100dvh - 28px) !important;
+  overflow: visible !important;
+}
+
+.popup-card {
+  width: 100% !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 22px 22px 17px !important;
+  border-radius: 16px !important;
+  border-top-width: 3px !important;
+}
+
+/* Restore the original vertical form appearance. */
+#popupLeadForm {
+  display: block !important;
+}
+
+.popup-header {
+  text-align: center !important;
+  margin-bottom: 12px !important;
+  padding-right: 8px !important;
+}
+
+.popup-header h2 {
+  font-size: 1.28rem !important;
+  margin-bottom: 4px !important;
+}
+
+.popup-header p {
+  font-size: .78rem !important;
+  line-height: 1.4 !important;
+}
+
+.popup-form-group {
+  margin-bottom: 9px !important;
+}
+
+.popup-form-group label {
+  font-size: .72rem !important;
+  margin-bottom: 3px !important;
+}
+
+.popup-input,
+.popup-select,
+.popup-textarea {
+  padding: 8px 10px !important;
+  min-height: 35px !important;
+  font-size: .80rem !important;
+  border-radius: 7px !important;
+}
+
+.popup-phone-flag {
+  padding: 0 8px !important;
+}
+
+.popup-phone-code {
+  font-size: .78rem !important;
+}
+
+.popup-captcha-label {
+  font-size: .72rem !important;
+  margin-bottom: 3px !important;
+}
+
+.popup-actions {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 7px !important;
+  margin-top: 11px !important;
+}
+
+.popup-btn-submit,
+.popup-btn-whatsapp {
+  width: 100% !important;
+  min-height: 36px !important;
+  padding: 8px 12px !important;
+  font-size: .80rem !important;
+}
+
+.popup-footer-note {
+  margin-top: 8px !important;
+  font-size: .64rem !important;
+}
+
+.popup-field-error {
+  font-size: .64rem !important;
+  margin-top: 2px !important;
+}
+
+.popup-close {
+  top: 10px !important;
+  right: 10px !important;
+  width: 28px !important;
+  height: 28px !important;
+  font-size: 12px !important;
+}
+
+@media (max-width: 440px) {
+  #popupOverlay {
+    padding: 8px !important;
+    align-items: center !important;
+  }
+
+  .popup-scroll-wrap {
+    width: min(360px, calc(100vw - 16px)) !important;
+    max-width: 360px !important;
+    max-height: calc(100dvh - 16px) !important;
+  }
+
+  .popup-card {
+    padding: 18px 16px 13px !important;
+    border-radius: 14px !important;
+  }
+
+  .popup-header {
+    margin-bottom: 9px !important;
+  }
+
+  .popup-header h2 {
+    font-size: 1.16rem !important;
+  }
+
+  .popup-header p {
+    font-size: .70rem !important;
+  }
+
+  .popup-form-group {
+    margin-bottom: 7px !important;
+  }
+
+  .popup-form-group label {
+    font-size: .67rem !important;
+  }
+
+  .popup-input,
+  .popup-select,
+  .popup-textarea {
+    min-height: 33px !important;
+    padding: 7px 8px !important;
+    font-size: .75rem !important;
+  }
+
+  .popup-actions {
+    margin-top: 8px !important;
+    gap: 5px !important;
+  }
+
+  .popup-btn-submit,
+  .popup-btn-whatsapp {
+    min-height: 33px !important;
+    padding: 7px 10px !important;
+    font-size: .75rem !important;
+  }
+
+  .popup-footer-note {
+    margin-top: 5px !important;
+    font-size: .60rem !important;
+  }
+}
+
+
+/* ============================================================
+   TCONGS AI CHATBOT — SMALL ROBOT ASSISTANT
+   ============================================================ */
+.tcongs-ai-widget {
+  right: 16px !important;
+  bottom: 16px !important;
+  z-index: 9990;
+}
+
+.tcongs-ai-launcher {
+  width: 46px !important;
+  height: 46px !important;
+  min-height: 46px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  justify-content: center !important;
+  background: linear-gradient(145deg, #28558a, #4b9ac9) !important;
+  box-shadow: 0 7px 20px rgba(40,85,138,.28) !important;
+  position: relative;
+}
+
+.tcongs-ai-launcher:hover {
+  transform: translateY(-2px) scale(1.03) !important;
+}
+
+.tcongs-ai-launcher-icon {
+  width: 31px !important;
+  height: 31px !important;
+  background: #ffffff !important;
+  color: #28558a !important;
+  border-radius: 10px !important;
+  font-size: 0 !important;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+/* Robot face */
+.tcongs-ai-launcher-icon::before {
+  content: "•  •";
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 23px;
+  height: 13px;
+  border-radius: 7px;
+  background: #28558a;
+  color: #ffffff;
+  font-size: 8px;
+  line-height: 11px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.tcongs-ai-launcher-icon::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  bottom: 4px;
+  width: 9px;
+  height: 3px;
+  border-bottom: 2px solid #28558a;
+  border-radius: 50%;
+}
+
+.tcongs-ai-panel {
+  width: min(330px, calc(100vw - 24px)) !important;
+  right: 0 !important;
+  bottom: 57px !important;
+  border-radius: 15px !important;
+  box-shadow: 0 16px 45px rgba(13,17,23,.20) !important;
+}
+
+.tcongs-ai-header {
+  padding: 12px 13px !important;
+  background: linear-gradient(135deg, #163b61, #28558a) !important;
+}
+
+.tcongs-ai-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tcongs-ai-header > div:first-child::before {
+  content: "🤖";
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 9px;
+  font-size: 17px;
+}
+
+.tcongs-ai-header strong {
+  font-size: .82rem !important;
+}
+
+.tcongs-ai-header span {
+  font-size: .62rem !important;
+}
+
+.tcongs-ai-close {
+  width: 25px !important;
+  height: 25px !important;
+  font-size: 16px !important;
+}
+
+.tcongs-ai-messages {
+  height: 205px !important;
+  padding: 11px !important;
+}
+
+.tcongs-ai-message {
+  padding: 8px 10px !important;
+  border-radius: 10px !important;
+  font-size: .72rem !important;
+  line-height: 1.4 !important;
+}
+
+.tcongs-ai-quick {
+  gap: 5px !important;
+  padding: 8px 10px 4px !important;
+}
+
+.tcongs-ai-quick button {
+  padding: 5px 8px !important;
+  font-size: .62rem !important;
+}
+
+.tcongs-ai-form {
+  padding: 8px 10px 10px !important;
+}
+
+.tcongs-ai-form input {
+  padding: 8px 9px !important;
+  font-size: .72rem !important;
+}
+
+.tcongs-ai-form button {
+  width: 34px !important;
+  border-radius: 8px !important;
+}
+
+@media (max-width: 480px) {
+  .tcongs-ai-widget {
+    right: 11px !important;
+    bottom: 11px !important;
+  }
+
+  .tcongs-ai-launcher {
+    width: 43px !important;
+    height: 43px !important;
+    min-height: 43px !important;
+  }
+
+  .tcongs-ai-launcher-icon {
+    width: 29px !important;
+    height: 29px !important;
+  }
+
+  .tcongs-ai-panel {
+    width: min(315px, calc(100vw - 20px)) !important;
+    bottom: 52px !important;
+  }
+
+  .tcongs-ai-messages {
+    height: 190px !important;
+  }
+}
+
+
+/* ============================================================
+   TCONGS AI — PREMIUM MINI ROBOT ASSISTANT
+   ============================================================ */
+.tcongs-ai-widget {
+  right: 18px !important;
+  bottom: 18px !important;
+  z-index: 9995;
+}
+
+/* Premium floating robot button */
+.tcongs-ai-launcher {
+  width: 52px !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  padding: 0 !important;
+  border: 2px solid rgba(255,255,255,.82) !important;
+  border-radius: 16px !important;
+  justify-content: center !important;
+  background: linear-gradient(145deg, #153d68 0%, #286da5 52%, #55b8cf 100%) !important;
+  box-shadow:
+    0 9px 24px rgba(21,61,104,.30),
+    0 0 0 5px rgba(62,157,193,.08) !important;
+  position: relative;
+}
+
+.tcongs-ai-launcher::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  right: 5px;
+  top: 5px;
+  border-radius: 50%;
+  background: #7ee8b2;
+  border: 2px solid #fff;
+  box-shadow: 0 0 9px rgba(126,232,178,.7);
+}
+
+.tcongs-ai-launcher:hover {
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 13px 30px rgba(21,61,104,.36),
+    0 0 0 6px rgba(62,157,193,.10) !important;
+}
+
+/* Robot face */
+.tcongs-ai-launcher-icon {
+  width: 34px !important;
+  height: 31px !important;
+  background: linear-gradient(#f9fdff, #dfeff7) !important;
+  color: transparent !important;
+  border-radius: 10px 10px 9px 9px !important;
+  font-size: 0 !important;
+  position: relative;
+  box-shadow: inset 0 -2px 0 rgba(40,109,165,.16), 0 2px 7px rgba(0,0,0,.12);
+}
+
+.tcongs-ai-launcher-icon::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  width: 20px;
+  height: 10px;
+  border-radius: 6px;
+  background:
+    radial-gradient(circle at 5px 5px, #2c7fa9 0 2px, transparent 2.5px),
+    radial-gradient(circle at 15px 5px, #2c7fa9 0 2px, transparent 2.5px),
+    #173e67;
+}
+
+.tcongs-ai-launcher-icon::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: 4px;
+  width: 10px;
+  height: 3px;
+  border-bottom: 2px solid #2c7fa9;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Premium chat panel */
+.tcongs-ai-panel {
+  width: min(360px, calc(100vw - 26px)) !important;
+  right: 0 !important;
+  bottom: 64px !important;
+  border: 1px solid rgba(49,115,157,.18) !important;
+  border-radius: 18px !important;
+  background: #f8fbfd !important;
+  box-shadow: 0 22px 60px rgba(15,42,67,.22) !important;
+}
+
+.tcongs-ai-header {
+  padding: 14px 15px !important;
+  background: linear-gradient(135deg, #102f50 0%, #205f91 62%, #2d93ad 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.tcongs-ai-header::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  right: -45px;
+  top: -60px;
+  border-radius: 50%;
+  background: rgba(111,220,226,.15);
+}
+
+.tcongs-ai-header > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.tcongs-ai-header > div:first-child::before {
+  content: "✦";
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg,#ffffff,#dff5f8);
+  color: #236b91;
+  border-radius: 11px;
+  font-size: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.12);
+}
+
+.tcongs-ai-header strong {
+  font-size: .84rem !important;
+  letter-spacing: .01em;
+}
+
+.tcongs-ai-header span {
+  font-size: .63rem !important;
+  opacity: .82;
+}
+
+.tcongs-ai-close {
+  position: relative;
+  z-index: 2;
+  width: 27px !important;
+  height: 27px !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+  background: rgba(255,255,255,.10) !important;
+  font-size: 16px !important;
+}
+
+.tcongs-ai-messages {
+  height: 220px !important;
+  padding: 13px !important;
+  background: linear-gradient(#f8fbfd,#f3f8fb) !important;
+}
+
+.tcongs-ai-message {
+  padding: 9px 11px !important;
+  border-radius: 12px !important;
+  font-size: .73rem !important;
+  line-height: 1.48 !important;
+  margin-bottom: 8px !important;
+}
+
+.tcongs-ai-message.bot {
+  background: #ffffff !important;
+  border: 1px solid #dce9f0 !important;
+  color: #304456 !important;
+  box-shadow: 0 2px 7px rgba(24,72,99,.05);
+}
+
+.tcongs-ai-message.user {
+  background: linear-gradient(135deg,#286da5,#2d93ad) !important;
+  color: #fff !important;
+  box-shadow: 0 4px 10px rgba(40,109,165,.16);
+}
+
+.tcongs-ai-quick {
+  gap: 6px !important;
+  padding: 9px 12px 6px !important;
+}
+
+.tcongs-ai-quick button {
+  border: 1px solid #cfe1ea !important;
+  background: #ffffff !important;
+  color: #21658b !important;
+  border-radius: 999px !important;
+  padding: 6px 10px !important;
+  font-size: .63rem !important;
+  font-weight: 600;
+  transition: .18s ease;
+}
+
+.tcongs-ai-quick button:hover {
+  background: #eaf7fa !important;
+  border-color: #74bfd0 !important;
+  transform: translateY(-1px);
+}
+
+.tcongs-ai-form {
+  padding: 9px 11px 11px !important;
+  background: #fff !important;
+  border-top: 1px solid #e6eef3 !important;
+}
+
+.tcongs-ai-form input {
+  padding: 9px 10px !important;
+  border: 1px solid #d5e2e9 !important;
+  border-radius: 10px !important;
+  background: #f8fbfd;
+  font-size: .73rem !important;
+}
+
+.tcongs-ai-form input:focus {
+  border-color: #55a9c0 !important;
+  box-shadow: 0 0 0 3px rgba(85,169,192,.12) !important;
+}
+
+.tcongs-ai-form button {
+  width: 36px !important;
+  border-radius: 10px !important;
+  background: linear-gradient(145deg,#205f91,#2d93ad) !important;
+  box-shadow: 0 4px 10px rgba(32,95,145,.18);
+}
+
+@media (max-width: 480px) {
+  .tcongs-ai-widget {
+    right: 11px !important;
+    bottom: 11px !important;
+  }
+
+  .tcongs-ai-launcher {
+    width: 47px !important;
+    height: 47px !important;
+    min-height: 47px !important;
+    border-radius: 14px !important;
+  }
+
+  .tcongs-ai-launcher-icon {
+    width: 31px !important;
+    height: 28px !important;
+  }
+
+  .tcongs-ai-panel {
+    width: min(330px, calc(100vw - 20px)) !important;
+    bottom: 58px !important;
+    border-radius: 16px !important;
+  }
+
+  .tcongs-ai-messages {
+    height: 200px !important;
+  }
+}
+
+
+/* ============================================================
+   TCONGS AI — THIN / MINIMAL FLOATING BOT
+   ============================================================ */
+.tcongs-ai-widget {
+  right: 14px !important;
+  bottom: 14px !important;
+  z-index: 9995;
+}
+
+.tcongs-ai-launcher {
+  width: 40px !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  padding: 0 !important;
+  border: 1px solid rgba(255,255,255,.8) !important;
+  border-radius: 50% !important;
+  background: linear-gradient(145deg, #1f527e, #55a8bd) !important;
+  box-shadow: 0 5px 14px rgba(25,76,108,.24) !important;
+}
+
+.tcongs-ai-launcher:hover {
+  transform: translateY(-2px) !important;
+}
+
+.tcongs-ai-launcher-icon {
+  width: 26px !important;
+  height: 24px !important;
+  border-radius: 7px !important;
+  background: #f7fcff !important;
+  box-shadow: none !important;
+}
+
+.tcongs-ai-launcher-icon::before {
+  left: 5px !important;
+  top: 6px !important;
+  width: 16px !important;
+  height: 8px !important;
+  background:
+    radial-gradient(circle at 4px 4px, #2f82a5 0 1.5px, transparent 2px),
+    radial-gradient(circle at 12px 4px, #2f82a5 0 1.5px, transparent 2px),
+    #174b70 !important;
+}
+
+.tcongs-ai-launcher-icon::after {
+  left: 9px !important;
+  bottom: 3px !important;
+  width: 8px !important;
+  height: 2px !important;
+  border-bottom: 1.5px solid #2f82a5 !important;
+}
+
+.tcongs-ai-launcher::after {
+  width: 5px !important;
+  height: 5px !important;
+  right: 2px !important;
+  top: 2px !important;
+  border-width: 1px !important;
+}
+
+.tcongs-ai-panel {
+  width: min(300px, calc(100vw - 20px)) !important;
+  bottom: 50px !important;
+  border-radius: 13px !important;
+  box-shadow: 0 14px 38px rgba(15,42,67,.18) !important;
+}
+
+.tcongs-ai-header {
+  padding: 10px 11px !important;
+}
+
+.tcongs-ai-header > div:first-child {
+  gap: 7px !important;
+}
+
+.tcongs-ai-header > div:first-child::before {
+  width: 27px !important;
+  height: 27px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+}
+
+.tcongs-ai-header strong {
+  font-size: .74rem !important;
+}
+
+.tcongs-ai-header span {
+  font-size: .56rem !important;
+}
+
+.tcongs-ai-close {
+  width: 23px !important;
+  height: 23px !important;
+  font-size: 14px !important;
+}
+
+.tcongs-ai-messages {
+  height: 170px !important;
+  padding: 9px !important;
+}
+
+.tcongs-ai-message {
+  max-width: 88% !important;
+  padding: 7px 9px !important;
+  margin-bottom: 6px !important;
+  border-radius: 9px !important;
+  font-size: .66rem !important;
+  line-height: 1.4 !important;
+}
+
+.tcongs-ai-quick {
+  gap: 4px !important;
+  padding: 6px 8px 3px !important;
+}
+
+.tcongs-ai-quick button {
+  padding: 4px 7px !important;
+  font-size: .57rem !important;
+}
+
+.tcongs-ai-form {
+  gap: 5px !important;
+  padding: 7px 8px 8px !important;
+}
+
+.tcongs-ai-form input {
+  padding: 7px 8px !important;
+  border-radius: 8px !important;
+  font-size: .66rem !important;
+}
+
+.tcongs-ai-form button {
+  width: 30px !important;
+  border-radius: 8px !important;
+  font-size: .85rem !important;
+}
+
+@media (max-width: 480px) {
+  .tcongs-ai-widget {
+    right: 9px !important;
+    bottom: 9px !important;
+  }
+
+  .tcongs-ai-launcher {
+    width: 38px !important;
+    height: 38px !important;
+    min-height: 38px !important;
+  }
+
+  .tcongs-ai-launcher-icon {
+    width: 24px !important;
+    height: 22px !important;
+  }
+
+  .tcongs-ai-panel {
+    width: min(285px, calc(100vw - 18px)) !important;
+    bottom: 47px !important;
+  }
+
+  .tcongs-ai-messages {
+    height: 155px !important;
+  }
+}
+
+
+/* ============================================================
+   FINAL AI BOT — slim, elegant robot, not bulky
+   ============================================================ */
+.tcongs-ai-widget {
+  right: 15px !important;
+  bottom: 15px !important;
+}
+
+.tcongs-ai-launcher {
+  width: 42px !important;
+  height: 42px !important;
+  min-height: 42px !important;
+  border: 1px solid rgba(255,255,255,.9) !important;
+  border-radius: 13px !important;
+  background: linear-gradient(145deg, #174a72 0%, #2d87a5 100%) !important;
+  box-shadow: 0 6px 16px rgba(20,69,101,.25) !important;
+}
+
+.tcongs-ai-launcher-icon {
+  width: 27px !important;
+  height: 24px !important;
+  border-radius: 7px !important;
+  background: linear-gradient(180deg,#ffffff,#e9f6fa) !important;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0,0,0,.12) !important;
+}
+
+/* antenna */
+.tcongs-ai-launcher-icon::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: -5px;
+  width: 2px;
+  height: 5px;
+  background: #d8edf2;
+  box-shadow: 0 -2px 0 1px #65c5d3;
+  border-radius: 2px;
+}
+
+/* robot face */
+.tcongs-ai-launcher-icon::after {
+  content: "••";
+  position: absolute;
+  left: 5px;
+  top: 7px;
+  width: 17px;
+  height: 9px;
+  border-radius: 5px;
+  background: #194d70;
+  color: #8ce2e8;
+  font-size: 8px;
+  line-height: 8px;
+  letter-spacing: 4px;
+  padding-left: 3px;
+  box-sizing: border-box;
+}
+
+.tcongs-ai-launcher::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #66d7a2;
+  border: 1px solid #fff;
+}
+
+.tcongs-ai-panel {
+  width: min(310px, calc(100vw - 22px)) !important;
+  bottom: 52px !important;
+  border-radius: 14px !important;
+  border: 1px solid #d8e7ee !important;
+  box-shadow: 0 16px 42px rgba(13,45,67,.18) !important;
+}
+
+.tcongs-ai-header {
+  padding: 11px 12px !important;
+  background: linear-gradient(135deg,#153e61,#247d9b) !important;
+}
+
+.tcongs-ai-header > div:first-child::before {
+  content: "🤖" !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+}
+
+.tcongs-ai-header strong {
+  font-size: .76rem !important;
+}
+
+.tcongs-ai-header span {
+  font-size: .57rem !important;
+}
+
+.tcongs-ai-messages {
+  height: 175px !important;
+  padding: 10px !important;
+}
+
+.tcongs-ai-message {
+  font-size: .67rem !important;
+  padding: 7px 9px !important;
+  margin-bottom: 6px !important;
+}
+
+.tcongs-ai-quick {
+  padding: 6px 9px 3px !important;
+  gap: 4px !important;
+}
+
+.tcongs-ai-quick button {
+  font-size: .58rem !important;
+  padding: 4px 7px !important;
+}
+
+.tcongs-ai-form {
+  padding: 7px 9px 9px !important;
+}
+
+.tcongs-ai-form input {
+  font-size: .67rem !important;
+  padding: 7px 8px !important;
+}
+
+.tcongs-ai-form button {
+  width: 31px !important;
+  border-radius: 8px !important;
+}
+
+@media (max-width: 480px) {
+  .tcongs-ai-widget {
+    right: 9px !important;
+    bottom: 9px !important;
+  }
+
+  .tcongs-ai-launcher {
+    width: 39px !important;
+    height: 39px !important;
+    min-height: 39px !important;
+    border-radius: 12px !important;
+  }
+
+  .tcongs-ai-launcher-icon {
+    width: 25px !important;
+    height: 22px !important;
+  }
+
+  .tcongs-ai-panel {
+    width: min(295px, calc(100vw - 18px)) !important;
+    bottom: 48px !important;
+  }
+
+  .tcongs-ai-messages {
+    height: 160px !important;
+  }
+}
+
+/* FINAL USER REQUEST: slim rectangular AI chatbot */
+.tcongs-ai-widget {
+  right: 14px !important;
+  bottom: 14px !important;
+}
+.tcongs-ai-launcher {
+  width: auto !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 11px 0 8px !important;
+  border-radius: 9px !important;
+  gap: 6px !important;
+  background: linear-gradient(135deg,#17486d,#2d86a1) !important;
+  box-shadow: 0 5px 14px rgba(20,69,101,.22) !important;
+  border: 1px solid rgba(255,255,255,.7) !important;
+}
+.tcongs-ai-launcher-icon {
+  width: 22px !important;
+  height: 20px !important;
+  border-radius: 6px !important;
+}
+.tcongs-ai-launcher-icon::before {
+  left: 4px !important;
+  top: 6px !important;
+  width: 14px !important;
+  height: 7px !important;
+}
+.tcongs-ai-launcher-icon::after {
+  left: 8px !important;
+  bottom: 2px !important;
+}
+.tcongs-ai-launcher-text {
+  display: inline !important;
+  font-size: .62rem !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+}
+.tcongs-ai-launcher::after {
+  width: 5px !important;
+  height: 5px !important;
+  right: 3px !important;
+  top: 3px !important;
+}
+.tcongs-ai-panel {
+  width: min(300px, calc(100vw - 18px)) !important;
+  bottom: 45px !important;
+  border-radius: 12px !important;
+}
+.tcongs-ai-header {
+  padding: 9px 11px !important;
+}
+.tcongs-ai-messages {
+  height: 155px !important;
+}
+@media (max-width: 480px) {
+  .tcongs-ai-launcher {
+    height: 34px !important;
+    min-height: 34px !important;
+    padding: 0 9px 0 7px !important;
+  }
+  .tcongs-ai-launcher-text {
+    font-size: .58rem !important;
+  }
+  .tcongs-ai-panel {
+    bottom: 42px !important;
+    width: min(285px, calc(100vw - 16px)) !important;
+  }
+}
+
+/* FINAL CHATBOT POSITION — raised from the bottom */
+.tcongs-ai-widget {
+  bottom: 72px !important;
+}
+
+@media (max-width: 480px) {
+  .tcongs-ai-widget {
+    bottom: 62px !important;
+  }
+}

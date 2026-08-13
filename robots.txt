@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Disallow: /*.json$
+
+Sitemap: https://tcongsmarketplacesolutions.in/sitemap.xml
