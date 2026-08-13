@@ -1109,6 +1109,54 @@ p {
 
 
 /* =============================================================
+   FLOATING COMPONENTS
+   ============================================================= */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: var(--shadow-green);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--clr-hover);
+  transform: translateY(-3px);
+}
+
+.preloader-img {
+  max-width: 240px;
+  width: 240px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 2px 16px rgba(0,0,0,0.18));
+}
+
+
+/* =============================================================
    RESPONSIVE DESIGN MEDIA QUERIES
    ============================================================= */
 @media (max-width: 992px) {

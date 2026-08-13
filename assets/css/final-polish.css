@@ -149,3 +149,757 @@ img, video { height:auto; }
   a, button { min-height:44px; }
   .nav-phone-badge { min-height:44px; }
 }
+
+
+/* ============================================================
+   FINAL UX POLISH — AI status, mobile navigation/footer accordions,
+   hero CTA contrast and mobile overflow protection
+   ============================================================ */
+
+/* Hero primary CTA: stronger contrast and clearer action */
+.hero-cta-row .btn-primary-cta,
+.hero-section .btn-primary-cta {
+  background: linear-gradient(135deg,#0f5fa8 0%,#1f78c1 100%) !important;
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.35) !important;
+  box-shadow:0 10px 24px rgba(8,72,132,.30) !important;
+  text-shadow:0 1px 1px rgba(0,0,0,.18);
+}
+.hero-cta-row .btn-primary-cta:hover,
+.hero-section .btn-primary-cta:hover {
+  background:linear-gradient(135deg,#0b4f8d 0%,#176aa9 100%) !important;
+  color:#fff !important;
+  transform:translateY(-2px);
+}
+.hero-cta-row .btn-secondary-cta,
+.hero-section .btn-secondary-cta {
+  color:#fff !important;
+  border-color:rgba(255,255,255,.72) !important;
+  background:rgba(8,31,53,.42) !important;
+  box-shadow:0 6px 18px rgba(0,0,0,.16) !important;
+}
+
+/* AI Assistant: clear online state inside the opened panel */
+.tcongs-ai-status {
+  display:flex !important;
+  align-items:center !important;
+  gap:5px !important;
+}
+.tcongs-ai-status i {
+  width:6px !important;
+  height:6px !important;
+  border-radius:50% !important;
+  background:#66e0a5 !important;
+  box-shadow:0 0 0 2px rgba(102,224,165,.18) !important;
+  flex:0 0 6px !important;
+}
+.tcongs-ai-panel.open .tcongs-ai-status { color:#e9fff4 !important; }
+
+/* AI panel stays fully inside the viewport on small screens */
+.tcongs-ai-panel {
+  max-height:calc(100dvh - 94px) !important;
+  display:flex !important;
+  flex-direction:column !important;
+  overflow:hidden !important;
+}
+.tcongs-ai-panel.open .tcongs-ai-messages {
+  flex:1 1 auto !important;
+  min-height:120px !important;
+  max-height:calc(100dvh - 285px) !important;
+  overflow-y:auto !important;
+}
+.tcongs-ai-quick { flex:0 0 auto !important; }
+.tcongs-ai-form { flex:0 0 auto !important; }
+
+/* Mobile services dropdown */
+.mobile-services-group { width:100%; }
+.mobile-services-toggle {
+  width:100%;
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 4px;
+  border:0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  background:transparent;
+  color:var(--clr-text);
+  font:inherit;
+  font-size:1rem;
+  font-weight:500;
+  cursor:pointer;
+  text-align:left;
+}
+.mobile-services-toggle:hover { color:var(--clr-primary); padding-left:10px; }
+.mobile-services-chevron { transition:transform .2s ease; font-size:1.15rem; line-height:1; }
+.mobile-services-toggle.open .mobile-services-chevron { transform:rotate(180deg); }
+.mobile-services-submenu {
+  display:none;
+  padding:6px 0 8px 12px;
+  border-left:2px solid rgba(88,185,228,.35);
+  margin:2px 0 4px;
+}
+.mobile-services-submenu.open { display:block; }
+.mobile-services-submenu a {
+  display:block !important;
+  width:100% !important;
+  min-height:42px !important;
+  padding:10px 8px !important;
+  border-bottom:1px solid rgba(255,255,255,.045) !important;
+  font-size:.92rem !important;
+}
+
+/* Footer accordion: desktop remains open/unchanged; mobile becomes clean expandable groups */
+.footer-accordion-toggle {
+  width:100%;
+  border:0;
+  background:transparent;
+  color:#eaf5fb !important;
+  text-align:left;
+  font:inherit;
+  font-size:.75rem !important;
+  font-weight:800 !important;
+  letter-spacing:.10em !important;
+  padding:0 0 8px !important;
+  margin:0 0 14px !important;
+  position:relative;
+  cursor:pointer;
+}
+.footer-accordion-toggle::after {
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:28px;
+  height:2px;
+  background:#3f8fc5;
+}
+.footer-accordion-icon { display:none; float:right; font-size:1rem; letter-spacing:0; }
+
+@media (max-width:700px) {
+  /* Prevent mobile menu from being cut off */
+  .mobile-menu {
+    max-height:calc(100dvh - var(--navbar-height));
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    padding-bottom:24px !important;
+  }
+
+  /* Footer: one clean accordion per category */
+  .footer-main-grid {
+    display:flex !important;
+    flex-direction:column !important;
+    gap:0 !important;
+    padding-bottom:12px !important;
+  }
+  .footer-brand-column {
+    order:0;
+    width:100%;
+    padding:0 8px 18px !important;
+  }
+  .footer-links-column {
+    width:100%;
+    order:1;
+    border-top:1px solid rgba(255,255,255,.09);
+    padding:0 !important;
+  }
+  .footer-links-column:nth-child(2) { order:2; }
+  .footer-links-column:nth-child(4) { order:3; }
+  .footer-contact-column { order:4; }
+
+  .footer-accordion-toggle {
+    min-height:50px;
+    display:flex !important;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 2px !important;
+    margin:0 !important;
+    font-size:.76rem !important;
+  }
+  .footer-accordion-toggle::after { display:none; }
+  .footer-accordion-icon { display:inline-block; color:#69cef2; font-size:1.2rem; transition:transform .2s ease; }
+  .footer-column-open .footer-accordion-icon { transform:rotate(45deg); }
+  .footer-list-items,
+  .footer-contact-details {
+    display:none !important;
+    padding:0 2px 14px !important;
+    margin:0 !important;
+  }
+  .footer-column-open .footer-list-items,
+  .footer-column-open .footer-contact-details {
+    display:flex !important;
+  }
+  .footer-list-items { flex-direction:column; gap:2px !important; }
+  .footer-list-items a { min-height:42px !important; display:flex; align-items:center; font-size:.78rem !important; }
+  .footer-contact-details { flex-direction:column; gap:12px !important; }
+  .contact-detail-item { align-items:flex-start !important; }
+  .contact-detail-item p,
+  .contact-detail-item span,
+  .contact-detail-item a { font-size:.78rem !important; line-height:1.5 !important; }
+  .contact-detail-item a { word-break:break-word; overflow-wrap:anywhere; }
+
+  .footer-legal-note { margin-top:4px !important; }
+
+  /* Keep the floating assistant clear of the last footer controls */
+  .footer-copyright-strip { padding-bottom:78px !important; }
+  .tcongs-ai-widget { bottom:14px !important; }
+  .tcongs-ai-panel {
+    width:min(360px, calc(100vw - 20px)) !important;
+    right:10px !important;
+    bottom:48px !important;
+  }
+}
+
+@media (max-width:480px) {
+  .tcongs-ai-widget { right:8px !important; bottom:10px !important; }
+  .tcongs-ai-panel {
+    width:calc(100vw - 16px) !important;
+    right:8px !important;
+    max-height:calc(100dvh - 82px) !important;
+    bottom:44px !important;
+  }
+  .tcongs-ai-header { padding:10px 11px !important; }
+  .tcongs-ai-header strong { font-size:.76rem !important; }
+  .tcongs-ai-header span { font-size:.60rem !important; }
+  .tcongs-ai-messages { min-height:110px !important; }
+}
+
+/* ============================================================
+   MOBILE FINAL FIX — Services hero, marketplace icon menu,
+   AI online badge and viewport-safe chatbot
+   ============================================================ */
+@media (max-width:700px) {
+  /* Services page: prevent hero heading/content from overflowing */
+  .srv-hero,
+  .srv-hero-inner,
+  .srv-hero-content,
+  .srv-hero-stats,
+  .srv-hero-btns { width:100%; max-width:100%; min-width:0; }
+  .srv-hero-inner { display:grid; grid-template-columns:minmax(0,1fr) !important; }
+  .srv-hero-title {
+    width:100% !important;
+    max-width:100% !important;
+    font-size:clamp(1.65rem,7.8vw,2.05rem) !important;
+    line-height:1.14 !important;
+    letter-spacing:-.35px !important;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  .srv-hero-title br { display:block; }
+  .srv-hero-sub { width:100%; max-width:100%; font-size:.95rem !important; line-height:1.65 !important; }
+  .srv-hero-btns { gap:10px !important; }
+  .srv-btn-primary,.srv-btn-whatsapp { width:100% !important; min-width:0 !important; max-width:100% !important; justify-content:center !important; text-align:center; }
+
+  /* Services dropdown: icon + label, aligned and tappable */
+  .mobile-services-submenu { padding:6px 0 10px 10px !important; }
+  .mobile-services-submenu a {
+    display:flex !important;
+    align-items:center !important;
+    gap:11px !important;
+    min-height:48px !important;
+    padding:7px 8px !important;
+    border-bottom:1px solid rgba(255,255,255,.06) !important;
+    color:var(--clr-text) !important;
+  }
+  .mobile-service-icon {
+    width:34px !important;
+    height:34px !important;
+    flex:0 0 34px !important;
+    border-radius:9px !important;
+    display:grid !important;
+    place-items:center !important;
+    background:rgba(255,255,255,.96) !important;
+    border:1px solid rgba(105,206,242,.22) !important;
+    overflow:hidden !important;
+    color:#28558a !important;
+    font-size:17px !important;
+    font-weight:800 !important;
+  }
+  .mobile-service-icon img { width:26px !important; height:26px !important; object-fit:contain !important; display:block !important; }
+  .mobile-service-submenu a span:last-child { font-size:.91rem !important; font-weight:600 !important; }
+
+  /* AI status: clear green Online badge instead of a long clipped sentence */
+  .tcongs-ai-header > div:first-child { min-width:0 !important; }
+  .tcongs-ai-status {
+    width:max-content !important;
+    max-width:100% !important;
+    margin-top:5px !important;
+    padding:3px 8px !important;
+    border-radius:999px !important;
+    background:rgba(60,220,150,.14) !important;
+    border:1px solid rgba(102,224,165,.30) !important;
+    color:#eafff3 !important;
+    font-size:.68rem !important;
+    line-height:1.2 !important;
+    white-space:nowrap !important;
+  }
+  .tcongs-ai-status i { width:7px !important; height:7px !important; flex-basis:7px !important; }
+  .tcongs-ai-status strong { font-size:.68rem !important; font-weight:800 !important; }
+  .tcongs-ai-status em { display:inline !important; font-style:normal !important; opacity:.82 !important; margin-left:2px !important; }
+
+  /* Keep the opened chatbot completely inside the viewport */
+  .tcongs-ai-panel {
+    width:calc(100vw - 16px) !important;
+    max-width:390px !important;
+    right:8px !important;
+    bottom:56px !important;
+    max-height:calc(100dvh - 72px) !important;
+    border-radius:16px !important;
+  }
+  .tcongs-ai-panel.open .tcongs-ai-messages { max-height:calc(100dvh - 310px) !important; }
+  .tcongs-ai-form { padding-bottom:max(8px, env(safe-area-inset-bottom)) !important; }
+}
+
+@media (max-width:480px) {
+  .srv-hero { padding-top:calc(var(--navbar-height) + 18px) !important; padding-bottom:44px !important; }
+  .srv-hero-title { font-size:clamp(1.55rem,8.6vw,1.95rem) !important; }
+  .srv-hero-sub { font-size:.91rem !important; }
+  .tcongs-ai-widget { right:8px !important; bottom:10px !important; }
+  .tcongs-ai-launcher { min-height:50px !important; }
+}
+
+
+/* ============================================================
+   FINAL MOBILE RESPONSIVE + AI BRANDING POLISH
+   ============================================================ */
+html, body { max-width:100%; overflow-x:hidden !important; }
+img, svg, video, iframe { max-width:100%; }
+
+/* Mobile Services control: obvious tappable animated trigger */
+@media (max-width:700px) {
+  .mobile-services-toggle {
+    position:relative;
+    min-height:56px !important;
+    padding:10px 12px !important;
+    border:1px solid rgba(105,206,242,.18) !important;
+    border-radius:12px !important;
+    background:linear-gradient(135deg,rgba(40,85,138,.20),rgba(36,125,155,.08)) !important;
+    box-shadow:0 6px 18px rgba(0,0,0,.08) !important;
+    margin:5px 0 6px !important;
+    transition:transform .2s ease, border-color .2s ease, background .2s ease !important;
+  }
+  .mobile-services-toggle::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:12px;
+    border:1px solid rgba(105,206,242,.14);
+    opacity:0;
+    transform:scale(.96);
+    animation:servicesPulse 2.2s ease-in-out infinite;
+    pointer-events:none;
+  }
+  .mobile-services-toggle.open { border-color:rgba(105,206,242,.55) !important; background:linear-gradient(135deg,rgba(40,85,138,.30),rgba(36,125,155,.16)) !important; }
+  .mobile-services-toggle:active { transform:scale(.985); }
+  .mobile-services-toggle-label { display:flex; align-items:center; gap:9px; font-weight:800; }
+  .mobile-services-toggle-icon {
+    width:31px; height:31px; display:grid; place-items:center; flex:0 0 31px;
+    border-radius:9px; background:#fff; color:#28558a; font-size:16px;
+    box-shadow:0 3px 9px rgba(0,0,0,.12);
+  }
+  .mobile-services-hint {
+    margin-left:auto; margin-right:10px; font-size:.65rem; font-weight:700;
+    letter-spacing:.04em; text-transform:uppercase; color:#72c9ea; opacity:.9;
+  }
+  .mobile-services-chevron { font-size:1.35rem !important; font-weight:800; transition:transform .3s ease !important; }
+  .mobile-services-toggle.open .mobile-services-chevron { transform:rotate(180deg) !important; }
+  .mobile-services-submenu {
+    display:block !important;
+    max-height:0 !important;
+    overflow:hidden !important;
+    opacity:0;
+    padding:0 0 0 10px !important;
+    margin:0 0 4px !important;
+    border-left:2px solid rgba(88,185,228,.30);
+    transition:max-height .38s ease, opacity .25s ease, padding .3s ease !important;
+  }
+  .mobile-services-submenu.open {
+    max-height:720px !important;
+    opacity:1;
+    padding:7px 0 10px 10px !important;
+  }
+  .mobile-services-submenu a {
+    display:flex !important;
+    align-items:center !important;
+    gap:11px !important;
+    min-height:50px !important;
+    padding:7px 9px !important;
+    margin:3px 0 !important;
+    border:1px solid rgba(105,206,242,.10) !important;
+    border-radius:10px !important;
+    background:rgba(255,255,255,.025) !important;
+    transition:transform .2s ease, background .2s ease, border-color .2s ease !important;
+  }
+  .mobile-services-submenu a:hover,
+  .mobile-services-submenu a:focus-visible { transform:translateX(4px); background:rgba(105,206,242,.08) !important; border-color:rgba(105,206,242,.28) !important; }
+
+  /* Services hero: no forced desktop line-break and no grid min-content overflow */
+  .srv-hero { width:100% !important; max-width:100vw !important; overflow:hidden !important; box-sizing:border-box !important; }
+  .srv-hero .container { width:100% !important; max-width:100% !important; box-sizing:border-box !important; padding-left:14px !important; padding-right:14px !important; }
+  .srv-hero-inner { width:100% !important; max-width:100% !important; min-width:0 !important; grid-template-columns:minmax(0,1fr) !important; gap:26px !important; box-sizing:border-box !important; }
+  .srv-hero-content, .srv-hero-stats { min-width:0 !important; max-width:100% !important; width:100% !important; box-sizing:border-box !important; }
+  .srv-hero-title { max-width:100% !important; width:100% !important; overflow-wrap:anywhere !important; word-break:normal !important; }
+  .srv-hero-title br { display:none !important; }
+  .srv-hero-sub { overflow-wrap:anywhere !important; }
+  .srv-hero-stats { grid-template-columns:repeat(2,minmax(0,1fr)) !important; gap:12px !important; }
+  .srv-stat-card { min-width:0 !important; width:100% !important; box-sizing:border-box !important; padding:22px 10px !important; overflow:hidden !important; }
+  .srv-stat-num { min-width:0 !important; max-width:100% !important; overflow-wrap:anywhere !important; word-break:break-word !important; font-size:clamp(1.45rem,7vw,2rem) !important; }
+  .srv-stat-label { overflow-wrap:anywhere !important; }
+  .srv-hero-btns { width:100% !important; max-width:100% !important; }
+  .srv-btn-primary, .srv-btn-whatsapp { box-sizing:border-box !important; }
+
+  /* AI: use the real TCONGS brand mark, not a robot icon */
+  .tcongs-ai-launcher-icon,
+  .tcongs-ai-header > div:first-child::before {
+    background-image:url('../images/tcongs-mark.png') !important;
+    background-repeat:no-repeat !important;
+    background-position:center !important;
+    background-size:contain !important;
+    background-color:#fff !important;
+    color:transparent !important;
+    font-size:0 !important;
+    box-shadow:0 2px 7px rgba(0,0,0,.12) !important;
+  }
+  .tcongs-ai-launcher-icon::before,
+  .tcongs-ai-launcher-icon::after { display:none !important; content:none !important; }
+  .tcongs-ai-header > div:first-child::before { content:"" !important; }
+  .tcongs-ai-launcher-text { font-weight:800 !important; }
+  .tcongs-ai-status em { display:none !important; }
+  .tcongs-ai-status { padding:4px 9px !important; }
+  .tcongs-ai-status strong { font-size:.7rem !important; }
+}
+
+@keyframes servicesPulse {
+  0%,100% { opacity:0; transform:scale(.96); }
+  50% { opacity:1; transform:scale(1.02); }
+}
+
+@media (max-width:480px) {
+  .mobile-services-hint { font-size:.57rem; margin-right:7px; }
+  .mobile-services-toggle-label { font-size:.92rem; }
+  .srv-hero-title { font-size:clamp(1.55rem,8.3vw,1.95rem) !important; line-height:1.13 !important; }
+  .srv-hero-stats { gap:10px !important; }
+  .srv-stat-card { padding:20px 8px !important; min-height:112px !important; display:flex; flex-direction:column; justify-content:center; }
+  .tcongs-ai-panel { width:calc(100vw - 12px) !important; right:6px !important; max-width:none !important; }
+  .tcongs-ai-header { padding:10px !important; }
+}
+
+/* ============================================================
+   FINAL CROSS-DEVICE CONSISTENCY PASS
+   - Same AI Assistant branding on desktop + mobile
+   - Mobile-only homepage hero consultation CTA
+   - Remove homepage Explore Services text CTA
+   - Remove generic Services icon from mobile menu
+   - Prevent mobile content clipping / horizontal overflow
+   ============================================================ */
+
+/* AI Assistant: one consistent TCONGS-branded appearance everywhere */
+.tcongs-ai-launcher-icon,
+.tcongs-ai-header > div:first-child::before {
+  background-image:url('../images/tcongs-mark.png') !important;
+  background-repeat:no-repeat !important;
+  background-position:center !important;
+  background-size:contain !important;
+  background-color:#fff !important;
+  color:transparent !important;
+  font-size:0 !important;
+  box-shadow:0 2px 7px rgba(0,0,0,.12) !important;
+}
+.tcongs-ai-launcher-icon::before,
+.tcongs-ai-launcher-icon::after {
+  display:none !important;
+  content:none !important;
+}
+.tcongs-ai-header > div:first-child::before {
+  content:"" !important;
+}
+
+/* Homepage hero CTA: desktop navigation already has the consultation CTA.
+   Show the hero CTA only on mobile. */
+.index-page .hero-cta-row,
+body:has(.hero-section) .hero-cta-row {
+  display:none !important;
+}
+
+@media (max-width:700px) {
+  /* Mobile navigation */
+  .mobile-services-toggle-icon { display:none !important; }
+  .mobile-services-toggle-label { gap:0 !important; }
+  .mobile-services-toggle { min-width:0 !important; }
+
+  /* Make the mobile Services trigger obviously interactive without a fake icon. */
+  .mobile-services-toggle::before {
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#69cef2;
+    box-shadow:0 0 0 4px rgba(105,206,242,.12);
+    flex:0 0 7px;
+    margin-right:10px;
+  }
+  .mobile-services-toggle { justify-content:flex-start !important; }
+  .mobile-services-hint { margin-left:auto !important; }
+  .mobile-services-chevron { margin-left:4px !important; }
+
+  /* Homepage hero: keep every line inside the viewport. */
+  body:has(.hero-section) .hero-section,
+  body:has(.hero-section) .hero-container-center,
+  body:has(.hero-section) .hero-content {
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    box-sizing:border-box !important;
+  }
+  body:has(.hero-section) .hero-section { overflow:hidden !important; }
+  body:has(.hero-section) .hero-container-center { padding-left:14px !important; padding-right:14px !important; }
+  body:has(.hero-section) .hero-title-finkash {
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    font-size:clamp(1.65rem,7.8vw,2.35rem) !important;
+    line-height:1.13 !important;
+    letter-spacing:-.35px !important;
+    overflow-wrap:break-word !important;
+    word-break:normal !important;
+    white-space:normal !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  body:has(.hero-section) .hero-tag-finkash,
+  body:has(.hero-section) .hero-sublinks-row {
+    max-width:100% !important;
+    min-width:0 !important;
+  }
+  body:has(.hero-section) .hero-sublinks-row { gap:7px !important; }
+  body:has(.hero-section) .sublink-item { max-width:100% !important; white-space:normal !important; text-align:center !important; }
+
+  /* Only mobile gets the homepage hero consultation button. */
+  body:has(.hero-section) .hero-cta-row {
+    display:flex !important;
+    width:100% !important;
+    max-width:100% !important;
+    justify-content:center !important;
+    margin-top:20px !important;
+  }
+  body:has(.hero-section) .hero-cta-row .btn-primary-cta {
+    display:flex !important;
+    width:min(100%,330px) !important;
+    min-height:56px !important;
+    align-items:center !important;
+    justify-content:center !important;
+    background:linear-gradient(135deg,#b9ef45,#8edb20) !important;
+    color:#10251a !important;
+    border:1px solid rgba(255,255,255,.65) !important;
+    box-shadow:0 10px 28px rgba(119,190,20,.30) !important;
+    text-shadow:none !important;
+  }
+  body:has(.hero-section) .hero-cta-row .btn-primary-cta:hover { color:#10251a !important; }
+
+  /* Services page: mobile-only hero consultation buttons. */
+  .srv-hero .srv-hero-btns { width:100% !important; }
+  .srv-hero .srv-btn-primary { display:flex !important; }
+
+  /* Prevent services-page stats from ever being clipped on narrow screens. */
+  .srv-hero,
+  .srv-hero-inner,
+  .srv-hero-content,
+  .srv-hero-stats,
+  .srv-stat-card {
+    min-width:0 !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+  }
+  .srv-hero-stats { overflow:visible !important; }
+  .srv-stat-card { overflow:hidden !important; }
+}
+
+/* Very narrow phones: one-column stats eliminate any chance of clipping. */
+@media (max-width:420px) {
+  .srv-hero-stats { grid-template-columns:1fr !important; gap:10px !important; }
+  .srv-stat-card { min-height:98px !important; padding:18px 12px !important; }
+  body:has(.hero-section) .hero-title-finkash { font-size:clamp(1.55rem,7.6vw,2rem) !important; }
+  body:has(.hero-section) .hero-section { padding-bottom:34px !important; }
+}
+
+/* AI panel: identical brand mark and compact online title on all viewports. */
+.tcongs-ai-header strong { white-space:nowrap !important; }
+.tcongs-ai-header > div:first-child { min-width:0 !important; }
+@media (max-width:480px) {
+  .tcongs-ai-header strong { font-size:.72rem !important; }
+  .tcongs-ai-panel { width:calc(100vw - 12px) !important; right:6px !important; max-width:none !important; }
+}
+
+/* ============================================================
+   TCONGS AI — FINAL OPEN PANEL DESIGN
+   One brand logo, TCONGS AI + Online, floating launcher.
+   ============================================================ */
+.tcongs-ai-widget{z-index:99990!important;}
+.tcongs-ai-launcher{
+  position:relative!important; display:flex!important; align-items:center!important; gap:9px!important;
+  min-height:50px!important; padding:7px 13px 7px 8px!important; border:1px solid rgba(255,255,255,.42)!important;
+  border-radius:15px!important; background:linear-gradient(135deg,#174d70,#218da8)!important;
+  color:#fff!important; box-shadow:0 12px 28px rgba(0,0,0,.28)!important; overflow:visible!important;
+  animation:tcongsAiFloat 3.2s ease-in-out infinite!important;
+}
+.tcongs-ai-launcher-icon{width:34px!important;height:34px!important;flex:0 0 34px!important;display:grid!important;place-items:center!important;border-radius:9px!important;background:#fff!important;overflow:hidden!important;box-shadow:0 2px 8px rgba(0,0,0,.14)!important;}
+.tcongs-ai-launcher-icon img{width:26px!important;height:26px!important;object-fit:contain!important;display:block!important;}
+.tcongs-ai-launcher-text{font-size:.82rem!important;font-weight:800!important;letter-spacing:-.01em!important;}
+.tcongs-ai-launcher-dot{width:7px!important;height:7px!important;border-radius:50%!important;background:#49e49a!important;box-shadow:0 0 0 2px rgba(73,228,154,.18),0 0 10px rgba(73,228,154,.65)!important;margin-left:auto!important;animation:tcongsAiPulse 1.8s ease-in-out infinite!important;}
+.tcongs-ai-panel{
+  position:fixed!important; right:18px!important; bottom:78px!important; width:min(450px,calc(100vw - 28px))!important;
+  height:min(590px,calc(100dvh - 98px))!important; max-height:calc(100dvh - 98px)!important;
+  display:flex!important; flex-direction:column!important; overflow:hidden!important; border-radius:20px!important;
+  border:1px solid rgba(255,255,255,.7)!important; background:#f5fbfe!important;
+  box-shadow:0 22px 60px rgba(0,0,0,.34)!important; transform:translateY(16px) scale(.96)!important;
+  opacity:0!important; visibility:hidden!important; pointer-events:none!important;
+  transition:opacity .22s ease,transform .28s cubic-bezier(.2,.8,.2,1),visibility .22s!important;
+}
+.tcongs-ai-panel.open{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateY(0) scale(1)!important;}
+.tcongs-ai-header{
+  flex:0 0 auto!important; min-height:84px!important; padding:14px 15px!important; display:flex!important; align-items:center!important;
+  justify-content:space-between!important; gap:12px!important; color:#fff!important;
+  background:linear-gradient(135deg,#164d72,#258ca8)!important; position:relative!important; overflow:hidden!important;
+}
+.tcongs-ai-header::after{content:"";position:absolute;width:120px;height:120px;right:-38px;top:-55px;border-radius:50%;background:rgba(255,255,255,.08)!important;pointer-events:none!important;}
+.tcongs-ai-brand{display:flex!important;align-items:center!important;gap:11px!important;min-width:0!important;position:relative!important;z-index:1!important;}
+.tcongs-ai-header-logo{width:42px!important;height:42px!important;flex:0 0 42px!important;border-radius:11px!important;background:#fff!important;display:grid!important;place-items:center!important;overflow:hidden!important;box-shadow:0 2px 8px rgba(0,0,0,.14)!important;}
+.tcongs-ai-header-logo img{width:31px!important;height:31px!important;object-fit:contain!important;display:block!important;}
+.tcongs-ai-title-wrap{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:5px!important;min-width:0!important;position:relative!important;}
+.tcongs-ai-title-wrap strong{display:block!important;font-size:1rem!important;line-height:1.05!important;white-space:nowrap!important;color:#fff!important;}
+.tcongs-ai-online{display:inline-flex!important;align-items:center!important;gap:6px!important;padding:3px 8px!important;border-radius:999px!important;background:rgba(43,220,145,.14)!important;border:1px solid rgba(105,245,180,.32)!important;color:#eafff4!important;font-size:.7rem!important;font-weight:800!important;white-space:nowrap!important;}
+.tcongs-ai-online i{width:7px!important;height:7px!important;flex:0 0 7px!important;border-radius:50%!important;background:#4ce39c!important;box-shadow:0 0 0 3px rgba(76,227,156,.14)!important;animation:tcongsAiPulse 1.6s ease-in-out infinite!important;}
+.tcongs-ai-close{position:relative!important;z-index:2!important;width:42px!important;height:42px!important;flex:0 0 42px!important;border-radius:50%!important;border:1px solid rgba(255,255,255,.3)!important;background:rgba(255,255,255,.07)!important;color:#fff!important;font-size:1.5rem!important;line-height:1!important;cursor:pointer!important;}
+.tcongs-ai-messages{flex:1 1 auto!important;min-height:0!important;overflow-y:auto!important;padding:14px!important;background:#f6fbfe!important;}
+.tcongs-ai-message{max-width:92%!important;padding:11px 13px!important;border-radius:14px!important;font-size:.9rem!important;line-height:1.5!important;margin-bottom:10px!important;}
+.tcongs-ai-message.bot{background:#fff!important;border:1px solid #d8e6ef!important;color:#30445a!important;box-shadow:0 3px 12px rgba(25,70,100,.06)!important;}
+.tcongs-ai-message.user{margin-left:auto!important;background:#2a6aa6!important;color:#fff!important;}
+.tcongs-ai-quick{flex:0 0 auto!important;display:flex!important;gap:7px!important;flex-wrap:wrap!important;padding:10px 12px!important;background:#fff!important;border-top:1px solid #e0ebf1!important;}
+.tcongs-ai-quick button{padding:8px 12px!important;border:1px solid #cfe0eb!important;border-radius:999px!important;background:#fff!important;color:#24628d!important;font-weight:700!important;font-size:.75rem!important;cursor:pointer!important;}
+.tcongs-ai-quick button:hover{background:#edf7fb!important;border-color:#7cc7e5!important;}
+.tcongs-ai-form{flex:0 0 auto!important;display:flex!important;align-items:center!important;gap:8px!important;padding:10px 12px!important;background:#fff!important;border-top:1px solid #dce9f0!important;}
+.tcongs-ai-form input{flex:1 1 auto!important;min-width:0!important;height:48px!important;border:1px solid #b8d7e8!important;border-radius:13px!important;padding:0 13px!important;outline:none!important;background:#fafdff!important;color:#263b50!important;font-size:.9rem!important;}
+.tcongs-ai-form input:focus{border-color:#4bb5db!important;box-shadow:0 0 0 3px rgba(75,181,219,.14)!important;}
+.tcongs-ai-form button{width:48px!important;height:48px!important;flex:0 0 48px!important;border:0!important;border-radius:12px!important;background:linear-gradient(135deg,#2c6fa9,#218ca8)!important;color:#fff!important;font-size:1.25rem!important;font-weight:800!important;cursor:pointer!important;}
+@keyframes tcongsAiFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes tcongsAiPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(.82)}}
+@media(max-width:700px){
+  .tcongs-ai-panel{right:8px!important;bottom:68px!important;width:calc(100vw - 16px)!important;height:min(560px,calc(100dvh - 82px))!important;max-height:calc(100dvh - 82px)!important;border-radius:18px!important;}
+  .tcongs-ai-header{min-height:74px!important;padding:11px 12px!important;}
+  .tcongs-ai-header-logo{width:38px!important;height:38px!important;flex-basis:38px!important;}
+  .tcongs-ai-header-logo img{width:28px!important;height:28px!important;}
+  .tcongs-ai-title-wrap{gap:4px!important;}
+  .tcongs-ai-title-wrap strong{font-size:.9rem!important;}
+  .tcongs-ai-online{font-size:.68rem!important;padding:4px 8px!important;}
+  .tcongs-ai-close{width:38px!important;height:38px!important;flex-basis:38px!important;font-size:1.35rem!important;}
+  .tcongs-ai-messages{padding:12px!important;}
+  .tcongs-ai-quick{padding:9px 10px!important;}
+  .tcongs-ai-form{padding:9px 10px max(9px,env(safe-area-inset-bottom))!important;}
+}
+@media(max-width:380px){
+  .tcongs-ai-title-wrap{gap:3px!important;}
+  .tcongs-ai-online{font-size:.62rem!important;padding:4px 7px!important;}
+  .tcongs-ai-header-logo{width:36px!important;height:36px!important;flex-basis:36px!important;}
+}
+/* Hide floating launcher while the full assistant panel is open so the brand logo appears only once. */
+.tcongs-ai-widget:has(.tcongs-ai-panel.open) .tcongs-ai-launcher{opacity:0!important;visibility:hidden!important;pointer-events:none!important;transform:translateY(6px)!important;}
+
+/* ============================================================
+   FINAL MOBILE OVERFLOW + CHATBOT SINGLE-LOGO PASS
+   ============================================================ */
+
+/* Never allow a child/grid item to create a wider mobile layout. */
+@media (max-width: 700px) {
+  html, body { width:100% !important; max-width:100% !important; overflow-x:hidden !important; }
+  *, *::before, *::after { box-sizing:border-box; min-width:0; }
+  img, svg, video, canvas { max-width:100% !important; }
+  .container { width:100% !important; max-width:100% !important; margin-left:auto !important; margin-right:auto !important; }
+
+  /* Marketplace detail pages: all stat cards stay inside the viewport. */
+  .amz-stats-bar,
+  .amz-stats-bar .container,
+  .amz-stats-bar-inner { width:100% !important; max-width:100% !important; min-width:0 !important; }
+  .amz-stats-bar-inner {
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:12px !important;
+  }
+  .amz-stat-item {
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    padding:14px 8px !important;
+    overflow:hidden !important;
+    word-break:break-word !important;
+  }
+  .amz-stat-num,
+  .amz-stat-txt { max-width:100% !important; overflow-wrap:anywhere !important; word-break:break-word !important; }
+
+  .amz-hero-inner,
+  .amz-stats-row,
+  .amz-chart-row,
+  .challenges-grid,
+  .services-cards,
+  .why-grid,
+  .process-steps,
+  .results-grid,
+  .faq-cta-grid,
+  .cta-btns-row {
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+  }
+  .amz-stats-row { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  .amz-chart-row { grid-template-columns:minmax(0,1fr) !important; }
+  .amz-stats-row > *, .amz-chart-row > *, .challenge-card, .svc-card, .why-card, .process-step, .result-card, .faq-item, .cta-btn-outline {
+    min-width:0 !important; max-width:100% !important; overflow-wrap:anywhere !important;
+  }
+
+  /* Mobile Services menu: every marketplace item gets the full available width. */
+  .mobile-services-group,
+  .mobile-services-toggle,
+  .mobile-services-submenu { width:100% !important; max-width:100% !important; min-width:0 !important; }
+  .mobile-services-submenu {
+    box-sizing:border-box !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+    border-left:0 !important;
+  }
+  .mobile-services-submenu.open {
+    max-height:calc(100dvh - 180px) !important;
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+  }
+  .mobile-services-submenu a {
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+    margin:4px 0 !important;
+  }
+
+  /* Chatbot: the real header logo is the only logo. Remove legacy pseudo-logo. */
+  .tcongs-ai-header > div:first-child::before {
+    display:none !important;
+    content:none !important;
+    background:none !important;
+    width:0 !important;
+    height:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+  }
+  .tcongs-ai-brand { min-width:0 !important; }
+  .tcongs-ai-header-logo { display:grid !important; flex:0 0 38px !important; }
+  .tcongs-ai-header-logo img { display:block !important; }
+}
+
+@media (max-width:420px) {
+  .amz-stats-bar-inner { grid-template-columns:1fr !important; gap:10px !important; }
+  .amz-stat-item { padding:16px 10px !important; }
+  .amz-stat-num { font-size:clamp(1.35rem,8vw,1.9rem) !important; }
+}
+
+/* Desktop/tablet also get safe min-width behavior without changing the layout. */
+.amz-stats-bar-inner > *,
+.amz-stats-row > *,
+.amz-chart-row > *,
+.srv-mp-grid > *,
+.srv-sol-grid > * { min-width:0; }

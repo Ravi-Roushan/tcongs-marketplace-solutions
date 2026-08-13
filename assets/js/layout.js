@@ -126,7 +126,26 @@
   <!-- ── Mobile Menu ── -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="index.html"${currentPage() === 'index.html' ? ' class="active"' : ''}>Home</a>
-    <a href="services.html"${currentPage() === 'services.html' ? ' class="active"' : ''}>Services</a>
+    <div class="mobile-services-group">
+      <button type="button" class="mobile-services-toggle" id="mobileServicesToggle" aria-expanded="false">
+        <span class="mobile-services-toggle-label">Services</span>
+        <span class="mobile-services-hint">Tap to explore</span>
+        <span class="mobile-services-chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="mobile-services-submenu" id="mobileServicesSubmenu">
+        <a href="services.html"><span class="mobile-service-icon all">▦</span><span>All Services</span></a>
+        <a href="amazon.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/amazon.png" alt=""></span><span>Amazon</span></a>
+        <a href="flipkart.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/flipkart.png" alt=""></span><span>Flipkart</span></a>
+        <a href="meesho.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/meesho.png" alt=""></span><span>Meesho</span></a>
+        <a href="myntra.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/myntra.png" alt=""></span><span>Myntra</span></a>
+        <a href="ajio.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/ajio.png" alt=""></span><span>AJIO</span></a>
+        <a href="nykaa.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/nykaa.png" alt=""></span><span>Nykaa</span></a>
+        <a href="jiomart.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/jiomart.png" alt=""></span><span>JioMart</span></a>
+        <a href="tatacliq.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/TataCLiQ.png" alt=""></span><span>Tata CLiQ</span></a>
+        <a href="snapdeal.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/snapdeal.png" alt=""></span><span>Snapdeal</span></a>
+        <a href="firstcry.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/firstcry.png" alt=""></span><span>FirstCry</span></a>
+      </div>
+    </div>
     <a href="about.html"${currentPage() === 'about.html' ? ' class="active"' : ''}>About Us</a>
     <a href="contact.html"${currentPage() === 'contact.html' ? ' class="active"' : ''}>Contact Us</a>
     <div class="mobile-menu-actions">
@@ -144,7 +163,7 @@
 
         <!-- LEFT 2: COMPANY — all existing links preserved -->
         <div class="footer-links-column">
-          <h3 class="footer-column-title">COMPANY</h3>
+          <button type="button" class="footer-column-title footer-accordion-toggle" aria-expanded="false">COMPANY <span class="footer-accordion-icon">+</span></button>
           <ul class="footer-list-items">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -159,7 +178,7 @@
 
         <!-- LEFT 1: SERVICES — all existing links preserved -->
         <div class="footer-links-column">
-          <h3 class="footer-column-title">OUR SERVICES</h3>
+          <button type="button" class="footer-column-title footer-accordion-toggle" aria-expanded="false">OUR SERVICES <span class="footer-accordion-icon">+</span></button>
           <ul class="footer-list-items">
             <li><a href="amazon.html">Amazon Seller Management</a></li>
             <li><a href="flipkart.html">Flipkart Seller Management</a></li>
@@ -186,7 +205,7 @@
 
         <!-- RIGHT 1: POLICIES — all existing links preserved -->
         <div class="footer-links-column">
-          <h3 class="footer-column-title">POLICIES &amp; LEGAL</h3>
+          <button type="button" class="footer-column-title footer-accordion-toggle" aria-expanded="false">POLICIES &amp; LEGAL <span class="footer-accordion-icon">+</span></button>
           <ul class="footer-list-items">
             <li><a href="privacy-policy.html">Privacy Policy</a></li>
             <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li>
@@ -202,7 +221,7 @@
 
         <!-- RIGHT 2: CONTACT — all existing contact information preserved -->
         <div class="footer-links-column footer-contact-column">
-          <h3 class="footer-column-title">CONTACT INFORMATION</h3>
+          <button type="button" class="footer-column-title footer-accordion-toggle" aria-expanded="false">CONTACT INFORMATION <span class="footer-accordion-icon">+</span></button>
           <ul class="footer-contact-details">
             <li class="contact-detail-item">
               <span class="contact-item-icon">📍</span>
@@ -234,20 +253,23 @@
     </div>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
   <!-- ── TCONGS AI CHAT ASSISTANT ───────────────────────── -->
   <div class="tcongs-ai-widget" id="tcongsAiWidget">
-    <button class="tcongs-ai-launcher" id="tcongsAiLauncher" aria-label="Open TCONGS AI Assistant" aria-expanded="false">
-      <span class="tcongs-ai-launcher-icon">✦</span>
-      <span class="tcongs-ai-launcher-text">AI Assistant</span>
+    <button class="tcongs-ai-launcher" id="tcongsAiLauncher" aria-label="Open TCONGS AI" aria-expanded="false">
+      <span class="tcongs-ai-launcher-icon" aria-hidden="true"><img src="assets/images/tcongs-mark.png" alt=""></span>
+      <span class="tcongs-ai-launcher-text">Assistant</span>
+      <span class="tcongs-ai-launcher-dot" aria-hidden="true"></span>
     </button>
 
-    <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="TCONGS AI Assistant">
+    <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="TCONGS AI Assistant" aria-modal="false">
       <div class="tcongs-ai-header">
-        <div>
-          <strong>TCONGS AI Assistant</strong>
-          <span>Ask about our marketplace services</span>
+        <div class="tcongs-ai-brand">
+          <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-mark.png" alt="TCONGS"></span>
+          <div class="tcongs-ai-title-wrap">
+            <strong>TCONGS AI</strong>
+            <span class="tcongs-ai-online"><i></i> Online</span>
+          </div>
         </div>
         <button type="button" class="tcongs-ai-close" id="tcongsAiClose" aria-label="Close AI Assistant">×</button>
       </div>
@@ -295,6 +317,40 @@
       });
     }
 
+    /* ── Mobile Services dropdown ─────────────────────────────── */
+    const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+    const mobileServicesSubmenu = document.getElementById('mobileServicesSubmenu');
+    if (mobileServicesToggle && mobileServicesSubmenu) {
+      mobileServicesToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = mobileServicesSubmenu.classList.toggle('open');
+        mobileServicesToggle.classList.toggle('open', isOpen);
+        mobileServicesToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+      mobileServicesSubmenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger?.classList.remove('open');
+          mobileMenu?.classList.remove('open');
+        });
+      });
+    }
+
+    /* ── Mobile footer accordions ─────────────────────────────── */
+    document.querySelectorAll('.footer-accordion-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const column = toggle.closest('.footer-links-column');
+        if (!column) return;
+        const willOpen = !column.classList.contains('footer-column-open');
+        document.querySelectorAll('.footer-links-column.footer-column-open').forEach(openColumn => {
+          if (openColumn !== column) {
+            openColumn.classList.remove('footer-column-open');
+            openColumn.querySelector('.footer-accordion-toggle')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+        column.classList.toggle('footer-column-open', willOpen);
+        toggle.setAttribute('aria-expanded', String(willOpen));
+      });
+    });
 
     /* ── Navbar — scroll state ────────────────────────────────── */
     const navbar = document.getElementById('navbar');
