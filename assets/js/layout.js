@@ -295,23 +295,6 @@
       });
     }
 
-    /* ── Back To Top ──────────────────────────────────────────── */
-    const backToTop = document.getElementById('backToTop');
-    if (backToTop) {
-      const handleBackToTopScroll = () => {
-        if (window.scrollY > 400) {
-          backToTop.classList.add('visible');
-        } else {
-          backToTop.classList.remove('visible');
-        }
-      };
-      window.addEventListener('scroll', handleBackToTopScroll);
-      handleBackToTopScroll();
-
-      backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
 
     /* ── Navbar — scroll state ────────────────────────────────── */
     const navbar = document.getElementById('navbar');

@@ -1,7 +1,7 @@
 /* ============================================================
    TCONGS — main.js
    Preloader | Navbar | Mobile Menu | Scroll Reveal
-   Skill Bars | FAQ Accordion | Back To Top
+   Skill Bars | FAQ Accordion
    ============================================================ */
 
 /* ── Preloader ────────────────────────────────────────────── */

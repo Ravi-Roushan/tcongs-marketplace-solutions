@@ -270,15 +270,6 @@
   .copyright-text  { font-size: 0.78rem; }
   .marketing-text  { font-size: 0.8rem; }
 
-  /* ── Back to Top ── */
-  .back-to-top {
-    bottom: 18px;
-    right: 18px;
-    width: 38px;
-    height: 38px;
-    font-size: 0.9rem;
-  }
-
   /* ── Scroll Reveal – disable heavy transforms on touch ── */
   .reveal, .reveal-left, .reveal-right {
     transform: translateY(20px);
