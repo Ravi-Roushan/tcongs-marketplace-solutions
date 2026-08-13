@@ -660,8 +660,20 @@
     gap: 32px;
   }
   .insights-img-col { display: none; }
-  .process-steps { flex-wrap: wrap; justify-content: center; gap: 16px; }
-  .process-connector { display: none; }
+
+  /* Keep the existing four-step desktop/tablet flow intact.
+     The 2×2 mobile layout is applied only at <= 768px below. */
+  .process-steps {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0;
+  }
+  .process-step {
+    min-width: 0;
+  }
+  .process-connector {
+    width: 28px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -684,8 +696,60 @@
   .final-cta-text h3 { font-size: 1.2rem; }
   .marketplaces-logos-row { gap: 24px 32px; }
   .mp-logo-img { height: 26px; }
-  .process-steps { gap: 16px; }
-  .process-step { max-width: 100%; }
+
+  /* Home → Simple Steps / Powerful Results: mobile-only 2×2 grid.
+     Connectors are hidden so only the four cards participate in the grid. */
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    width: 100%;
+  }
+  .process-step {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 100%;
+    box-sizing: border-box;
+    padding: 24px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .process-step h4,
+  .process-step p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .process-step p {
+    flex: 1;
+  }
+  .process-connector {
+    display: none;
+  }
+
+  /* Seller Account Management → Service Focus percentages. */
+  .skill-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 12px;
+  }
+  .skill-label {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .skill-percent {
+    min-width: 48px;
+    text-align: right;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    font-weight: 800;
+  }
+  .skill-track {
+    width: 100%;
+  }
+
   .insights-stat-col { display: none; }
 }
 
@@ -1011,4 +1075,46 @@
   .svc-popup-title { font-size: 1.1rem; }
   .svc-popup-body  { font-size: 0.87rem; }
   .svc-popup-icon  { font-size: 2rem; }
+}
+
+
+/* =========================================================
+   SERVICES INTERACTION FIXES — preserve existing design
+   ========================================================= */
+.comp-service-card {
+  cursor: pointer;
+  position: relative;
+}
+.comp-service-card:focus-visible {
+  outline: 2px solid var(--hr-blue);
+  outline-offset: 4px;
+}
+.comp-service-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+}
+.comp-service-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.comp-service-link:hover::after,
+.comp-service-card:hover .comp-service-link::after,
+.comp-service-card:focus-within .comp-service-link::after {
+  transform: scaleX(1);
+}
+.comp-service-card:hover .comp-service-link { gap: 8px; }
+
+@media (max-width: 767px) {
+  .comp-service-card { min-width: 0; }
 }

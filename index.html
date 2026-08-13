@@ -18,9 +18,9 @@
 <title>Marketplace Management Agency in Mumbai | TCONGS Solutions</title>
 <link href="assets/images/favicon.jpg" rel="icon" type="image/jpeg"/>
 <link href="assets/css/style.css?v=1.1" rel="stylesheet"/>
-<link href="assets/css/home.css?v=1.1" rel="stylesheet">
+<link href="assets/css/home.css?v=1.2" rel="stylesheet">
 <link href="assets/css/animations.css?v=1.1" rel="stylesheet"/>
-<link href="assets/css/responsive.css?v=1.1" rel="stylesheet"/>
+<link href="assets/css/responsive.css?v=1.2" rel="stylesheet"/>
 <link href="assets/css/popup.css?v=1.1" rel="stylesheet"/>
 <link href="assets/css/final-polish.css?v=2.0" rel="stylesheet"/>
 <!-- NEW REDESIGN CSS -->
@@ -71,37 +71,37 @@
 <p>End-to-end solutions to help your marketplace thrive across all major platforms.</p>
 </div>
 <div class="comp-services-cards">
-<div class="comp-service-card reveal">
+<div class="comp-service-card reveal" data-service-id="svc1" role="button" tabindex="0" aria-label="Open Account Health Management details" onclick="openServicePopup('svc1')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openServicePopup('svc1')}">
 <div class="comp-service-icon comp-icon-blue">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
 </div>
 <h3>Account Health Management</h3>
 <p>Keep your seller accounts healthy and compliant for uninterrupted growth.</p>
-<a class="comp-service-link" href="services.html#account-health-management">Read More →</a>
+<a class="comp-service-link" href="services.html#account-health-management" onclick="event.stopPropagation();openServicePopup('svc1');return false;">Read More →</a>
 </div>
-<div class="comp-service-card reveal">
+<div class="comp-service-card reveal" data-service-id="svc2" role="button" tabindex="0" aria-label="Open Product Listing Optimization details" onclick="openServicePopup('svc2')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openServicePopup('svc2')}">
 <div class="comp-service-icon comp-icon-purple">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" x2="7.01" y1="7" y2="7"></line></svg>
 </div>
 <h3>Product Listing Optimization</h3>
 <p>Optimize listings that rank higher, attract more buyers, and boost conversions.</p>
-<a class="comp-service-link" href="services.html#listing-optimization">Read More →</a>
+<a class="comp-service-link" href="services.html#listing-optimization" onclick="event.stopPropagation();openServicePopup('svc2');return false;">Read More →</a>
 </div>
-<div class="comp-service-card reveal">
+<div class="comp-service-card reveal" data-service-id="svc3" role="button" tabindex="0" aria-label="Open E-commerce Strategy and Growth details" onclick="openServicePopup('svc3')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openServicePopup('svc3')}">
 <div class="comp-service-icon comp-icon-green">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg>
 </div>
 <h3>E-commerce Strategy &amp; Growth</h3>
 <p>Actionable strategies to improve visibility, rankings, and overall brand presence.</p>
-<a class="comp-service-link" href="services.html#ecommerce-strategy">Read More →</a>
+<a class="comp-service-link" href="services.html#ecommerce-strategy" onclick="event.stopPropagation();openServicePopup('svc3');return false;">Read More →</a>
 </div>
-<div class="comp-service-card reveal">
+<div class="comp-service-card reveal" data-service-id="svc4" role="button" tabindex="0" aria-label="Open Consulting and Issue Resolution details" onclick="openServicePopup('svc4')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openServicePopup('svc4')}">
 <div class="comp-service-icon comp-icon-orange">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
 </div>
 <h3>Consulting &amp; Issue Resolution</h3>
 <p>Expert guidance to solve complex marketplace challenges and scale your business.</p>
-<a class="comp-service-link" href="services.html#consulting-issue-resolution">Read More →</a>
+<a class="comp-service-link" href="services.html#consulting-issue-resolution" onclick="event.stopPropagation();openServicePopup('svc4');return false;">Read More →</a>
 </div>
 </div>
 </div>
@@ -337,7 +337,7 @@
 <div class="skill-item">
 <div class="skill-header">
 <span class="skill-label">Marketplace Account Health</span>
-<span class="skill-percent">Service Focus</span>
+<span class="skill-percent">95%</span>
 </div>
 <div class="skill-track">
 <div class="skill-fill" data-width="95"></div>
@@ -346,7 +346,7 @@
 <div class="skill-item">
 <div class="skill-header">
 <span class="skill-label">Product Listing Optimization</span>
-<span class="skill-percent">Service Focus</span>
+<span class="skill-percent">98%</span>
 </div>
 <div class="skill-track">
 <div class="skill-fill" data-width="98"></div>
@@ -355,10 +355,10 @@
 <div class="skill-item">
 <div class="skill-header">
 <span class="skill-label">E-Commerce Strategy &amp; Visibility</span>
-<span class="skill-percent">Service Focus</span>
+<span class="skill-percent">96%</span>
 </div>
 <div class="skill-track">
-<div class="skill-fill" data-width="90"></div>
+<div class="skill-fill" data-width="96"></div>
 </div>
 </div>
 </div>

@@ -680,3 +680,138 @@
     padding-right: 0;
   }
 }
+
+
+/* ============================================================
+   CONTACT — MARKETPLACES WE SUPPORT
+   Uses the existing marketplace logo assets.
+   ============================================================ */
+.marketplace-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.contact-marketplace-card {
+  min-width: 0;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(0,0,0,0.07);
+  border-radius: var(--radius-sm);
+  background: #f9fafb;
+  color: #1e2a38;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+
+.contact-marketplace-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(40,116,240,0.24);
+  background: #fff;
+  box-shadow: 0 7px 18px rgba(20,50,80,0.09);
+}
+
+.contact-marketplace-card:focus-visible {
+  outline: 3px solid rgba(88,185,228,.35);
+  outline-offset: 2px;
+}
+
+.contact-marketplace-logo {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.contact-marketplace-logo img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  object-fit: contain;
+}
+
+.contact-marketplace-name {
+  min-width: 0;
+  font-size: .82rem;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -.15px;
+  color: #20334a;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.contact-marketplace-card:hover .contact-marketplace-name {
+  color: #0f5fa8;
+}
+
+@media (min-width: 1200px) {
+  .marketplace-logos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .marketplace-logos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .contact-marketplace-card {
+    min-height: 70px;
+    padding: 10px;
+    gap: 9px;
+  }
+  .contact-marketplace-logo {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+  .contact-marketplace-logo img {
+    width: 29px;
+    height: 29px;
+    max-width: 29px;
+    max-height: 29px;
+  }
+  .contact-marketplace-name {
+    font-size: .76rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .marketplace-logos-grid {
+    gap: 8px;
+  }
+  .contact-marketplace-card {
+    min-height: 66px;
+    padding: 8px;
+    gap: 7px;
+  }
+  .contact-marketplace-logo {
+    width: 34px;
+    height: 34px;
+    flex-basis: 34px;
+  }
+  .contact-marketplace-logo img {
+    width: 26px;
+    height: 26px;
+    max-width: 26px;
+    max-height: 26px;
+  }
+  .contact-marketplace-name {
+    font-size: .71rem;
+  }
+}

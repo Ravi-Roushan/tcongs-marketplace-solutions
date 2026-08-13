@@ -986,3 +986,143 @@
   .srv-why-grid { gap:32px; }
   .srv-cta-box { padding:34px 20px; }
 }
+
+
+/* =========================================================
+   SERVICES DESKTOP POLISH — interactions + exact stat cards
+   ========================================================= */
+.srv-hero-stats {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.srv-stat-card {
+  min-width: 0;
+  min-height: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.srv-stat-num, .srv-stat-label {
+  max-width: 100%;
+}
+.srv-stat-label {
+  white-space: nowrap;
+}
+.srv-why-stat {
+  min-width: 0;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.srv-why-stat:hover {
+  border-color: rgba(40,85,138,0.55);
+  background: rgba(40,85,138,0.18);
+  transform: translateY(-3px);
+}
+.srv-why-feat {
+  position: relative;
+  overflow: hidden;
+}
+.srv-why-feat::after {
+  content: '';
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-hover));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.srv-why-feat:hover::after { transform: scaleX(1); }
+.srv-why-feat h4 {
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+.srv-why-feat:hover h4 {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--clr-primary);
+}
+
+@media (min-width: 1200px) {
+  .srv-hero-inner { gap: 72px; }
+  .srv-hero-stats { gap: 18px; }
+  .srv-stat-card { padding: 22px 18px; }
+}
+
+@media (max-width: 640px) {
+  .srv-stat-label { white-space: normal; line-height: 1.35; }
+  .srv-stat-num { font-size: clamp(1.55rem, 7vw, 2rem); }
+}
+
+/* =========================================================
+   DESKTOP OVERLAP FIX — keep the 4 stat cards inside the hero
+   without changing the mobile layout.
+   ========================================================= */
+@media (min-width: 1200px) {
+  .srv-hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(440px, 1fr);
+    gap: 48px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .srv-hero-content,
+  .srv-hero-stats {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .srv-hero-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .srv-stat-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 122px;
+    padding: 20px 12px;
+    overflow: hidden;
+  }
+
+  .srv-stat-num {
+    font-size: clamp(1.55rem, 2vw, 2rem);
+    white-space: nowrap;
+  }
+
+  .srv-stat-label {
+    white-space: nowrap;
+    font-size: clamp(.68rem, .72vw, .78rem);
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+  .srv-hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+    gap: 36px;
+  }
+
+  .srv-hero-content,
+  .srv-hero-stats {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .srv-hero-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .srv-stat-card {
+    min-width: 0;
+    overflow: hidden;
+  }
+}
