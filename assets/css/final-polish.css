@@ -948,19 +948,25 @@ body:has(.hero-section) .hero-cta-row {
 
 
 /* ============================================================
-   MOBILE SERVICES MENU — CLEAN ROW + ARROW ONLY
-   Keep the existing dropdown behavior; remove the boxed trigger.
+   FINAL SERVICES NAV FIX
+   Desktop: never show the mobile services/menu trigger.
+   Mobile: clean Services row — no dot, no box, no hint text.
    ============================================================ */
+.mobile-menu { display:none !important; }
+
 @media (max-width:700px) {
+  .mobile-menu.open { display:flex !important; }
+
   .mobile-services-toggle {
+    position:relative !important;
     width:100% !important;
-    min-height:54px !important;
-    height:54px !important;
+    min-height:52px !important;
     display:flex !important;
     align-items:center !important;
     justify-content:space-between !important;
-    padding:10px 4px !important;
+    gap:0 !important;
     margin:0 !important;
+    padding:12px 0 !important;
     border:0 !important;
     border-bottom:1px solid rgba(255,255,255,.06) !important;
     border-radius:0 !important;
@@ -970,75 +976,84 @@ body:has(.hero-section) .hero-cta-row {
     transform:none !important;
   }
 
+  .mobile-services-toggle::before,
   .mobile-services-toggle::after {
+    content:none !important;
     display:none !important;
-    animation:none !important;
-  }
-
-  .mobile-services-toggle-label {
-    display:block !important;
-    margin:0 !important;
-    font-size:1rem !important;
-    font-weight:600 !important;
-    color:var(--clr-text) !important;
-  }
-
-  .mobile-services-hint {
-    display:none !important;
-  }
-
-  .mobile-services-chevron {
-    display:flex !important;
-    align-items:center !important;
-    justify-content:center !important;
-    width:34px !important;
-    height:34px !important;
-    margin-left:auto !important;
-    font-size:1.25rem !important;
-    font-weight:700 !important;
-    color:var(--clr-text) !important;
-    background:transparent !important;
-    border:0 !important;
-    box-shadow:none !important;
   }
 
   .mobile-services-toggle:hover,
   .mobile-services-toggle:active,
   .mobile-services-toggle.open {
-    padding-left:4px !important;
-    border-radius:0 !important;
+    padding-left:0 !important;
     border:0 !important;
     border-bottom:1px solid rgba(255,255,255,.06) !important;
+    border-radius:0 !important;
     background:transparent !important;
     box-shadow:none !important;
-    color:var(--clr-text) !important;
     transform:none !important;
   }
 
-  .mobile-services-toggle.open .mobile-services-chevron {
-    transform:rotate(180deg) !important;
+  .mobile-services-toggle-label {
+    display:block !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-size:1rem !important;
+    font-weight:700 !important;
+    line-height:1.4 !important;
+    color:var(--clr-text) !important;
+  }
+
+  .mobile-services-hint { display:none !important; }
+
+  .mobile-services-chevron {
+    display:block !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-size:1.25rem !important;
+    line-height:1 !important;
+    font-weight:700 !important;
+    color:var(--clr-text) !important;
+    transition:transform .25s ease !important;
   }
 
   .mobile-services-submenu {
-    display:block !important;
-    max-height:0 !important;
-    overflow:hidden !important;
-    opacity:0 !important;
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
     padding:0 !important;
     margin:0 !important;
-    border-left:0 !important;
-    transition:max-height .3s ease, opacity .2s ease, padding .25s ease !important;
+    border:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
   }
 
   .mobile-services-submenu.open {
-    max-height:650px !important;
-    opacity:1 !important;
-    padding:4px 0 8px 12px !important;
+    padding:4px 0 8px !important;
   }
 
   .mobile-services-submenu a {
-    min-height:42px !important;
-    padding:8px 4px !important;
+    display:flex !important;
+    align-items:center !important;
+    width:100% !important;
+    min-height:44px !important;
+    margin:0 !important;
+    padding:10px 4px !important;
+    border:0 !important;
     border-bottom:1px solid rgba(255,255,255,.045) !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    transform:none !important;
+    color:var(--clr-text) !important;
+  }
+
+  .mobile-services-submenu a:hover,
+  .mobile-services-submenu a:focus,
+  .mobile-services-submenu a:focus-visible {
+    border:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.045) !important;
+    background:transparent !important;
+    transform:none !important;
   }
 }
