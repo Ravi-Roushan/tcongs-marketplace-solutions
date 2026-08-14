@@ -903,3 +903,99 @@ body:has(.hero-section) .hero-cta-row {
 .amz-chart-row > *,
 .srv-mp-grid > *,
 .srv-sol-grid > * { min-width:0; }
+
+/* ============================================================
+   HOMEPAGE HERO — subtle visual scale/color adjustment only
+   Keep the existing bg.webp artwork; do not replace or crop it.
+   ============================================================ */
+@media (min-width: 769px) {
+  body:has(.hero-section) .hero-section {
+    background: #edf4f8 !important;
+  }
+  body:has(.hero-section) .hero-bg {
+    inset: 0 !important;
+    transform: scale(.94) !important;
+    transform-origin: center center !important;
+    background:
+      linear-gradient(115deg, rgba(4, 24, 38, 0.76), rgba(22, 96, 125, 0.38), rgba(7, 34, 54, 0.66)),
+      url('../images/bg.webp') center center / cover no-repeat !important;
+    filter: saturate(1.08) contrast(1.02) brightness(.99) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body:has(.hero-section) .hero-section {
+    background: #edf4f8 !important;
+  }
+  body:has(.hero-section) .hero-bg {
+    inset: 0 !important;
+    transform: scale(.90) !important;
+    transform-origin: center center !important;
+    background:
+      linear-gradient(115deg, rgba(4, 24, 38, 0.72), rgba(22, 96, 125, 0.34), rgba(7, 34, 54, 0.62)),
+      url('../images/bg.webp') center center / cover no-repeat !important;
+    filter: saturate(1.08) contrast(1.02) brightness(.99) !important;
+  }
+}
+
+
+/* FINAL MOBILE NAV — Services should be a simple menu row with arrow only. */
+@media (max-width: 700px) {
+  .mobile-services-toggle {
+    min-height: 56px !important;
+    padding: 14px 4px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,.06) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .mobile-services-toggle::after { display:none !important; }
+  .mobile-services-toggle:hover,
+  .mobile-services-toggle:active { padding-left:4px !important; transform:none !important; background:transparent !important; }
+  .mobile-services-toggle-label { font-size:1rem !important; font-weight:600 !important; }
+  .mobile-services-chevron {
+    margin-left:auto !important;
+    font-size:1.35rem !important;
+    font-weight:800 !important;
+    color:#b9c9d8 !important;
+  }
+  .mobile-services-submenu {
+    border-left:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:transparent !important;
+  }
+  .mobile-services-submenu.open { padding:6px 0 8px 10px !important; }
+  .mobile-services-submenu a {
+    min-height:44px !important;
+    margin:2px 0 !important;
+    padding:8px 8px !important;
+    border:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.045) !important;
+    border-radius:0 !important;
+    background:transparent !important;
+  }
+}
+
+/* FINAL HERO IMAGE — show the complete existing bg.webp, never crop it. */
+body:has(.hero-section) .hero-bg {
+  transform: none !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+}
+@media (min-width: 769px) {
+  body:has(.hero-section) .hero-bg {
+    background-size: contain !important;
+    filter: saturate(1.04) contrast(1.01) brightness(1) !important;
+  }
+}
+@media (max-width: 768px) {
+  body:has(.hero-section) .hero-bg {
+    background-size: contain !important;
+    filter: saturate(1.04) contrast(1.01) brightness(1) !important;
+  }
+}
