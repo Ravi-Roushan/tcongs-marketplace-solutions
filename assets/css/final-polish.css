@@ -1098,3 +1098,167 @@ body:has(.hero-section) .hero-cta-row {
   .footer-trust-item{ border-bottom:1px solid #e5ebf2!important; padding:7px 6px!important; }
   .footer-trust-item:last-child{ grid-column:auto!important; justify-content:flex-start!important; border-bottom:0!important; }
 }
+
+
+/* ============================================================
+   TCONGS AI — FINAL CHATBOT-ONLY FIX
+   Preserve the rest of the website. One logo, one launcher dot.
+   ============================================================ */
+.tcongs-ai-widget {
+  position: fixed !important;
+  right: 16px !important;
+  bottom: 72px !important;
+  z-index: 99999 !important;
+}
+
+/* Small rectangular launcher */
+.tcongs-ai-launcher {
+  width: auto !important;
+  min-width: 132px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  padding: 5px 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  justify-content: flex-start !important;
+  border: 1px solid rgba(255,255,255,.55) !important;
+  border-radius: 13px !important;
+  background: linear-gradient(135deg,#174d70,#238ca7) !important;
+  box-shadow: 0 8px 22px rgba(20,69,101,.28) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  animation: tcongsAiFloat 3.2s ease-in-out infinite !important;
+}
+
+.tcongs-ai-launcher:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 12px 28px rgba(20,69,101,.34) !important;
+}
+
+/* Real TCONGS logo only — no robot/pseudo artwork */
+.tcongs-ai-launcher-icon {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  flex: 0 0 34px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 9px !important;
+  background: #fff !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.14) !important;
+  position: relative !important;
+}
+.tcongs-ai-launcher-icon img {
+  width: 27px !important;
+  height: 27px !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  display: block !important;
+  position: static !important;
+}
+.tcongs-ai-launcher-icon::before,
+.tcongs-ai-launcher-icon::after {
+  content: none !important;
+  display: none !important;
+}
+
+.tcongs-ai-launcher-text {
+  display: inline !important;
+  color: #fff !important;
+  font-size: .78rem !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+}
+
+/* Keep ONLY this green dot, beside TCONGS AI text. */
+.tcongs-ai-launcher-dot {
+  display: block !important;
+  width: 7px !important;
+  height: 7px !important;
+  min-width: 7px !important;
+  flex: 0 0 7px !important;
+  margin: 0 1px 0 2px !important;
+  border-radius: 50% !important;
+  background: #49e49a !important;
+  box-shadow: 0 0 0 2px rgba(73,228,154,.15), 0 0 9px rgba(73,228,154,.55) !important;
+  animation: tcongsAiPulse 1.8s ease-in-out infinite !important;
+}
+
+/* Remove the old decorative green corner dot completely. */
+.tcongs-ai-launcher::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Open panel: exactly one real TCONGS logo in the header. */
+.tcongs-ai-panel .tcongs-ai-header > div:first-child::before,
+.tcongs-ai-panel .tcongs-ai-header::before {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+.tcongs-ai-header-logo {
+  display: grid !important;
+  width: 42px !important;
+  height: 42px !important;
+  flex: 0 0 42px !important;
+  place-items: center !important;
+  border-radius: 11px !important;
+  background: #fff !important;
+  overflow: hidden !important;
+}
+.tcongs-ai-header-logo img {
+  display: block !important;
+  width: 31px !important;
+  height: 31px !important;
+  object-fit: contain !important;
+}
+.tcongs-ai-title-wrap strong {
+  font-size: 1rem !important;
+  color: #fff !important;
+}
+
+/* Never show the floating launcher underneath the open panel. */
+.tcongs-ai-widget:has(.tcongs-ai-panel.open) .tcongs-ai-launcher {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(6px) !important;
+}
+
+@media (max-width: 700px) {
+  .tcongs-ai-widget {
+    right: 10px !important;
+    bottom: 62px !important;
+  }
+  .tcongs-ai-launcher {
+    min-width: 124px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 4px 8px !important;
+    gap: 7px !important;
+    border-radius: 12px !important;
+  }
+  .tcongs-ai-launcher-icon {
+    width: 31px !important;
+    height: 31px !important;
+    flex-basis: 31px !important;
+  }
+  .tcongs-ai-launcher-icon img {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .tcongs-ai-launcher-text { font-size: .72rem !important; }
+  .tcongs-ai-launcher-dot { width: 6px !important; height: 6px !important; min-width: 6px !important; flex-basis: 6px !important; }
+  .tcongs-ai-header-logo { width: 38px !important; height: 38px !important; flex-basis: 38px !important; }
+  .tcongs-ai-header-logo img { width: 28px !important; height: 28px !important; }
+}

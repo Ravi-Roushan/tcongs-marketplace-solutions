@@ -284,7 +284,7 @@
   <div class="tcongs-ai-widget" id="tcongsAiWidget">
     <button class="tcongs-ai-launcher" id="tcongsAiLauncher" aria-label="Open TCONGS AI" aria-expanded="false">
       <span class="tcongs-ai-launcher-icon" aria-hidden="true"><img src="assets/images/tcongs-mark.png" alt=""></span>
-      <span class="tcongs-ai-launcher-text">Assistant</span>
+      <span class="tcongs-ai-launcher-text">TCONGS AI</span>
       <span class="tcongs-ai-launcher-dot" aria-hidden="true"></span>
     </button>
 
@@ -293,7 +293,7 @@
         <div class="tcongs-ai-brand">
           <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-mark.png" alt="TCONGS"></span>
           <div class="tcongs-ai-title-wrap">
-            <strong>TCONGS AI</strong>
+            <strong>TCONGS Assistant</strong>
             <span class="tcongs-ai-online"><i></i> Online</span>
           </div>
         </div>
