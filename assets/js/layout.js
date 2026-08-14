@@ -325,6 +325,26 @@
     if (headerEl) headerEl.innerHTML = HEADER_HTML;
     if (footerEl) footerEl.innerHTML = FOOTER_HTML;
 
+
+    /* TCONGS CHATBOT LOAD VISIBILITY FIX v1 */
+    if (!document.getElementById('tcongsChatbotLoadFix')) {
+      const chatbotLoadStyle = document.createElement('style');
+      chatbotLoadStyle.id = 'tcongsChatbotLoadFix';
+      chatbotLoadStyle.textContent = `
+        html:not(.tcongs-chatbot-ready) .tcongs-ai-widget {
+          visibility: hidden !important;
+          opacity: 0 !important;
+          pointer-events: none !important;
+        }
+        html.tcongs-chatbot-ready .tcongs-ai-widget {
+          visibility: visible;
+          opacity: 1;
+          transition: opacity .18s ease;
+        }
+      `;
+      document.head.appendChild(chatbotLoadStyle);
+    }
+
     /* ── Hamburger / Mobile Menu ──────────────────────────────── */
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -500,6 +520,22 @@
     document.addEventListener('DOMContentLoaded', inject);
   } else {
     inject();
+  }
+
+  /* TCONGS CHATBOT — reveal only after the page preloader is finished */
+  function revealChatbotAfterPageLoad() {
+    const preloader = document.getElementById('preloader');
+    const delay = preloader ? 2500 : 80;
+
+    window.setTimeout(() => {
+      document.documentElement.classList.add('tcongs-chatbot-ready');
+    }, delay);
+  }
+
+  if (document.readyState === 'complete') {
+    revealChatbotAfterPageLoad();
+  } else {
+    window.addEventListener('load', revealChatbotAfterPageLoad, { once: true });
   }
 
 })();
