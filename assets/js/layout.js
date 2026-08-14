@@ -129,6 +129,7 @@
     <div class="mobile-services-group">
       <button type="button" class="mobile-services-toggle" id="mobileServicesToggle" aria-expanded="false">
         <span class="mobile-services-toggle-label">Services</span>
+        <span class="mobile-services-hint">Tap to explore</span>
         <span class="mobile-services-chevron" aria-hidden="true">⌄</span>
       </button>
       <div class="mobile-services-submenu" id="mobileServicesSubmenu">

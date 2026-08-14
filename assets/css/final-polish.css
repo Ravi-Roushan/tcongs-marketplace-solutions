@@ -905,97 +905,140 @@ body:has(.hero-section) .hero-cta-row {
 .srv-sol-grid > * { min-width:0; }
 
 /* ============================================================
-   HOMEPAGE HERO — subtle visual scale/color adjustment only
-   Keep the existing bg.webp artwork; do not replace or crop it.
+   TCONGS — FINAL DESKTOP SPACING / HERO TUNING
+   Scope: homepage hero + homepage/services content containers.
+   The source hero artwork is unchanged; only its presentation size
+   and overlaid typography are reduced slightly on desktop.
    ============================================================ */
 @media (min-width: 769px) {
-  body:has(.hero-section) .hero-section {
-    background: #edf4f8 !important;
+  /* Keep the homepage content rhythm close to the polished About page. */
+  .comp-services-section > .container,
+  .marketplaces-bar-section > .container,
+  .insights-section > .container,
+  .why-choose-section > .container,
+  .process-section > .container,
+  .services-section > .container,
+  .blog-section > .container,
+  .testimonials-section > .container,
+  .faq-section > .container,
+  .final-cta-section > .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  body:has(.hero-section) .hero-bg {
-    inset: 0 !important;
-    transform: scale(.94) !important;
-    transform-origin: center center !important;
-    background:
-      linear-gradient(115deg, rgba(4, 24, 38, 0.76), rgba(22, 96, 125, 0.38), rgba(7, 34, 54, 0.66)),
-      url('../images/bg.webp') center center / cover no-repeat !important;
-    filter: saturate(1.08) contrast(1.02) brightness(.99) !important;
+
+  /* Services page: same comfortable side margins as About. */
+  .srv-hero-inner,
+  .srv-marketplaces > .container,
+  .srv-solutions > .container,
+  .srv-why > .container,
+  .srv-process > .container,
+  .srv-cta > .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  /* ONLY reduce hero text; original hero artwork/position remains untouched. */
+  .hero-title-finkash { font-size: clamp(2.35rem, 4.2vw, 3.2rem); line-height: 1.15; }
+
+  .hero-tag-finkash { font-size: 12px; margin-bottom: 19px; }
+  .hero-sublinks-row { font-size: 15px; gap: 14px; }
 }
 
-@media (max-width: 768px) {
-  body:has(.hero-section) .hero-section {
-    background: #edf4f8 !important;
-  }
-  body:has(.hero-section) .hero-bg {
-    inset: 0 !important;
-    transform: scale(.90) !important;
-    transform-origin: center center !important;
-    background:
-      linear-gradient(115deg, rgba(4, 24, 38, 0.72), rgba(22, 96, 125, 0.34), rgba(7, 34, 54, 0.62)),
-      url('../images/bg.webp') center center / cover no-repeat !important;
-    filter: saturate(1.08) contrast(1.02) brightness(.99) !important;
-  }
-}
 
-
-/* FINAL MOBILE NAV — Services should be a simple menu row with arrow only. */
-@media (max-width: 700px) {
+/* ============================================================
+   MOBILE SERVICES MENU — CLEAN ROW + ARROW ONLY
+   Keep the existing dropdown behavior; remove the boxed trigger.
+   ============================================================ */
+@media (max-width:700px) {
   .mobile-services-toggle {
-    min-height: 56px !important;
-    padding: 14px 4px !important;
-    margin: 0 !important;
-    border: 0 !important;
-    border-bottom: 1px solid rgba(255,255,255,.06) !important;
-    border-radius: 0 !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    transform: none !important;
-  }
-  .mobile-services-toggle::after { display:none !important; }
-  .mobile-services-toggle:hover,
-  .mobile-services-toggle:active { padding-left:4px !important; transform:none !important; background:transparent !important; }
-  .mobile-services-toggle-label { font-size:1rem !important; font-weight:600 !important; }
-  .mobile-services-chevron {
-    margin-left:auto !important;
-    font-size:1.35rem !important;
-    font-weight:800 !important;
-    color:#b9c9d8 !important;
-  }
-  .mobile-services-submenu {
-    border-left:0 !important;
+    width:100% !important;
+    min-height:54px !important;
+    height:54px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    padding:10px 4px !important;
     margin:0 !important;
-    padding:0 !important;
-    background:transparent !important;
-  }
-  .mobile-services-submenu.open { padding:6px 0 8px 10px !important; }
-  .mobile-services-submenu a {
-    min-height:44px !important;
-    margin:2px 0 !important;
-    padding:8px 8px !important;
     border:0 !important;
-    border-bottom:1px solid rgba(255,255,255,.045) !important;
+    border-bottom:1px solid rgba(255,255,255,.06) !important;
     border-radius:0 !important;
     background:transparent !important;
+    box-shadow:none !important;
+    color:var(--clr-text) !important;
+    transform:none !important;
   }
-}
 
-/* FINAL HERO IMAGE — show the complete existing bg.webp, never crop it. */
-body:has(.hero-section) .hero-bg {
-  transform: none !important;
-  background-size: contain !important;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-}
-@media (min-width: 769px) {
-  body:has(.hero-section) .hero-bg {
-    background-size: contain !important;
-    filter: saturate(1.04) contrast(1.01) brightness(1) !important;
+  .mobile-services-toggle::after {
+    display:none !important;
+    animation:none !important;
   }
-}
-@media (max-width: 768px) {
-  body:has(.hero-section) .hero-bg {
-    background-size: contain !important;
-    filter: saturate(1.04) contrast(1.01) brightness(1) !important;
+
+  .mobile-services-toggle-label {
+    display:block !important;
+    margin:0 !important;
+    font-size:1rem !important;
+    font-weight:600 !important;
+    color:var(--clr-text) !important;
+  }
+
+  .mobile-services-hint {
+    display:none !important;
+  }
+
+  .mobile-services-chevron {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:34px !important;
+    height:34px !important;
+    margin-left:auto !important;
+    font-size:1.25rem !important;
+    font-weight:700 !important;
+    color:var(--clr-text) !important;
+    background:transparent !important;
+    border:0 !important;
+    box-shadow:none !important;
+  }
+
+  .mobile-services-toggle:hover,
+  .mobile-services-toggle:active,
+  .mobile-services-toggle.open {
+    padding-left:4px !important;
+    border-radius:0 !important;
+    border:0 !important;
+    border-bottom:1px solid rgba(255,255,255,.06) !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    color:var(--clr-text) !important;
+    transform:none !important;
+  }
+
+  .mobile-services-toggle.open .mobile-services-chevron {
+    transform:rotate(180deg) !important;
+  }
+
+  .mobile-services-submenu {
+    display:block !important;
+    max-height:0 !important;
+    overflow:hidden !important;
+    opacity:0 !important;
+    padding:0 !important;
+    margin:0 !important;
+    border-left:0 !important;
+    transition:max-height .3s ease, opacity .2s ease, padding .25s ease !important;
+  }
+
+  .mobile-services-submenu.open {
+    max-height:650px !important;
+    opacity:1 !important;
+    padding:4px 0 8px 12px !important;
+  }
+
+  .mobile-services-submenu a {
+    min-height:42px !important;
+    padding:8px 4px !important;
+    border-bottom:1px solid rgba(255,255,255,.045) !important;
   }
 }
