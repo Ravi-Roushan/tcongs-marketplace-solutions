@@ -1,5 +1,5 @@
 /* ============================================================
-   TCONGS — layout.js  (v1.1)
+   TCONGS — layout.js  (v1.2)
    Injects shared header + footer into every page.
    Edit this ONE file to update header/footer site-wide.
    ============================================================ */
@@ -158,6 +158,33 @@
   <footer class="footer-corporate">
     <div class="container">
       <!-- 2 LEFT + CENTER BRAND + 2 RIGHT -->
+      <!-- TCONGS TRUST STRIP v2 -->
+      <section class="footer-trust-strip" aria-label="Why Businesses Trust TCONGS">
+        <h2 class="footer-trust-title">WHY BUSINESSES TRUST TCONGS</h2>
+        <div class="footer-trust-items">
+          <div class="footer-trust-item">
+            <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.5 5-.7L12 3z"/></svg></span>
+            <span><strong>500+</strong><small>Marketplace Listings Managed</small></span>
+          </div>
+          <div class="footer-trust-item">
+            <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10l9-7 9 7v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10z"/><path d="M8 21v-7h8v7"/></svg></span>
+            <span><strong>Multi-Marketplace</strong><small>Expertise</small></span>
+          </div>
+          <div class="footer-trust-item">
+            <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c.5-3.2 2.5-5 6-5s5.5 1.8 6 5"/><path d="M14 15c3.2-.2 5.4 1.4 6 4.5"/></svg></span>
+            <span><strong>Dedicated</strong><small>Account Managers</small></span>
+          </div>
+          <div class="footer-trust-item">
+            <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 20V10M12 20V4M19 20v-7"/><path d="M3 20h18"/></svg></span>
+            <span><strong>Transparent</strong><small>Reporting</small></span>
+          </div>
+          <div class="footer-trust-item">
+            <span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+            <span><strong>Data Privacy</strong><small>Protected</small></span>
+          </div>
+        </div>
+      </section>
+
       <div class="footer-main-grid">
 
         <!-- LEFT 2: COMPANY — all existing links preserved -->
