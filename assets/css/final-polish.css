@@ -1338,3 +1338,164 @@ body:has(.hero-section) .hero-cta-row {
     min-height:62px !important;
   }
 }
+
+/* ============================================================
+   TCONGS FINAL MOBILE AUDIT — 2026-08-15
+   Safe alignment/overflow polish across all pages.
+   Existing desktop layout and functionality preserved.
+   ============================================================ */
+@media (max-width:700px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden!important}
+  *,*::before,*::after{box-sizing:border-box}
+  .container{width:100%;max-width:100%;margin-left:auto;margin-right:auto;padding-left:16px;padding-right:16px}
+  section,header,footer,main,nav,article,aside{max-width:100%;}
+  img,svg,video,canvas,iframe{max-width:100%;}
+  input,textarea,select,button{max-width:100%;}
+  table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  pre,code{max-width:100%;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+  a{overflow-wrap:anywhere}
+  h1,h2,h3,h4,h5,h6,p,li{overflow-wrap:break-word}
+  .row,.grid,.two-col,.three-col,.four-col{min-width:0}
+  [class*="grid"]>*{min-width:0}
+  .btn,.button,[class*="btn-"]{max-width:100%;white-space:normal}
+
+  /* Common form alignment on narrow screens */
+  form{max-width:100%}
+  .form-row{min-width:0}
+  .form-group{min-width:0}
+  .form-group input,.form-group textarea,.form-group select{width:100%;max-width:100%;box-sizing:border-box}
+
+  /* Prevent floating widgets from forcing horizontal overflow */
+  .tcongs-ai-widget{max-width:calc(100vw - 16px)!important}
+}
+@media (max-width:360px){
+  .container{padding-left:13px;padding-right:13px}
+}
+
+/* ============================================================
+   CHATBOT ROBOT — +10% SIZE + SMOOTH BLINK
+   Launcher only. Chat panel/functionality unchanged.
+   ============================================================ */
+.tcongs-ai-launcher{
+  width:97px!important;
+  min-width:97px!important;
+  height:97px!important;
+  min-height:97px!important;
+  animation:none!important;
+}
+.tcongs-ai-robot{
+  animation:tcongsRobotSoftBlink 4.6s ease-in-out infinite!important;
+  will-change:opacity,transform,filter;
+}
+.tcongs-ai-robot img{object-fit:contain!important}
+.tcongs-ai-launcher:hover .tcongs-ai-robot{
+  animation:tcongsRobotSoftBlink 4.6s ease-in-out infinite!important;
+  transform:translateY(-3px) scale(1.055)!important;
+  filter:drop-shadow(0 11px 24px rgba(0,115,220,.44))!important;
+}
+@keyframes tcongsRobotSoftBlink{
+  0%,82%,100%{opacity:1;transform:translateY(0) scale(1);}
+  87%{opacity:.88;transform:translateY(-1px) scale(1.012);}
+  90%{opacity:.96;transform:translateY(0) scale(1.006);}
+  93%{opacity:1;transform:translateY(0) scale(1);}
+}
+@media (max-width:700px){
+  .tcongs-ai-launcher{width:75px!important;min-width:75px!important;height:75px!important;min-height:75px!important}
+}
+@media (max-width:480px){
+  .tcongs-ai-launcher{width:68px!important;min-width:68px!important;height:68px!important;min-height:68px!important}
+}
+
+/* ============================================================
+   CONTACT — GET IN TOUCH ALIGNMENT
+   Compact, consistent icon/text columns; email never breaks badly.
+   ============================================================ */
+@media (max-width:700px){
+  .contact-info-panel{width:100%;max-width:100%;gap:16px!important}
+  .contact-info-panel .info-block{width:100%;max-width:100%;padding:15px 13px!important}
+  .contact-info-panel .info-block-title{margin-bottom:12px!important;padding-bottom:8px!important}
+  .contact-detail-list{width:100%;gap:10px!important;margin:0;padding:0}
+  .contact-detail-list li{
+    width:100%;
+    display:grid!important;
+    grid-template-columns:26px minmax(0,1fr);
+    align-items:start!important;
+    column-gap:8px!important;
+    min-width:0;
+    line-height:1.45!important;
+  }
+  .contact-detail-list li .cd-icon{width:26px;min-width:26px;text-align:center;margin-top:1px;font-size:1rem!important}
+  .contact-detail-list li p,
+  .contact-detail-list li a,
+  .contact-detail-list li>span:not(.cd-icon){
+    min-width:0;
+    max-width:100%;
+    margin:0!important;
+    overflow-wrap:anywhere!important;
+    word-break:normal!important;
+    line-height:1.45!important;
+  }
+  .contact-detail-list li a{display:block}
+
+  .why-grid{width:100%;min-width:0;gap:7px!important}
+  .why-item{min-width:0;align-items:center;padding:8px 8px!important;line-height:1.25}
+  .why-item span:last-child{min-width:0;overflow-wrap:break-word}
+
+  .marketplace-logos-grid{width:100%;min-width:0;gap:7px!important}
+  .contact-marketplace-card{min-width:0!important;width:100%;overflow:hidden}
+  .contact-marketplace-name{min-width:0;overflow-wrap:anywhere}
+
+  .contact-form-panel{width:100%;max-width:100%;min-width:0;padding:15px 13px!important}
+  .form-panel-header{width:100%;min-width:0;margin-bottom:14px!important;padding-bottom:12px!important}
+  .form-panel-header h3,.form-panel-header p{max-width:100%;overflow-wrap:break-word}
+  .consultation-form{width:100%;min-width:0;gap:10px!important}
+  .form-row{width:100%;grid-template-columns:1fr!important;gap:9px!important}
+  .marketplace-grid,.services-grid{width:100%;min-width:0}
+  .checkbox-item{min-width:0;max-width:100%;align-items:flex-start}
+  .checkbox-item .check-label,.checkbox-item .check-logo{min-width:0;overflow-wrap:anywhere;line-height:1.3}
+
+  .contact-bottom-section{width:100%;overflow:hidden}
+  .contact-bottom-grid{width:100%;min-width:0;gap:14px!important}
+  .map-card,.cta-strip{width:100%;min-width:0}
+  .map-card-header{padding:13px 14px!important;gap:8px!important}
+  .map-card-header>div{min-width:0}
+  .map-card-header h4,.map-card-header p{overflow-wrap:break-word}
+  .map-link-btn{margin-left:auto!important}
+  .map-embed-wrap iframe{width:100%!important;max-width:100%!important}
+  .cta-strip{padding:17px 14px!important;gap:12px!important}
+  .cta-strip-content{min-width:0;width:100%}
+  .cta-contact-item{min-width:0;overflow-wrap:anywhere}
+}
+
+/* Extra-small: keep Get In Touch readable without horizontal drift */
+@media (max-width:390px){
+  .contact-detail-list li{grid-template-columns:24px minmax(0,1fr);column-gap:7px!important;font-size:.82rem!important}
+  .contact-detail-list li .cd-icon{width:24px;min-width:24px;font-size:.95rem!important}
+  .contact-detail-list li p{font-size:.82rem!important}
+  .contact-info-panel .info-block{padding:14px 11px!important}
+}
+
+/* FINAL ROBOT + MOBILE ALIGNMENT PASS */
+@media (min-width:901px){.tcongs-ai-launcher{width:107px!important;height:107px!important;min-width:107px!important;min-height:107px!important}}
+@media (max-width:900px){.tcongs-ai-launcher{width:83px!important;height:83px!important;min-width:83px!important;min-height:83px!important}}
+@media (max-width:480px){.tcongs-ai-launcher{width:75px!important;height:75px!important;min-width:75px!important;min-height:75px!important}}
+.tcongs-ai-launcher{animation:tcongsRobotBlink 4.8s ease-in-out infinite!important;transform-origin:center;will-change:transform,opacity,filter}
+@keyframes tcongsRobotBlink{0%,86%,100%{transform:scale(1);opacity:1;filter:brightness(1)}89%{transform:scale(1.015);opacity:.82;filter:brightness(1.08)}92%{transform:scale(1);opacity:1;filter:brightness(1)}}
+.tcongs-ai-launcher:hover{transform:scale(1.055) translateY(-2px)!important}
+@media(max-width:700px){
+html,body{width:100%!important;max-width:100%!important;overflow-x:hidden!important}
+*,*::before,*::after{box-sizing:border-box!important}
+img,svg,video,canvas,iframe{max-width:100%!important}
+input,textarea,select,button{max-width:100%!important;box-sizing:border-box!important}
+.container,.section-container,.page-container,.content-container,.main-container{width:100%!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important;padding-left:16px!important;padding-right:16px!important}
+section{max-width:100%!important}
+a,p,span,small,label,li,td,th{overflow-wrap:anywhere}
+.card,.service-card,.stat-card,.info-card,.marketplace-card,.contact-card{max-width:100%!important;min-width:0!important}
+form{width:100%!important;max-width:100%!important}
+input,textarea,select{width:100%!important}
+.contact-info-item,.contact-detail,.contact-method,.contact-item{display:flex!important;align-items:flex-start!important;width:100%!important}
+.contact-info-item>*,.contact-detail>*,.contact-method>*,.contact-item>*{min-width:0!important}
+.contact-info-item .icon,.contact-detail .icon,.contact-method .icon,.contact-item .icon{flex:0 0 32px!important}
+.contact-info-item a,.contact-detail a,.contact-method a,.contact-item a{overflow-wrap:anywhere!important}
+}
+@media(max-width:390px){.container,.section-container,.page-container,.content-container,.main-container{padding-left:14px!important;padding-right:14px!important}}
