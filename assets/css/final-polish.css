@@ -1262,3 +1262,79 @@ body:has(.hero-section) .hero-cta-row {
   .tcongs-ai-header-logo { width: 38px !important; height: 38px !important; flex-basis: 38px !important; }
   .tcongs-ai-header-logo img { width: 28px !important; height: 28px !important; }
 }
+
+
+/* ============================================================
+   TCONGS CHATBOT ROBOT — LAUNCHER ONLY
+   Replace the TCONGS AI launcher visual with the supplied robot.
+   No chatbot panel/functionality changes.
+   ============================================================ */
+.tcongs-ai-launcher{
+  width:88px !important;
+  min-width:88px !important;
+  height:88px !important;
+  min-height:88px !important;
+  padding:0 !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+  display:block !important;
+  animation:none !important;
+}
+.tcongs-ai-robot{
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  position:relative !important;
+  cursor:pointer !important;
+  filter:drop-shadow(0 8px 16px rgba(0,90,170,.24)) !important;
+  animation:tcongsRobotBlink 3.8s ease-in-out infinite !important;
+  transform-origin:center bottom !important;
+}
+.tcongs-ai-robot img{
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  pointer-events:none !important;
+}
+.tcongs-ai-launcher:hover .tcongs-ai-robot{
+  animation:none !important;
+  transform:translateY(-3px) scale(1.06) !important;
+  filter:drop-shadow(0 10px 22px rgba(0,115,220,.42)) !important;
+}
+.tcongs-ai-launcher-text,
+.tcongs-ai-launcher-dot,
+.tcongs-ai-launcher-icon{
+  display:none !important;
+}
+.tcongs-ai-launcher::after,
+.tcongs-ai-launcher-icon::before,
+.tcongs-ai-launcher-icon::after{
+  content:none !important;
+  display:none !important;
+}
+@keyframes tcongsRobotBlink{
+  0%, 88%, 100%{opacity:1; transform:translateY(0) scale(1);}
+  91%{opacity:.72; transform:translateY(-1px) scale(1.015);}
+  94%{opacity:1; transform:translateY(0) scale(1);}
+}
+@media (max-width:700px){
+  .tcongs-ai-launcher{
+    width:68px !important;
+    min-width:68px !important;
+    height:68px !important;
+    min-height:68px !important;
+  }
+}
+@media (max-width:480px){
+  .tcongs-ai-launcher{
+    width:62px !important;
+    min-width:62px !important;
+    height:62px !important;
+    min-height:62px !important;
+  }
+}

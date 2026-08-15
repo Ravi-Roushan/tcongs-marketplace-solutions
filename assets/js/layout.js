@@ -282,10 +282,8 @@
 
   <!-- ── TCONGS AI CHAT ASSISTANT ───────────────────────── -->
   <div class="tcongs-ai-widget" id="tcongsAiWidget">
-    <button class="tcongs-ai-launcher" id="tcongsAiLauncher" aria-label="Open TCONGS AI" aria-expanded="false">
-      <span class="tcongs-ai-launcher-icon" aria-hidden="true"><img src="assets/images/tcongs-mark.png" alt=""></span>
-      <span class="tcongs-ai-launcher-text">TCONGS AI</span>
-      <span class="tcongs-ai-launcher-dot" aria-hidden="true"></span>
+    <button class="tcongs-ai-launcher" id="tcongsAiLauncher" aria-label="Open TCONGS Chatbot" aria-expanded="false">
+      <span class="tcongs-ai-robot" aria-hidden="true"><img src="assets/images/chatbot.png" alt=""></span>
     </button>
 
     <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="TCONGS AI Assistant" aria-modal="false">
