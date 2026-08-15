@@ -1499,3 +1499,92 @@ input,textarea,select{width:100%!important}
 .contact-info-item a,.contact-detail a,.contact-method a,.contact-item a{overflow-wrap:anywhere!important}
 }
 @media(max-width:390px){.container,.section-container,.page-container,.content-container,.main-container{padding-left:14px!important;padding-right:14px!important}}
+
+/* =========================================================
+   TCONGS ROBOT — FINAL DESKTOP + MOBILE SIZE / LIGHT HOVER
+   ========================================================= */
+
+/* Keep launcher safely above page content */
+.tcongs-ai-launcher {
+  position: relative !important;
+  cursor: pointer !important;
+  overflow: visible !important;
+  transition:
+    transform .28s cubic-bezier(.2,.8,.2,1),
+    filter .28s ease,
+    box-shadow .28s ease !important;
+  filter: drop-shadow(0 6px 14px rgba(0, 126, 255, .20)) !important;
+}
+
+/* Soft light around the robot */
+.tcongs-ai-launcher::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: -5px !important;
+  border-radius: 50% !important;
+  pointer-events: none !important;
+  opacity: .32 !important;
+  box-shadow: 0 0 14px rgba(45, 170, 255, .34) !important;
+  transition: opacity .28s ease, box-shadow .28s ease !important;
+}
+
+/* Desktop */
+@media (min-width: 901px) {
+  .tcongs-ai-launcher {
+    width: 112px !important;
+    height: 112px !important;
+    min-width: 112px !important;
+    min-height: 112px !important;
+  }
+
+  .tcongs-ai-launcher:hover {
+    transform: scale(1.10) translateY(-3px) !important;
+    filter:
+      drop-shadow(0 8px 18px rgba(0, 126, 255, .30))
+      brightness(1.04) !important;
+  }
+
+  .tcongs-ai-launcher:hover::after {
+    opacity: .72 !important;
+    box-shadow:
+      0 0 22px rgba(45, 170, 255, .52),
+      0 0 42px rgba(45, 170, 255, .18) !important;
+  }
+}
+
+/* Tablet / mobile */
+@media (max-width: 900px) {
+  .tcongs-ai-launcher {
+    width: 88px !important;
+    height: 88px !important;
+    min-width: 88px !important;
+    min-height: 88px !important;
+  }
+
+  .tcongs-ai-launcher:active {
+    transform: scale(1.06) !important;
+    filter:
+      drop-shadow(0 7px 17px rgba(0, 126, 255, .28))
+      brightness(1.04) !important;
+  }
+}
+
+/* Small mobile: still clearly visible without covering content */
+@media (max-width: 480px) {
+  .tcongs-ai-launcher {
+    width: 80px !important;
+    height: 80px !important;
+    min-width: 80px !important;
+    min-height: 80px !important;
+  }
+}
+
+/* Very narrow screens */
+@media (max-width: 360px) {
+  .tcongs-ai-launcher {
+    width: 74px !important;
+    height: 74px !important;
+    min-width: 74px !important;
+    min-height: 74px !important;
+  }
+}
