@@ -1,29 +1,8 @@
 <?php
 header("Content-Type: application/json");
-$configuredOrigin = trim((string)getenv('TCONGS_ALLOWED_ORIGIN'));
-$origin = $_SERVER['HTTP_ORIGIN'] ?? '';
-$allowedOrigins = array_filter(array_unique([
-    'https://tcongsmarketplacesolutions.in',
-    'https://www.tcongsmarketplacesolutions.in',
-    'http://localhost',
-    'http://127.0.0.1',
-    $configuredOrigin
-]));
-if ($origin !== '' && !in_array($origin, $allowedOrigins, true)) {
-    http_response_code(403);
-    echo json_encode(["success" => false, "message" => "Origin not allowed."]);
-    exit;
-}
-if ($origin !== '') {
-    header("Access-Control-Allow-Origin: " . $origin);
-    header("Vary: Origin");
-}
+header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: Content-Type");
-header("Access-Control-Allow-Methods: POST, OPTIONS");
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(204);
-    exit;
-}
+header("Access-Control-Allow-Methods: POST");
 
 require_once 'vendor/phpmailer/phpmailer/src/Exception.php';
 require_once 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
@@ -67,17 +46,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $m->isSMTP();
         $m->Host       = 'smtp.gmail.com';
         $m->SMTPAuth   = true;
-        $m->Username   = getenv('TCONGS_SMTP_USER') ?: '';
-        $m->Password   = getenv('TCONGS_SMTP_PASS') ?: '';
+        $m->Username   = 'tcongsmarketplacesolutions@gmail.com';
+        $m->Password   = 'ydfp whtw xvuc luga';
         $m->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $m->Port       = (int)(getenv('TCONGS_SMTP_PORT') ?: 587);
-        if ($m->Username === '' || $m->Password === '') {
-            throw new Exception('SMTP credentials are not configured on the server.');
-        }
+        $m->Port       = 587;
         $m->SMTPOptions = ['ssl' => [
-            'verify_peer'       => true,
-            'verify_peer_name'  => true,
-            'allow_self_signed' => false
+            'verify_peer'       => false,
+            'verify_peer_name'  => false,
+            'allow_self_signed' => true
         ]];
         $m->setFrom('development.tcongsinfotech@gmail.com', 'TCONGS Marketplace Solutions');
         $m->isHTML(true);

@@ -289,7 +289,7 @@
     <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="TCONGS AI Assistant" aria-modal="false">
       <div class="tcongs-ai-header">
         <div class="tcongs-ai-brand">
-          <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-mark.png" alt="TCONGS"></span>
+          <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-chatbot-header-logo-white-final.png" alt="TCONGS"></span>
           <div class="tcongs-ai-title-wrap">
             <strong>TCONGS Assistant</strong>
             <span class="tcongs-ai-online"><i></i> Online</span>
@@ -323,6 +323,12 @@
     if (headerEl) headerEl.innerHTML = HEADER_HTML;
     if (footerEl) footerEl.innerHTML = FOOTER_HTML;
 
+
+    /* GLOBAL CHATBOT HEADER LOGO — latest uploaded asset */
+    document.querySelectorAll('.tcongs-ai-header-logo img').forEach((img) => {
+      img.src = 'assets/images/tcongs-chatbot-header-logo-white-final.png';
+      img.alt = 'TCONGS';
+    });
 
     /* TCONGS CHATBOT LOAD VISIBILITY FIX v1 */
     if (!document.getElementById('tcongsChatbotLoadFix')) {

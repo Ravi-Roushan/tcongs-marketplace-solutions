@@ -1877,3 +1877,324 @@
 @media(max-width:380px) {
   .tcongs-ai-submenu-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   CONTACT POPUP — KEEP CLEAR SPACE FROM VIEWPORT EDGES
+   ============================================================ */
+#popupOverlay {
+  padding: 18px !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.popup-scroll-wrap {
+  width: min(440px, calc(100vw - 36px)) !important;
+  max-width: 440px !important;
+  max-height: calc(100dvh - 36px) !important;
+  overflow: hidden !important;
+}
+
+.popup-card {
+  width: 100% !important;
+  max-height: calc(100dvh - 36px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  -webkit-overflow-scrolling: touch !important;
+  scrollbar-width: thin !important;
+}
+
+@media (max-width: 600px) {
+  #popupOverlay {
+    padding: 12px !important;
+    align-items: center !important;
+  }
+
+  .popup-scroll-wrap {
+    width: min(360px, calc(100vw - 24px)) !important;
+    max-width: 360px !important;
+    max-height: calc(100dvh - 24px) !important;
+  }
+
+  .popup-card {
+    max-height: calc(100dvh - 24px) !important;
+  }
+}
+
+@media (max-height: 720px) {
+  #popupOverlay {
+    padding-block: 12px !important;
+  }
+
+  .popup-scroll-wrap,
+  .popup-card {
+    max-height: calc(100dvh - 24px) !important;
+  }
+}
+
+/* ============================================================
+   CONTACT POPUP — NO SCROLL, COMPACT FIT
+   Keep the complete form visible inside the viewport.
+   ============================================================ */
+#popupOverlay {
+  padding: 10px !important;
+  overflow: hidden !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.popup-scroll-wrap {
+  width: min(400px, calc(100vw - 20px)) !important;
+  max-width: 400px !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.popup-card {
+  width: 100% !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  padding: 18px 20px 14px !important;
+  box-sizing: border-box !important;
+}
+
+.popup-header {
+  margin-bottom: 9px !important;
+}
+.popup-header h2 {
+  font-size: 1.55rem !important;
+  margin-bottom: 3px !important;
+}
+.popup-header p {
+  font-size: .84rem !important;
+  line-height: 1.35 !important;
+  margin-bottom: 0 !important;
+}
+
+.popup-form-group {
+  margin-bottom: 6px !important;
+}
+.popup-form-group label {
+  font-size: .78rem !important;
+  margin-bottom: 3px !important;
+}
+.popup-input,
+.popup-select {
+  height: 42px !important;
+  min-height: 42px !important;
+  font-size: .82rem !important;
+}
+.popup-phone-row {
+  height: 42px !important;
+  min-height: 42px !important;
+}
+.popup-captcha-label {
+  font-size: .78rem !important;
+  margin-bottom: 3px !important;
+}
+
+.popup-actions {
+  margin-top: 7px !important;
+  gap: 5px !important;
+}
+.popup-btn-submit,
+.popup-btn-whatsapp {
+  min-height: 42px !important;
+  height: 42px !important;
+  padding: 8px 12px !important;
+  font-size: .84rem !important;
+}
+.popup-footer-note {
+  font-size: .72rem !important;
+  margin-top: 5px !important;
+}
+
+@media (max-width: 600px) {
+  #popupOverlay {
+    padding: 8px !important;
+  }
+  .popup-scroll-wrap {
+    width: min(360px, calc(100vw - 16px)) !important;
+    max-width: 360px !important;
+  }
+  .popup-card {
+    padding: 15px 14px 11px !important;
+  }
+  .popup-header h2 {
+    font-size: 1.35rem !important;
+  }
+  .popup-header p {
+    font-size: .76rem !important;
+  }
+  .popup-form-group label,
+  .popup-captcha-label {
+    font-size: .72rem !important;
+  }
+  .popup-input,
+  .popup-select,
+  .popup-phone-row {
+    height: 38px !important;
+    min-height: 38px !important;
+  }
+  .popup-btn-submit,
+  .popup-btn-whatsapp {
+    height: 39px !important;
+    min-height: 39px !important;
+    font-size: .78rem !important;
+  }
+}
+
+/* ============================================================
+   CONTACT POPUP — EXTRA COMPACT, ZERO SCROLL, VIEWPORT SAFE
+   ============================================================ */
+#popupOverlay {
+  padding: 12px !important;
+  overflow: hidden !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.popup-scroll-wrap {
+  width: min(390px, calc(100vw - 24px)) !important;
+  max-width: 390px !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.popup-card {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 14px 16px 11px !important;
+  box-sizing: border-box !important;
+  border-radius: 14px !important;
+}
+
+.popup-close {
+  width: 34px !important;
+  height: 34px !important;
+  font-size: 18px !important;
+}
+
+.popup-header {
+  margin-bottom: 7px !important;
+}
+.popup-header h2 {
+  font-size: 1.38rem !important;
+  line-height: 1.1 !important;
+  margin: 0 0 2px !important;
+}
+.popup-header p {
+  font-size: .75rem !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+
+.popup-form-group {
+  margin-bottom: 5px !important;
+}
+.popup-form-group label,
+.popup-captcha-label {
+  font-size: .71rem !important;
+  line-height: 1.15 !important;
+  margin-bottom: 2px !important;
+}
+
+.popup-input,
+.popup-select,
+.popup-phone-row {
+  height: 36px !important;
+  min-height: 36px !important;
+  font-size: .76rem !important;
+}
+
+.popup-actions {
+  margin-top: 5px !important;
+  gap: 4px !important;
+}
+
+.popup-btn-submit,
+.popup-btn-whatsapp {
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 5px 10px !important;
+  font-size: .76rem !important;
+  border-radius: 7px !important;
+}
+
+.popup-footer-note {
+  font-size: .62rem !important;
+  margin-top: 3px !important;
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 600px) {
+  #popupOverlay {
+    padding: 8px !important;
+  }
+
+  .popup-scroll-wrap {
+    width: min(340px, calc(100vw - 16px)) !important;
+    max-width: 340px !important;
+  }
+
+  .popup-card {
+    padding: 11px 12px 8px !important;
+    border-radius: 12px !important;
+  }
+
+  .popup-close {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 16px !important;
+  }
+
+  .popup-header {
+    margin-bottom: 5px !important;
+  }
+
+  .popup-header h2 {
+    font-size: 1.16rem !important;
+  }
+
+  .popup-header p {
+    font-size: .67rem !important;
+  }
+
+  .popup-form-group {
+    margin-bottom: 4px !important;
+  }
+
+  .popup-form-group label,
+  .popup-captcha-label {
+    font-size: .64rem !important;
+  }
+
+  .popup-input,
+  .popup-select,
+  .popup-phone-row {
+    height: 32px !important;
+    min-height: 32px !important;
+    font-size: .68rem !important;
+  }
+
+  .popup-actions {
+    margin-top: 4px !important;
+    gap: 3px !important;
+  }
+
+  .popup-btn-submit,
+  .popup-btn-whatsapp {
+    height: 33px !important;
+    min-height: 33px !important;
+    font-size: .68rem !important;
+  }
+
+  .popup-footer-note {
+    font-size: .56rem !important;
+  }
+}

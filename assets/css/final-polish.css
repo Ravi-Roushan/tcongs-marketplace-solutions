@@ -1940,3 +1940,700 @@ input,textarea,select{width:100%!important}
     right: -3px !important;
   }
 }
+
+/* ============================================================
+   MERGED COMPANY BASE — FINAL DESIGN POLISH
+   Preserve company backend; keep the approved visual design.
+   ============================================================ */
+
+/* Stat cards — values and labels are high-contrast white. */
+.about-stat-card .stat-number-alt,
+.about-stat-card .stat-desc-alt,
+.stats-grid-alt .stat-number-alt,
+.stats-grid-alt .stat-desc-alt,
+.srv-stat-card .srv-stat-num,
+.srv-stat-card .srv-stat-label {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Keep stat-card surfaces deep/clean like the approved design. */
+.about-stat-card,
+.srv-stat-card {
+  background: rgba(255,255,255,.08) !important;
+  border-color: rgba(255,255,255,.14) !important;
+}
+
+/* Navbar actions sit evenly on the same vertical center line. */
+.navbar .container {
+  display: flex !important;
+  align-items: center !important;
+}
+.nav-actions-group {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  flex: 0 0 auto !important;
+}
+.nav-cta-btn,
+.nav-phone-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.nav-phone-badge {
+  flex: 0 0 auto !important;
+}
+
+/* Standard mobile navbar hamburger — exact visual centering. */
+@media screen and (max-width: 1024px) {
+  .navbar .hamburger {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 0 !important;
+    margin-left: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    box-sizing: border-box !important;
+  }
+  .navbar .hamburger span {
+    width: 28px !important;
+    height: 3px !important;
+    margin: 0 !important;
+    flex: 0 0 3px !important;
+    border-radius: 3px !important;
+  }
+}
+
+/* Footer accordion + icon — same dark-blue as the TCONGS logo. */
+.footer-main-grid .footer-column-title.footer-accordion-toggle .footer-accordion-icon,
+.footer-column-title.footer-accordion-toggle .footer-accordion-icon,
+.footer-accordion-toggle > .footer-accordion-icon {
+  color: #0b4f8a !important;
+  -webkit-text-fill-color: #0b4f8a !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  font-weight: 900 !important;
+}
+
+/* Marketplace / platform logo tiles — white background as requested. */
+.srv-mp-card .mp-logo-wrap,
+.srv-mp-card .mp-logo,
+.marketplace-card img,
+.marketplace-logo,
+.about-platform-item img,
+.mega-item-icon {
+  background: #ffffff !important;
+}
+.srv-mp-card .mp-logo,
+.marketplace-card img,
+.marketplace-logo,
+.about-platform-item img {
+  border-radius: 10px !important;
+  padding: 6px !important;
+  box-sizing: border-box !important;
+}
+
+/* Growth page navbar button alignment. */
+.lp-header > .lp-container {
+  align-items: center !important;
+}
+.lp-header-cta,
+.lp-header-wa {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
+}
+
+/* ============================================================
+   FINAL DESIGN-ONLY FIX
+   Stat cards: WHITE surface + TCONGS DARK BLUE text
+   Navbar hamburger: exact center
+   Footer + icon: TCONGS DARK BLUE
+   ============================================================ */
+
+/* About + Services stat cards shown in the supplied screenshots */
+.about-stat-card,
+.srv-stat-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(40,85,138,.18) !important;
+  color: #0b4f8a !important;
+  box-shadow: 0 8px 24px rgba(13,49,82,.08) !important;
+}
+
+.about-stat-card .stat-number-alt,
+.about-stat-card .stat-desc-alt,
+.srv-stat-card .srv-stat-num,
+.srv-stat-card .srv-stat-label {
+  color: #0b4f8a !important;
+  -webkit-text-fill-color: #0b4f8a !important;
+  opacity: 1 !important;
+}
+
+.about-stat-card:hover,
+.srv-stat-card:hover {
+  border-color: rgba(40,85,138,.30) !important;
+  background: #ffffff !important;
+}
+
+/* Main site's mobile hamburger: exact geometric centering */
+@media screen and (max-width: 1024px) {
+  .navbar .container {
+    display: flex !important;
+    align-items: center !important;
+  }
+  .navbar .hamburger {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 0 !important;
+    margin: 0 0 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    box-sizing: border-box !important;
+    line-height: 0 !important;
+  }
+  .navbar .hamburger span {
+    width: 28px !important;
+    height: 3px !important;
+    min-width: 28px !important;
+    min-height: 3px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    flex: 0 0 3px !important;
+    border-radius: 3px !important;
+  }
+}
+
+/* Footer accordion + icon — same dark blue as TCONGS company text/logo */
+.footer-main-grid .footer-column-title.footer-accordion-toggle .footer-accordion-icon,
+.footer-column-title.footer-accordion-toggle .footer-accordion-icon,
+.footer-accordion-toggle > .footer-accordion-icon {
+  color: #0b4f8a !important;
+  -webkit-text-fill-color: #0b4f8a !important;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  font-weight: 900 !important;
+}
+
+/* ============================================================
+   MOBILE NAV CLEAN FINAL
+   Hide desktop CTA/phone actions on mobile; keep only hamburger.
+   ============================================================ */
+@media screen and (max-width: 1024px) {
+  .navbar .nav-actions-group {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .navbar .hamburger {
+    display: flex !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    margin-left: auto !important;
+    padding: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    box-sizing: border-box !important;
+  }
+
+  .navbar .hamburger span {
+    width: 28px !important;
+    height: 3px !important;
+    margin: 0 !important;
+    flex: 0 0 3px !important;
+    border-radius: 3px !important;
+  }
+}
+
+/* ============================================================
+   MARKETPLACE GROWTH MOBILE HEADER
+   Hide desktop contact/WhatsApp buttons; keep hamburger only.
+   ============================================================ */
+@media screen and (max-width: 768px) {
+  .lp-header {
+    height: 64px !important;
+    min-height: 64px !important;
+  }
+
+  .lp-header > .lp-container {
+    height: 64px !important;
+    min-height: 64px !important;
+    width: calc(100% - 24px) !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+
+  .lp-header-logo {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .lp-header-logo img {
+    height: 44px !important;
+    width: auto !important;
+    max-width: 180px !important;
+    object-fit: contain !important;
+  }
+
+  .lp-header .lp-header-cta,
+  .lp-header .lp-header-wa {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .lp-header .lp-hamburger {
+    display: flex !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    margin: 0 0 0 auto !important;
+    padding: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    box-sizing: border-box !important;
+  }
+
+  .lp-header .lp-hamburger span {
+    width: 28px !important;
+    height: 3px !important;
+    min-width: 28px !important;
+    margin: 0 !important;
+    flex: 0 0 3px !important;
+    border-radius: 3px !important;
+  }
+}
+
+/* ============================================================
+   CHATBOT — FINAL VIEWPORT-SAFE POSITION
+   Keep comfortable top/right margins when the panel is open.
+   ============================================================ */
+
+/* Launcher */
+.tcongs-ai-widget {
+  position: fixed !important;
+  right: 24px !important;
+  bottom: 24px !important;
+  top: auto !important;
+  left: auto !important;
+  z-index: 99999 !important;
+}
+
+/* Open panel — never touch viewport edges */
+.tcongs-ai-panel {
+  position: fixed !important;
+  top: auto !important;
+  left: auto !important;
+  right: 24px !important;
+  bottom: 108px !important;
+  width: 360px !important;
+  max-width: calc(100vw - 48px) !important;
+  height: min(590px, calc(100dvh - 148px)) !important;
+  max-height: calc(100dvh - 148px) !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+}
+
+/* Keep the top header comfortably away from the viewport top. */
+.tcongs-ai-header {
+  min-height: 74px !important;
+  box-sizing: border-box !important;
+  padding: 11px 13px !important;
+}
+
+/* Company T logo inside the assistant header */
+.tcongs-ai-header-logo {
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  border-radius: 11px !important;
+}
+
+.tcongs-ai-header-logo img {
+  width: 34px !important;
+  height: 34px !important;
+  object-fit: contain !important;
+}
+
+/* Mobile / narrow screens */
+@media (max-width: 600px) {
+  .tcongs-ai-widget {
+    right: 12px !important;
+    bottom: 12px !important;
+  }
+
+  .tcongs-ai-panel {
+    right: 12px !important;
+    bottom: 94px !important;
+    width: calc(100vw - 24px) !important;
+    max-width: calc(100vw - 24px) !important;
+    height: min(560px, calc(100dvh - 118px)) !important;
+    max-height: calc(100dvh - 118px) !important;
+    border-radius: 16px !important;
+  }
+
+  .tcongs-ai-header {
+    min-height: 70px !important;
+  }
+
+  .tcongs-ai-header-logo {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+  }
+
+  .tcongs-ai-header-logo img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .tcongs-ai-widget {
+    right: 10px !important;
+    bottom: 10px !important;
+  }
+
+  .tcongs-ai-panel {
+    right: 10px !important;
+    bottom: 88px !important;
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+    height: min(530px, calc(100dvh - 108px)) !important;
+    max-height: calc(100dvh - 108px) !important;
+  }
+}
+
+/* FINAL CHATBOT HEADER LOGO — uploaded company mark */
+.tcongs-ai-header-logo {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  padding: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #ffffff !important;
+  border-radius: 11px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+.tcongs-ai-header-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+@media (max-width: 600px) {
+  .tcongs-ai-header-logo {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+  }
+}
+
+/* ============================================================
+   FINAL STATS + MOBILE CHATBOT COMPACT FIX
+   ============================================================ */
+
+/* Dark stat cards: white, high-contrast numbers and labels. */
+.about-stat-card .stat-number-alt,
+.about-stat-card .stat-desc-alt,
+.stats-grid-alt .stat-number-alt,
+.stats-grid-alt .stat-desc-alt,
+.srv-stat-card .srv-stat-num,
+.srv-stat-card .srv-stat-label {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Keep the stat cards visually dark like the supplied screenshot. */
+.about-stat-card,
+.srv-stat-card {
+  color: #ffffff !important;
+}
+
+/* Mobile chatbot: narrower panel so it never dominates the screen. */
+@media (max-width: 600px) {
+  .tcongs-ai-panel {
+    width: 276px !important;
+    max-width: calc(100vw - 24px) !important;
+    right: 12px !important;
+    bottom: 94px !important;
+    height: min(540px, calc(100dvh - 118px)) !important;
+    max-height: calc(100dvh - 118px) !important;
+    border-radius: 16px !important;
+  }
+
+  .tcongs-ai-messages {
+    overflow-x: hidden !important;
+  }
+
+  .tcongs-ai-message {
+    max-width: 84% !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .tcongs-ai-panel {
+    width: 260px !important;
+    max-width: calc(100vw - 20px) !important;
+    right: 10px !important;
+    bottom: 88px !important;
+    height: min(515px, calc(100dvh - 108px)) !important;
+    max-height: calc(100dvh - 108px) !important;
+  }
+
+  .tcongs-ai-message {
+    max-width: 82% !important;
+  }
+}
+
+/* ============================================================
+   STATS CARDS — WHITE BACKGROUND + TCONGS DARK-BLUE TEXT
+   ============================================================ */
+.about-stat-card,
+.srv-stat-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(40,85,138,.18) !important;
+  color: #0b4f8a !important;
+  box-shadow: 0 8px 24px rgba(13,49,82,.08) !important;
+}
+
+.about-stat-card .stat-number-alt,
+.about-stat-card .stat-desc-alt,
+.stats-grid-alt .stat-number-alt,
+.stats-grid-alt .stat-desc-alt,
+.srv-stat-card .srv-stat-num,
+.srv-stat-card .srv-stat-label {
+  color: #0b4f8a !important;
+  -webkit-text-fill-color: #0b4f8a !important;
+  opacity: 1 !important;
+}
+
+.about-stat-card:hover,
+.srv-stat-card:hover {
+  background: #ffffff !important;
+  border-color: rgba(40,85,138,.30) !important;
+}
+
+/* ============================================================
+   SERVICES — WHY BRANDS STATS
+   WHITE CARD + TCONGS DARK BLUE TEXT
+   ============================================================ */
+.srv-why-stats .srv-why-stat {
+  background: #ffffff !important;
+  border: 1px solid rgba(40,85,138,.18) !important;
+  color: #0b4f8a !important;
+  box-shadow: 0 8px 24px rgba(13,49,82,.08) !important;
+}
+
+.srv-why-stats .srv-why-stat .srv-why-num,
+.srv-why-stats .srv-why-stat .srv-why-lbl {
+  color: #0b4f8a !important;
+  -webkit-text-fill-color: #0b4f8a !important;
+  opacity: 1 !important;
+}
+
+.srv-why-stats .srv-why-stat:hover {
+  background: #ffffff !important;
+  border-color: rgba(40,85,138,.30) !important;
+}
+
+/* FINAL CHATBOT HEADER LOGO — latest uploaded image, no masking/filtering */
+.tcongs-ai-header-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+/* ============================================================
+   CHATBOT HEADER — EXACT UPLOADED COMPANY LOGO
+   White logo tile, no crop, no tint, no filter.
+   ============================================================ */
+.tcongs-ai-header-logo {
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  min-height: 46px !important;
+  padding: 2px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(11,79,138,.12) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.tcongs-ai-header-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  background: #ffffff !important;
+  border-radius: 9px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (max-width: 600px) {
+  .tcongs-ai-header-logo {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+  }
+}
+
+/* ============================================================
+   CHATBOT POPUP — SMALLER / COMPACT FINAL
+   ============================================================ */
+.tcongs-ai-panel {
+  width: 320px !important;
+  max-width: calc(100vw - 32px) !important;
+  height: min(500px, calc(100dvh - 130px)) !important;
+  max-height: calc(100dvh - 130px) !important;
+  border-radius: 16px !important;
+}
+
+.tcongs-ai-header {
+  min-height: 64px !important;
+  padding: 9px 11px !important;
+}
+
+.tcongs-ai-header-logo {
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
+}
+
+.tcongs-ai-title-wrap strong {
+  font-size: 1.05rem !important;
+}
+
+.tcongs-ai-online {
+  font-size: .68rem !important;
+  padding: 4px 8px !important;
+}
+
+.tcongs-ai-messages {
+  padding: 10px !important;
+}
+
+.tcongs-ai-message {
+  font-size: .88rem !important;
+  line-height: 1.45 !important;
+  padding: 10px 12px !important;
+}
+
+.tcongs-ai-quick {
+  gap: 5px !important;
+  padding: 7px 8px !important;
+}
+
+.tcongs-ai-quick button {
+  padding: 7px 10px !important;
+  font-size: .75rem !important;
+}
+
+.tcongs-ai-form {
+  gap: 6px !important;
+  padding: 8px 9px !important;
+}
+
+.tcongs-ai-form input {
+  height: 44px !important;
+  font-size: .92rem !important;
+}
+
+.tcongs-ai-form button {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+@media (max-width: 600px) {
+  .tcongs-ai-panel {
+    width: 272px !important;
+    max-width: calc(100vw - 24px) !important;
+    height: min(500px, calc(100dvh - 112px)) !important;
+    max-height: calc(100dvh - 112px) !important;
+    right: 12px !important;
+    bottom: 92px !important;
+  }
+
+  .tcongs-ai-header {
+    min-height: 60px !important;
+    padding: 8px 10px !important;
+  }
+
+  .tcongs-ai-title-wrap strong {
+    font-size: .96rem !important;
+  }
+
+  .tcongs-ai-message {
+    font-size: .82rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .tcongs-ai-panel {
+    width: 258px !important;
+    max-width: calc(100vw - 20px) !important;
+    right: 10px !important;
+    bottom: 86px !important;
+    height: min(480px, calc(100dvh - 104px)) !important;
+    max-height: calc(100dvh - 104px) !important;
+  }
+}
