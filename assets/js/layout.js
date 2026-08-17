@@ -484,8 +484,82 @@
       sendAiMessage(value);
     });
 
+    /* ── Quick options: bot replies FIRST, then contextual options ── */
+    function addAiOptions(title, items) {
+      if (!aiMessages) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'tcongs-ai-submenu';
+      wrap.innerHTML = '<div class="tcongs-ai-submenu-title"></div><div class="tcongs-ai-submenu-grid"></div>';
+      wrap.querySelector('.tcongs-ai-submenu-title').textContent = title;
+      const grid = wrap.querySelector('.tcongs-ai-submenu-grid');
+
+      items.forEach(item => {
+        const a = document.createElement('a');
+        a.href = item.href;
+        a.textContent = item.label;
+        if (item.external) {
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+        }
+        grid.appendChild(a);
+      });
+
+      aiMessages.appendChild(wrap);
+      aiMessages.scrollTop = aiMessages.scrollHeight;
+    }
+
+    function showContextOptions(question) {
+      const q = String(question || '').toLowerCase();
+
+      if (q.includes('service')) {
+        addAiOptions('Choose a service', [
+          {label:'Account Management', href:'services.html#account-management'},
+          {label:'Product Listing & Catalog', href:'services.html#catalog-management'},
+          {label:'Advertising / PPC', href:'services.html#advertising-ppc'},
+          {label:'Account Health', href:'services.html#account-health'},
+          {label:'Marketplace Growth', href:'marketplace-growth.html'}
+        ]);
+        return;
+      }
+
+      if (q.includes('marketplace')) {
+        addAiOptions('Choose a marketplace', [
+          {label:'Amazon', href:'amazon.html'},
+          {label:'Flipkart', href:'flipkart.html'},
+          {label:'Meesho', href:'meesho.html'},
+          {label:'Myntra', href:'myntra.html'},
+          {label:'AJIO', href:'ajio.html'},
+          {label:'Nykaa', href:'nykaa.html'},
+          {label:'JioMart', href:'jiomart.html'},
+          {label:'Tata CLiQ', href:'tatacliq.html'},
+          {label:'Snapdeal', href:'snapdeal.html'},
+          {label:'FirstCry', href:'firstcry.html'}
+        ]);
+        return;
+      }
+
+      if (q.includes('contact')) {
+        addAiOptions('How would you like to contact TCONGS?', [
+          {label:'📞 Call TCONGS', href:'tel:+919321087099'},
+          {label:'✉️ Email TCONGS', href:'mailto:tcongsmarketplacesolutions@gmail.com'},
+          {label:'📍 View Location', href:'https://www.google.com/maps/search/?api=1&query=TCONGS+Marketplace+Solutions', external:true},
+          {label:'Get Free Consultation', href:'contact.html#contact-form'}
+        ]);
+      }
+    }
+
     aiQuick?.querySelectorAll('button').forEach(btn => {
-      btn.addEventListener('click', () => sendAiMessage(btn.dataset.question || ''));
+      btn.addEventListener('click', () => {
+        const question = btn.dataset.question || '';
+        addAiMessage(question, 'user');
+        if (aiQuick) aiQuick.style.display = 'none';
+
+        const reply = aiReply(question);
+        window.setTimeout(() => {
+          addAiMessage(reply, 'bot');
+          window.setTimeout(() => showContextOptions(question), 420);
+        }, 280);
+      });
     });
 
     /* Re-wire popup open buttons injected via header */
@@ -537,3 +611,5 @@
   }
 
 })();
+
+

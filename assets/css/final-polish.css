@@ -1588,3 +1588,170 @@ input,textarea,select{width:100%!important}
     min-height: 74px !important;
   }
 }
+
+/* ============================================================
+   TCONGS CHATBOT — FINAL VISUAL CLEANUP
+   ============================================================ */
+
+/* ROBOT ONLY: absolutely no white/light rectangle behind it */
+.tcongs-ai-widget,
+.tcongs-ai-launcher,
+.tcongs-ai-launcher:hover,
+.tcongs-ai-launcher:focus,
+.tcongs-ai-launcher:active,
+.tcongs-ai-robot,
+.tcongs-ai-robot img {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.tcongs-ai-launcher {
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  padding: 0 !important;
+}
+
+.tcongs-ai-robot {
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.tcongs-ai-robot img {
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Remove every decorative launcher pseudo-element */
+.tcongs-ai-launcher::before,
+.tcongs-ai-launcher::after,
+.tcongs-ai-robot::before,
+.tcongs-ai-robot::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Hover belongs to the robot image only — no light background */
+.tcongs-ai-launcher:hover .tcongs-ai-robot img {
+  transform: scale(1.055) translateY(-2px) !important;
+  filter: drop-shadow(0 10px 22px rgba(0,115,220,.38)) brightness(1.03) !important;
+  transition: transform .22s ease, filter .22s ease !important;
+}
+
+/* Compact chatbot window */
+.tcongs-ai-panel {
+  width: 280px !important;
+  max-width: calc(100vw - 24px) !important;
+  overflow: hidden !important;
+}
+
+/* Keep messages compact too */
+.tcongs-ai-message {
+  max-width: 80% !important;
+  overflow-wrap: anywhere !important;
+}
+
+/* Compact quick options */
+.tcongs-ai-quick {
+  max-width: 100% !important;
+  gap: 5px !important;
+  padding: 8px 9px !important;
+}
+
+.tcongs-ai-quick button {
+  font-size: .68rem !important;
+  padding: 6px 9px !important;
+}
+
+/* Contextual options stay inside the smaller panel */
+.tcongs-ai-submenu {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.tcongs-ai-submenu-grid a {
+  min-width: 0 !important;
+  overflow-wrap: anywhere !important;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .tcongs-ai-panel {
+    width: 270px !important;
+    max-width: calc(100vw - 18px) !important;
+  }
+
+  .tcongs-ai-message {
+    max-width: 84% !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .tcongs-ai-panel {
+    width: 264px !important;
+    max-width: calc(100vw - 14px) !important;
+  }
+
+  .tcongs-ai-message {
+    max-width: 86% !important;
+  }
+}
+
+/* ============================================================
+   CHATBOT LATEST FIX — ROBOT TRANSPARENT + SLIGHTLY WIDER CHAT
+   ============================================================ */
+.tcongs-ai-widget,
+.tcongs-ai-launcher,
+.tcongs-ai-launcher:hover,
+.tcongs-ai-launcher:focus,
+.tcongs-ai-launcher:focus-visible,
+.tcongs-ai-launcher:active,
+.tcongs-ai-launcher::before,
+.tcongs-ai-launcher::after,
+.tcongs-ai-launcher-icon,
+.tcongs-ai-launcher-icon::before,
+.tcongs-ai-launcher-icon::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.tcongs-ai-launcher {
+  border: 0 !important;
+  outline: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+/* Keep hover on the robot only; no white/colored rectangle. */
+.tcongs-ai-launcher:hover .tcongs-ai-launcher-icon,
+.tcongs-ai-launcher:hover img {
+  transform: scale(1.05) translateY(-1px) !important;
+  filter: drop-shadow(0 7px 16px rgba(0,115,220,.34)) !important;
+  transition: transform .22s ease, filter .22s ease !important;
+}
+
+/* Chat window: only a small width increase from the current compact size. */
+.tcongs-ai-panel {
+  width: min(300px, calc(100vw - 24px)) !important;
+  max-width: calc(100vw - 24px) !important;
+}
+
+@media (max-width: 600px) {
+  .tcongs-ai-panel {
+    width: min(290px, calc(100vw - 18px)) !important;
+    max-width: calc(100vw - 18px) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .tcongs-ai-panel {
+    width: calc(100vw - 14px) !important;
+    max-width: calc(100vw - 14px) !important;
+  }
+}
