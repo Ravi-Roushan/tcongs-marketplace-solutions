@@ -1755,3 +1755,188 @@ input,textarea,select{width:100%!important}
     max-width: calc(100vw - 14px) !important;
   }
 }
+
+/* ============================================================
+   CONTACT HERO — FULL WIDTH, CENTERED AND BALANCED
+   ============================================================ */
+.contact-hero-content {
+  width:100% !important;
+  max-width:1180px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  box-sizing:border-box !important;
+  padding-left:24px !important;
+  padding-right:24px !important;
+  text-align:center !important;
+}
+.contact-hero-content .section-tag {
+  justify-content:center !important;
+  text-align:center !important;
+}
+.contact-hero-content h1 {
+  width:100% !important;
+  max-width:1080px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+  line-height:1.08 !important;
+  white-space:normal !important;
+}
+.contact-hero-sub {
+  width:100% !important;
+  max-width:900px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  text-align:center !important;
+}
+.contact-hero-badges {
+  width:100% !important;
+  max-width:1100px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  justify-content:center !important;
+  align-items:center !important;
+  gap:12px !important;
+}
+.hero-badge-item {
+  white-space:nowrap;
+  justify-content:center !important;
+}
+@media (max-width:768px) {
+  .contact-hero-content {
+    max-width:100% !important;
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+  .contact-hero-content h1 {
+    max-width:100% !important;
+    font-size:clamp(2rem,9vw,3rem) !important;
+  }
+  .contact-hero-sub { max-width:100% !important; }
+  .contact-hero-badges { max-width:100% !important; }
+  .hero-badge-item {
+    white-space:normal;
+    flex:1 1 calc(50% - 12px);
+    min-width:145px;
+  }
+}
+
+/* ============================================================
+   FINAL ALIGNMENT PASS — CONTACT + GROWTH NAV + CHATBOT
+   ============================================================ */
+
+/* CONTACT: wider, symmetric and centered */
+.contact-hero-content {
+  width: min(100% - 48px, 1450px) !important;
+  max-width: 1450px !important;
+  margin-inline: auto !important;
+  padding-inline: 24px !important;
+}
+.contact-hero-content h1 {
+  width: 100% !important;
+  max-width: 1320px !important;
+  margin-inline: auto !important;
+}
+.contact-hero-sub {
+  width: 100% !important;
+  max-width: 1080px !important;
+  margin-inline: auto !important;
+}
+.contact-hero-badges {
+  width: 100% !important;
+  max-width: 1280px !important;
+  margin-inline: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+}
+@media (max-width: 768px) {
+  .contact-hero-content {
+    width: calc(100% - 28px) !important;
+    max-width: none !important;
+    padding-inline: 14px !important;
+  }
+  .contact-hero-content h1,
+  .contact-hero-sub,
+  .contact-hero-badges {
+    max-width: 100% !important;
+  }
+}
+
+/* CHATBOT: stable desktop/mobile placement; robot stays clean with no box */
+.tcongs-ai-widget {
+  position: fixed !important;
+  right: 22px !important;
+  bottom: 24px !important;
+  z-index: 99999 !important;
+  width: auto !important;
+  max-width: calc(100vw - 24px) !important;
+}
+.tcongs-ai-launcher {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 96px !important;
+  height: 96px !important;
+  min-width: 96px !important;
+  min-height: 96px !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+.tcongs-ai-robot,
+.tcongs-ai-robot img {
+  display: block !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.tcongs-ai-robot img {
+  width: 96px !important;
+  height: 96px !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+  transform: scale(1.03) !important;
+  filter: drop-shadow(0 8px 18px rgba(0,115,220,.30)) !important;
+  transition: transform .22s ease, filter .22s ease !important;
+}
+.tcongs-ai-launcher:hover .tcongs-ai-robot img,
+.tcongs-ai-launcher:focus-visible .tcongs-ai-robot img {
+  transform: scale(1.08) translateY(-2px) !important;
+  filter: drop-shadow(0 0 13px rgba(45,170,255,.48)) drop-shadow(0 8px 18px rgba(0,115,220,.30)) !important;
+}
+.tcongs-ai-panel {
+  width: 310px !important;
+  max-width: min(310px, calc(100vw - 24px)) !important;
+  right: 0 !important;
+  bottom: 108px !important;
+  margin: 0 !important;
+}
+@media (max-width: 600px) {
+  .tcongs-ai-widget {
+    right: 12px !important;
+    bottom: 18px !important;
+  }
+  .tcongs-ai-launcher,
+  .tcongs-ai-robot img {
+    width: 86px !important;
+    height: 86px !important;
+    min-width: 86px !important;
+    min-height: 86px !important;
+  }
+  .tcongs-ai-panel {
+    width: min(300px, calc(100vw - 24px)) !important;
+    max-width: calc(100vw - 24px) !important;
+    right: 0 !important;
+    bottom: 96px !important;
+  }
+}
+@media (max-width: 380px) {
+  .tcongs-ai-panel {
+    width: calc(100vw - 18px) !important;
+    max-width: calc(100vw - 18px) !important;
+    right: -3px !important;
+  }
+}

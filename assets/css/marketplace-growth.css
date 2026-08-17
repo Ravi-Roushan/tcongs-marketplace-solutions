@@ -1130,3 +1130,143 @@
     padding: 24px 16px;
   }
 }
+
+/* ============================================================
+   MARKETPLACE GROWTH — FINAL NAV / FOOTER / CHATBOT FIX
+   ============================================================ */
+.lp-float-wa { display:none !important; animation:none !important; }
+
+.lp-header { gap:14px; }
+.lp-header .lp-header-cta { margin-left:auto; }
+.lp-header-wa {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  min-height:40px;
+  padding:9px 14px;
+  border-radius:8px;
+  background:#25d366;
+  color:#fff !important;
+  text-decoration:none !important;
+  font-size:.88rem;
+  font-weight:750;
+  box-shadow:0 5px 16px rgba(37,211,102,.20);
+  transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.lp-header-wa:hover {
+  background:#20ba5a;
+  color:#fff !important;
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(37,211,102,.28);
+}
+.lp-btn-whatsapp {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:#25d366;
+  color:#fff !important;
+  font-weight:700;
+  padding:16px 28px;
+  border-radius:8px;
+  border:2px solid #25d366;
+  font-size:1rem;
+  cursor:pointer;
+  transition:var(--transition-lp);
+  text-decoration:none !important;
+  box-shadow:0 4px 14px rgba(37,211,102,.20);
+}
+.lp-btn-whatsapp:hover {
+  background:#20ba5a;
+  border-color:#20ba5a;
+  color:#fff !important;
+  transform:translateY(-2px);
+  box-shadow:0 7px 18px rgba(37,211,102,.28);
+}
+.lp-hero-actions .lp-btn-whatsapp { flex:1; min-width:220px; }
+
+#site-footer { display:block; width:100%; }
+#site-footer .footer-corporate { width:100%; display:block; }
+#site-footer .footer-corporate > .container {
+  width:100%; max-width:1240px; margin:0 auto;
+  padding-left:20px; padding-right:20px;
+}
+#site-footer .footer-corporate ul { list-style:none; padding:0; margin:0; }
+
+@media (max-width:768px) {
+  .lp-header-wa { display:none; }
+  .lp-hero-actions { width:100%; }
+  .lp-hero-actions .lp-btn-whatsapp { width:100%; min-width:0; }
+}
+
+/* ============================================================
+   GROWTH NAVBAR — FINAL BALANCED ARRANGEMENT
+   ============================================================ */
+.lp-header {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.lp-header > .lp-container {
+  width: min(100% - 40px, 1320px) !important;
+  max-width: 1320px !important;
+  margin-inline: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+}
+.lp-header-logo {
+  flex: 0 0 auto !important;
+}
+.lp-header-logo img {
+  width: auto !important;
+  height: 50px !important;
+  max-width: 205px !important;
+  object-fit: contain !important;
+}
+.lp-header-cta {
+  flex: 0 0 auto !important;
+  margin-left: auto !important;
+  min-width: 210px !important;
+}
+.lp-header-wa {
+  flex: 0 0 auto !important;
+  min-width: 118px !important;
+  white-space: nowrap !important;
+}
+.lp-hamburger {
+  flex: 0 0 auto !important;
+}
+.lp-mobile-nav {
+  box-sizing: border-box !important;
+}
+@media (max-width: 900px) {
+  .lp-header > .lp-container {
+    width: calc(100% - 28px) !important;
+    gap: 10px !important;
+  }
+  .lp-header-cta {
+    min-width: 0 !important;
+  }
+  .lp-header-wa {
+    min-width: 105px !important;
+    padding-inline: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .lp-header > .lp-container {
+    width: calc(100% - 24px) !important;
+    justify-content: space-between !important;
+  }
+  .lp-header-cta,
+  .lp-header-wa {
+    display: none !important;
+  }
+  .lp-header-logo img {
+    height: 44px !important;
+    max-width: 180px !important;
+  }
+  .lp-hamburger {
+    margin-left: auto !important;
+  }
+}
