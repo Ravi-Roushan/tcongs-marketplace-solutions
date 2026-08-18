@@ -341,8 +341,8 @@ img, video { height:auto; }
   .footer-legal-note { margin-top:4px !important; }
 
   /* Keep the floating assistant clear of the last footer controls */
-  .footer-copyright-strip { padding-bottom:78px !important; }
-  .tcongs-ai-widget { bottom:14px !important; }
+  .footer-copyright-strip { padding-bottom:24px !important; }
+  .tcongs-ai-widget { bottom:8px !important; }
   .tcongs-ai-panel {
     width:min(360px, calc(100vw - 20px)) !important;
     right:10px !important;
@@ -2635,5 +2635,63 @@ input,textarea,select{width:100%!important}
     bottom: 86px !important;
     height: min(480px, calc(100dvh - 104px)) !important;
     max-height: calc(100dvh - 104px) !important;
+  }
+}
+
+
+/* ============================================================
+   MOBILE FOOTER — COMPACT ACCORDION SPACING
+   Keep the white trust box; only reduce excess vertical space.
+   ============================================================ */
+@media (max-width:700px) {
+  .footer-main-grid {
+    display:flex !important;
+    flex-direction:column !important;
+    gap:0 !important;
+    padding-bottom:8px !important;
+  }
+
+  .footer-brand-column {
+    padding:0 8px 10px !important;
+  }
+
+  .footer-links-column {
+    width:100% !important;
+    border-top:1px solid rgba(255,255,255,.09) !important;
+    padding:0 !important;
+    margin:0 !important;
+  }
+
+  .footer-accordion-toggle {
+    min-height:68px !important;
+    height:68px !important;
+    padding:0 2px !important;
+    margin:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    line-height:1.2 !important;
+  }
+
+  .footer-list-items,
+  .footer-contact-details {
+    margin:0 !important;
+    padding:0 2px 10px !important;
+  }
+
+  .footer-legal-note {
+    margin-top:0 !important;
+    padding:10px 0 12px !important;
+  }
+}
+
+@media (max-width:480px) {
+  .footer-accordion-toggle {
+    min-height:64px !important;
+    height:64px !important;
+  }
+
+  .footer-main-grid {
+    padding-bottom:6px !important;
   }
 }

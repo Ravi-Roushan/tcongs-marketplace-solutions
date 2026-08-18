@@ -195,9 +195,7 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="index.html#comp-services">Marketplaces</a></li>
-            <li><a href="index.html#blog">Blog</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="careers.html">Careers</a></li>
           </ul>
         </div>
 
