@@ -545,7 +545,7 @@
       if (q.includes('contact')) {
         addAiOptions('How would you like to contact TCONGS?', [
           {label:'📞 Call TCONGS', href:'tel:+919321087099'},
-          {label:'✉️ Email TCONGS', href:'mailto:tcongsmarketplacesolutions@gmail.com'},
+          {label:'✉️ Email TCONGS', href:'https://mail.google.com/mail/?view=cm&fs=1&to=tcongsmarketplacesolutions@gmail.com&su=Enquiry%20for%20TCONGS%20Marketplace%20Solutions', external:true},
           {label:'📍 View Location', href:'https://www.google.com/maps/search/?api=1&query=TCONGS+Marketplace+Solutions', external:true},
           {label:'Get Free Consultation', href:'contact.html#contact-form'}
         ]);
