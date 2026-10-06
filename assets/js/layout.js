@@ -286,7 +286,7 @@
     <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="TCONGS AI Assistant" aria-modal="false">
       <div class="tcongs-ai-header">
         <div class="tcongs-ai-brand">
-          <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-assistant-logo-white.webp" alt="TCONGS"></span>
+          <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-favicon-round.webp" alt="TCONGS"></span>
           <div class="tcongs-ai-title-wrap">
             <strong>Tcongs Assistant</strong>
             <span class="tcongs-ai-online"><i></i> <span id="tcongsAiStatus">Online</span></span>
@@ -329,7 +329,7 @@ How can I help you today?</div>
       </div>
 
       <form class="tcongs-ai-form" id="tcongsAiForm">
-        <a class="tcongs-ai-whatsapp" id="tcongsAiWhatsapp" href="https://wa.me/919321087099" target="_blank" rel="noopener" aria-label="Chat with TCONGS on WhatsApp">
+        <a class="tcongs-ai-whatsapp" href="https://wa.me/919321087099?text=Hi%20TCONGS%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Message TCONGS on WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3.5 20l1.1-4.1A8.5 8.5 0 1 1 20.5 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.4 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-2.6-.8-4.6-2.8-5.7-5.1-5.7-1.1-.3-1.2 0-1.6Z" fill="currentColor"/></svg>
         </a>
         <input id="tcongsAiInput" type="text" autocomplete="off" placeholder="Message Tcongs Assistant" aria-label="Type your question">
@@ -351,7 +351,7 @@ How can I help you today?</div>
 
     /* GLOBAL CHATBOT HEADER LOGO — latest uploaded asset */
     document.querySelectorAll('.tcongs-ai-header-logo img').forEach((img) => {
-      img.src = 'assets/images/tcongs-assistant-logo-white.webp';
+      img.src = 'assets/images/tcongs-mark.webp';
       img.alt = 'TCONGS';
     });
 
@@ -453,7 +453,7 @@ How can I help you today?</div>
         <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="Tcongs Assistant" aria-modal="false">
           <div class="tcongs-ai-header">
             <div class="tcongs-ai-brand">
-              <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-assistant-logo-white.webp" alt="TCONGS"></span>
+              <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-favicon-round.webp" alt="TCONGS"></span>
               <div class="tcongs-ai-title-wrap"><strong>Tcongs Assistant</strong><span class="tcongs-ai-online"><i></i> <span id="tcongsAiStatus">Online</span></span></div>
             </div>
             <div class="tcongs-ai-header-actions">
@@ -465,7 +465,7 @@ How can I help you today?</div>
 I can help you explore our services, marketplace solutions, pricing, or connect you with our team.
 How can I help you today?</div></div>
           <div class="tcongs-ai-quick" id="tcongsAiQuick"><button type="button" data-question="services">Services</button><button type="button" data-question="marketplace">Marketplace</button><button type="button" data-question="price">Pricing</button><button type="button" data-question="contact">Contact</button></div>
-          <form class="tcongs-ai-form" id="tcongsAiForm"><a class="tcongs-ai-whatsapp" id="tcongsAiWhatsapp" href="https://wa.me/919321087099" target="_blank" rel="noopener" aria-label="Chat with TCONGS on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3.5 20l1.1-4.1A8.5 8.5 0 1 1 20.5 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.4 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-2.6-.8-4.6-2.8-5.7-5.1-.3-.7-.2-1.2 0-1.6Z" fill="currentColor"/></svg></a><input id="tcongsAiInput" type="text" autocomplete="off" placeholder="Message Tcongs Assistant" aria-label="Type your question"><button type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3 10.2 14.7m10.9-11.2-4.1 16.1a1 1 0 0 1-1.9.1l-4.9-5-6.3-2.2a1 1 0 0 1 .1-1.9L20.2 2.7a1 1 0 0 1 1.4.6Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
+          <form class="tcongs-ai-form" id="tcongsAiForm"><a class="tcongs-ai-whatsapp" href="https://wa.me/919321087099?text=Hi%20TCONGS%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Message TCONGS on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3.5 20l1.1-4.1A8.5 8.5 0 1 1 20.5 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.4 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-2.6-.8-4.6-2.8-5.7-5.1-.3-.7-.2-1.2 0-1.6Z" fill="currentColor"/></svg></a><input id="tcongsAiInput" type="text" autocomplete="off" placeholder="Message Tcongs Assistant" aria-label="Type your question"><button type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3 10.2 14.7m10.9-11.2-4.1 16.1a1 1 0 0 1-1.9.1l-4.9-5-6.3-2.2a1 1 0 0 1 .1-1.9L20.2 2.7a1 1 0 0 1 1.4.6Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
         </div>
       </div>`;
     }
@@ -665,12 +665,34 @@ How can I help you today?</div></div>
     }
 
     function setAiBusy(busy) {
-      aiBusy = !!busy;
-      if (aiForm) aiForm.classList.toggle('is-busy', busy);
-      if (aiInput) aiInput.disabled = busy;
+      aiBusy = Boolean(busy);
+      if (aiForm) aiForm.classList.toggle('is-busy', aiBusy);
+      if (aiInput) aiInput.disabled = aiBusy;
       const send = aiForm?.querySelector('button[type="submit"]');
-      if (send) send.disabled = busy;
-      if (aiStatus) aiStatus.textContent = busy ? 'Online' : 'Online';
+      if (send) send.disabled = aiBusy;
+      if (aiStatus) aiStatus.textContent = 'Online';
+    }
+
+    /* Reliable local assistant send flow. Keeps the UI responsive and guarantees
+       the submit button actually produces a reply even without an external API. */
+    async function sendAiMessage(rawValue) {
+      const value = String(rawValue || '').trim();
+      if (!value || aiBusy) return;
+
+      addAiMessage(value, 'user');
+      setAiBusy(true);
+      const thinking = addThinking();
+      const reply = aiReply(value);
+
+      // Natural, slightly slower thinking animation.
+      await new Promise(resolve => window.setTimeout(resolve, 2400));
+
+      if (thinking && thinking.parentNode) thinking.remove();
+      addAiMessage(reply.text, 'bot', reply.lang);
+      setAiBusy(false);
+
+      // Show useful navigation after the reply, without duplicating the quick action itself.
+      window.setTimeout(() => showContextOptions(value), 80);
     }
 
     function openAi() {
@@ -703,42 +725,6 @@ How can I help you today?</div></div>
       if (aiInput) aiInput.value = '';
       sendAiMessage(value);
     });
-
-    const aiWhatsapp = document.getElementById('tcongsAiWhatsapp');
-    aiWhatsapp?.addEventListener('click', (e) => {
-      e.preventDefault();
-      const typed = (aiInput?.value || '').trim();
-      const message = typed || 'Hi TCONGS, I would like to discuss my requirements.';
-      const url = 'https://wa.me/919321087099?text=' + encodeURIComponent(message);
-      window.open(url, '_blank', 'noopener,noreferrer');
-    });
-
-    function sendAiMessage(text) {
-      const value = String(text || '').trim();
-      if (!value || aiBusy) return;
-
-      addAiMessage(value, 'user');
-      if (aiInput) aiInput.value = '';
-      setAiBusy(true);
-
-      const thinking = addThinking();
-      const delay = 2600 + Math.floor(Math.random() * 900);
-
-      window.setTimeout(() => {
-        try {
-          const result = aiReply(value) || { text: TCONGS_KB.fallback, lang: 'en' };
-          if (thinking && thinking.parentNode) thinking.parentNode.removeChild(thinking);
-          addAiMessage(result.text, 'bot');
-          window.setTimeout(() => showContextOptions(value), 80);
-        } catch (error) {
-          if (thinking && thinking.parentNode) thinking.parentNode.removeChild(thinking);
-          addAiMessage('Sorry, I could not process that message right now. Please try again or contact TCONGS on WhatsApp.', 'bot');
-        } finally {
-          setAiBusy(false);
-          window.setTimeout(() => aiInput?.focus(), 80);
-        }
-      }, delay);
-    }
 
     function addAiOptions(title, items) {
       if (!aiMessages) return;

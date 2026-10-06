@@ -1428,19 +1428,310 @@ html body .tcongs-ai-form input{
 }
 
 
-/* ============================================================
-   TCONGS CHATBOT V43 — SEND + WHATSAPP FINAL FIX
-   ============================================================ */
-html body .tcongs-ai-form .tcongs-ai-emoji,
-html body .tcongs-ai-form .tcongs-ai-emoji-trigger,
-html body .tcongs-ai-form .tcongs-ai-emoji-panel{
-  display:none!important;
+/* ==========================================================
+   TCONGS ASSISTANT V43 — WORKING SEND + WHATSAPP + HOVER
+   ========================================================== */
+html body .tcongs-ai-widget .tcongs-ai-launcher,
+html body .tcongs-ai-widget .tcongs-ai-launcher:hover,
+html body .tcongs-ai-widget .tcongs-ai-launcher:focus,
+html body .tcongs-ai-widget .tcongs-ai-launcher:active{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  outline:none!important;
 }
+
+/* Light hover only on the robot itself. */
+html body .tcongs-ai-widget .tcongs-ai-launcher .tcongs-ai-robot,
+html body .tcongs-ai-widget .tcongs-ai-launcher .tcongs-ai-robot img{
+  transition:transform .22s ease,filter .22s ease!important;
+}
+html body .tcongs-ai-widget .tcongs-ai-launcher:hover .tcongs-ai-robot,
+html body .tcongs-ai-widget .tcongs-ai-launcher:hover .tcongs-ai-robot img{
+  transform:translateY(-3px) scale(1.025)!important;
+  filter:hue-rotate(14deg) saturate(1.18) brightness(1.05)!important;
+}
+
+/* Online indicator is calm normally, blinks only while the robot is hovered. */
+html body .tcongs-ai-widget .tcongs-ai-launcher-status{
+  animation:none!important;
+  transition:opacity .15s ease,transform .15s ease!important;
+}
+html body .tcongs-ai-widget .tcongs-ai-launcher:hover .tcongs-ai-launcher-status{
+  animation:tcongsOnlineHoverBlink .72s ease-in-out infinite!important;
+}
+@keyframes tcongsOnlineHoverBlink{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.25;transform:scale(.72)}
+}
+
+/* Real favicon in the assistant header — not the old assistant logo. */
+html body .tcongs-ai-header-logo,
+html body .tcongs-ai-header-logo img{
+  width:31px!important;
+  height:31px!important;
+  min-width:31px!important;
+  min-height:31px!important;
+  border-radius:9px!important;
+  object-fit:contain!important;
+}
+
+/* WhatsApp is a direct TCONGS chat shortcut. */
 html body .tcongs-ai-form .tcongs-ai-whatsapp{
-  cursor:pointer!important;
-  pointer-events:auto!important;
-  position:relative!important;
-  z-index:5!important;
+  flex:0 0 36px!important;
+  width:36px!important;
+  height:36px!important;
+  min-width:36px!important;
+  min-height:36px!important;
+  border-radius:50%!important;
+  display:grid!important;
+  place-items:center!important;
+  background:#25D366!important;
+  color:#fff!important;
+  border:0!important;
+  text-decoration:none!important;
+  box-shadow:0 4px 12px rgba(37,211,102,.20)!important;
 }
-html body .tcongs-ai-form .tcongs-ai-whatsapp svg{pointer-events:none!important}
-html body .tcongs-ai-form.is-busy button[type="submit"]{opacity:.65!important;cursor:wait!important}
+html body .tcongs-ai-form .tcongs-ai-whatsapp svg{
+  width:20px!important;
+  height:20px!important;
+}
+
+/* Submit button must remain clickable while the form is idle. */
+html body .tcongs-ai-form button[type="submit"]{
+  pointer-events:auto!important;
+  cursor:pointer!important;
+  opacity:1!important;
+}
+html body .tcongs-ai-form.is-busy button[type="submit"]{
+  cursor:wait!important;
+}
+
+@media(max-width:600px){
+  html body .tcongs-ai-form .tcongs-ai-whatsapp{
+    flex-basis:34px!important;
+    width:34px!important;
+    height:34px!important;
+    min-width:34px!important;
+    min-height:34px!important;
+  }
+  html body .tcongs-ai-form .tcongs-ai-whatsapp svg{
+    width:18px!important;
+    height:18px!important;
+  }
+  html body .tcongs-ai-header-logo,
+  html body .tcongs-ai-header-logo img{
+    width:29px!important;
+    height:29px!important;
+    min-width:29px!important;
+    min-height:29px!important;
+  }
+}
+
+
+/* ==========================================================
+   TCONGS ASSISTANT V46 — FULL-COLOR ROUND BRAND MARK
+   Use the real full-color transparent TCONGS mark; no white/rectangle background.
+   ========================================================== */
+html body .tcongs-ai-header .tcongs-ai-header-logo{
+  width:32px!important;
+  height:32px!important;
+  min-width:32px!important;
+  min-height:32px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+html body .tcongs-ai-header .tcongs-ai-header-logo img{
+  width:100%!important;
+  height:100%!important;
+  min-width:100%!important;
+  min-height:100%!important;
+  display:block!important;
+  object-fit:contain!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  padding:0!important;
+  margin:0!important;
+  filter:none!important;
+}
+@media(max-width:600px){
+  html body .tcongs-ai-header .tcongs-ai-header-logo,
+  html body .tcongs-ai-header .tcongs-ai-header-logo img{
+    width:30px!important;
+    height:30px!important;
+    min-width:30px!important;
+    min-height:30px!important;
+  }
+}
+
+
+/* ==========================================================
+   TCONGS ASSISTANT V47 — WHITE ROUND BRAND + MOBILE SAFE
+   ========================================================== */
+html body .tcongs-ai-header .tcongs-ai-header-logo,
+html body .tcongs-ai-header .tcongs-ai-header-logo img{
+  width:42px!important;
+  height:42px!important;
+  min-width:42px!important;
+  min-height:42px!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  margin:0!important;
+  object-fit:contain!important;
+  display:block!important;
+}
+
+/* Never clip the circular white logo. */
+html body .tcongs-ai-header .tcongs-ai-header-logo{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:visible!important;
+}
+
+/* Mobile: keep the complete assistant card inside the viewport. */
+@media (max-width:600px){
+  html, body{
+    overflow-x:hidden!important;
+  }
+  html body .tcongs-ai-widget{
+    position:fixed!important;
+    left:0!important;
+    right:0!important;
+    bottom:max(10px, env(safe-area-inset-bottom))!important;
+    width:100vw!important;
+    max-width:100vw!important;
+    height:auto!important;
+    padding:0 10px!important;
+    box-sizing:border-box!important;
+    display:flex!important;
+    justify-content:center!important;
+    align-items:flex-end!important;
+    z-index:2147483000!important;
+  }
+  html body .tcongs-ai-panel{
+    position:absolute!important;
+    left:50%!important;
+    right:auto!important;
+    bottom:72px!important;
+    width:min(400px, calc(100vw - 20px))!important;
+    max-width:calc(100vw - 20px)!important;
+    height:min(560px, calc(100dvh - 88px))!important;
+    max-height:calc(100dvh - 88px)!important;
+    min-height:0!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+    transform:translate(-50%, 12px) scale(.985)!important;
+    transform-origin:bottom center!important;
+  }
+  html body .tcongs-ai-panel.open{
+    transform:translate(-50%,0) scale(1)!important;
+  }
+  html body .tcongs-ai-launcher{
+    position:relative!important;
+    flex:0 0 64px!important;
+    width:64px!important;
+    height:64px!important;
+    min-width:64px!important;
+    min-height:64px!important;
+    margin:0 auto!important;
+    overflow:visible!important;
+  }
+  html body .tcongs-ai-launcher .tcongs-ai-robot,
+  html body .tcongs-ai-launcher .tcongs-ai-robot img{
+    width:60px!important;
+    height:60px!important;
+    max-width:none!important;
+    max-height:none!important;
+    overflow:visible!important;
+  }
+  html body .tcongs-ai-launcher-status{
+    right:1px!important;
+    top:1px!important;
+  }
+  html body .tcongs-ai-header{
+    min-width:0!important;
+  }
+  html body .tcongs-ai-brand{
+    min-width:0!important;
+    flex:1 1 auto!important;
+  }
+  html body .tcongs-ai-title-wrap{
+    min-width:0!important;
+  }
+  html body .tcongs-ai-title-wrap strong{
+    white-space:nowrap!important;
+    overflow:hidden!important;
+    text-overflow:ellipsis!important;
+  }
+  html body .tcongs-ai-header .tcongs-ai-header-logo,
+  html body .tcongs-ai-header .tcongs-ai-header-logo img{
+    width:38px!important;
+    height:38px!important;
+    min-width:38px!important;
+    min-height:38px!important;
+  }
+  html body .tcongs-ai-messages{
+    min-height:0!important;
+    overflow-x:hidden!important;
+  }
+}
+
+/* ==========================================================
+   TCONGS ASSISTANT V48 — ORIGINAL BLUE/WHITE ROUND BRAND MARK
+   The logo is clipped exactly to the red circular ring; no
+   rectangular/white outer background is visible.
+   ========================================================== */
+html body .tcongs-ai-header .tcongs-ai-header-logo{
+  width:44px!important;
+  height:44px!important;
+  min-width:44px!important;
+  min-height:44px!important;
+  padding:0!important;
+  margin:0!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+html body .tcongs-ai-header .tcongs-ai-header-logo img{
+  width:44px!important;
+  height:44px!important;
+  min-width:44px!important;
+  min-height:44px!important;
+  display:block!important;
+  object-fit:contain!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  padding:0!important;
+  margin:0!important;
+  filter:none!important;
+}
+@media(max-width:600px){
+  html body .tcongs-ai-header .tcongs-ai-header-logo,
+  html body .tcongs-ai-header .tcongs-ai-header-logo img{
+    width:40px!important;
+    height:40px!important;
+    min-width:40px!important;
+    min-height:40px!important;
+  }
+}
