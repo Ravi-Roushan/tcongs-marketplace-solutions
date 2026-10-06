@@ -371,3 +371,566 @@
   body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 14px) !important;padding-bottom:24px !important;}
   body:has(.lp-hero) .lp-hero{padding-top:16px !important;padding-bottom:32px !important;}
 }
+
+/* ===== FINAL ALL-PAGE RESPONSIVE SPACING PASS ===== */
+/* Balanced spacing for desktop + mobile. Keeps the existing visual design intact. */
+@media (min-width: 769px){
+  /* Shared section rhythm */
+  body:has(.hero-section) section:not(.hero-section),
+  body:has(.asymmetric-hero) section:not(.asymmetric-hero),
+  body:has(.amz-hero) section:not(.amz-hero),
+  body:has(.srv-hero) section:not(.srv-hero),
+  body:has(.contact-hero) section:not(.contact-hero),
+  body:has(.lp-hero) section:not(.lp-hero){
+    scroll-margin-top:80px;
+  }
+
+  /* Home */
+  body:has(.hero-section) .hero-section{
+    padding-top:calc(var(--navbar-height) + 34px) !important;
+    padding-bottom:44px !important;
+  }
+  body:has(.hero-section) .hero-tag-finkash{margin-bottom:16px !important;}
+  body:has(.hero-section) .hero-title-finkash{margin-bottom:22px !important;}
+
+  /* About */
+  body:has(.asymmetric-hero) .asymmetric-hero{
+    padding-top:calc(var(--navbar-height) + 30px) !important;
+    padding-bottom:56px !important;
+  }
+  body:has(.asymmetric-hero) .stats-layout-section{padding-top:42px !important;padding-bottom:42px !important;}
+  body:has(.asymmetric-hero) .features-layout-section,
+  body:has(.asymmetric-hero) .process-layout-section,
+  body:has(.asymmetric-hero) .profiles-layout-section{padding-top:58px !important;padding-bottom:58px !important;}
+
+  /* Marketplace detail pages */
+  body:has(.amz-hero) .amz-hero{
+    padding-top:calc(var(--navbar-height) + 28px) !important;
+    padding-bottom:44px !important;
+  }
+  body:has(.amz-hero) .amz-hero-inner{gap:34px !important;}
+  body:has(.amz-hero) .amz-section-head{margin-bottom:28px !important;}
+
+  /* Services */
+  body:has(.srv-hero) .srv-hero{
+    padding-top:calc(var(--navbar-height) + 26px) !important;
+    padding-bottom:44px !important;
+  }
+  body:has(.srv-hero) .srv-hero-inner{gap:28px !important;}
+  body:has(.srv-hero) .srv-section{padding-top:56px !important;padding-bottom:56px !important;}
+  body:has(.srv-hero) .srv-section-head{margin-bottom:28px !important;}
+
+  /* Contact */
+  body:has(.contact-hero) .contact-hero-content{padding-top:28px !important;padding-bottom:28px !important;}
+  body:has(.contact-hero) .contact-body-section{padding-top:48px !important;padding-bottom:52px !important;}
+  body:has(.contact-hero) .contact-bottom-section{padding-top:46px !important;padding-bottom:52px !important;}
+
+  /* Blog / policy / careers */
+  body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 28px) !important;padding-bottom:30px !important;}
+  body:has(.legal-content-section) .legal-content-section{padding-top:42px !important;padding-bottom:46px !important;}
+
+  /* Marketplace growth */
+  body:has(.lp-hero) .lp-hero{padding-top:28px !important;padding-bottom:48px !important;}
+  body:has(.lp-hero) .lp-hero-grid{gap:28px !important;}
+  body:has(.lp-hero) .lp-section-padding,
+  body:has(.lp-hero) .comp-services-section,
+  body:has(.lp-hero) .insights-section,
+  body:has(.lp-hero) .why-choose-section,
+  body:has(.lp-hero) .process-section,
+  body:has(.lp-hero) .blog-section,
+  body:has(.lp-hero) .testimonials-section{padding-top:56px !important;padding-bottom:56px !important;}
+}
+
+@media (max-width: 768px){
+  /* Global mobile rhythm */
+  body:has(.hero-section) section:not(.hero-section),
+  body:has(.asymmetric-hero) section:not(.asymmetric-hero),
+  body:has(.amz-hero) section:not(.amz-hero),
+  body:has(.srv-hero) section:not(.srv-hero),
+  body:has(.contact-hero) section:not(.contact-hero),
+  body:has(.lp-hero) section:not(.lp-hero){
+    scroll-margin-top:74px;
+  }
+
+  /* Home */
+  body:has(.hero-section) .hero-section{
+    padding-top:calc(var(--navbar-height) + 14px) !important;
+    padding-bottom:24px !important;
+  }
+  body:has(.hero-section) .hero-tag-finkash{margin-bottom:9px !important;}
+  body:has(.hero-section) .hero-title-finkash{margin-bottom:13px !important;line-height:1.12 !important;}
+  body:has(.hero-section) .hero-sublinks-row{gap:4px 8px !important;line-height:1.3 !important;}
+
+  /* About */
+  body:has(.asymmetric-hero) .asymmetric-hero{
+    padding-top:calc(var(--navbar-height) + 14px) !important;
+    padding-bottom:32px !important;
+  }
+  body:has(.asymmetric-hero) .hero-split-wrapper{gap:18px !important;}
+  body:has(.asymmetric-hero) .hero-badge-alt{margin-bottom:9px !important;}
+  body:has(.asymmetric-hero) .hero-actions-row{margin-top:6px !important;}
+  body:has(.asymmetric-hero) .stats-layout-section{padding-top:30px !important;padding-bottom:30px !important;}
+  body:has(.asymmetric-hero) .features-layout-section,
+  body:has(.asymmetric-hero) .process-layout-section,
+  body:has(.asymmetric-hero) .profiles-layout-section{padding-top:40px !important;padding-bottom:40px !important;}
+
+  /* Marketplace detail */
+  body:has(.amz-hero) .amz-hero{
+    padding-top:calc(var(--navbar-height) + 12px) !important;
+    padding-bottom:32px !important;
+  }
+  body:has(.amz-hero) .amz-hero-inner{gap:20px !important;}
+  body:has(.amz-hero) .amz-hero-badge{margin-bottom:9px !important;}
+  body:has(.amz-hero) .amz-hero-checks{margin-bottom:16px !important;}
+  body:has(.amz-hero) .amz-section-head{margin-bottom:22px !important;}
+
+  /* Services */
+  body:has(.srv-hero) .srv-hero{
+    padding-top:calc(var(--navbar-height) + 10px) !important;
+    padding-bottom:30px !important;
+  }
+  body:has(.srv-hero) .srv-hero-inner{gap:16px !important;}
+  body:has(.srv-hero) .srv-section{padding-top:40px !important;padding-bottom:40px !important;}
+  body:has(.srv-hero) .srv-section-head{margin-bottom:20px !important;}
+
+  /* Contact */
+  body:has(.contact-hero) .contact-hero-content{padding-top:18px !important;padding-bottom:18px !important;}
+  body:has(.contact-hero) .contact-hero-sub{margin-bottom:10px !important;}
+  body:has(.contact-hero) .contact-body-section{padding-top:28px !important;padding-bottom:32px !important;}
+  body:has(.contact-hero) .contact-bottom-section{padding-top:28px !important;padding-bottom:32px !important;}
+
+  /* Blog / policy / careers */
+  body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 12px) !important;padding-bottom:22px !important;}
+  body:has(.legal-content-section) .legal-content-section{padding-top:28px !important;padding-bottom:32px !important;}
+
+  /* Marketplace growth */
+  body:has(.lp-hero) .lp-hero{padding-top:12px !important;padding-bottom:30px !important;}
+  body:has(.lp-hero) .lp-hero-grid{gap:16px !important;}
+  body:has(.lp-hero) .lp-hero-badge{margin-bottom:9px !important;}
+  body:has(.lp-hero) .lp-hero-sub{margin-bottom:12px !important;}
+  body:has(.lp-hero) .lp-hero-trust-grid{margin-bottom:14px !important;}
+  body:has(.lp-hero) .lp-section-padding,
+  body:has(.lp-hero) .comp-services-section,
+  body:has(.lp-hero) .insights-section,
+  body:has(.lp-hero) .why-choose-section,
+  body:has(.lp-hero) .process-section,
+  body:has(.lp-hero) .blog-section,
+  body:has(.lp-hero) .testimonials-section{padding-top:38px !important;padding-bottom:38px !important;}
+
+  /* Prevent spacing/width problems on narrow devices */
+  section,main,.container,.lp-container,.hero-content,.hero-split-wrapper,.amz-hero-inner,.srv-hero-inner{
+    min-width:0 !important;max-width:100% !important;box-sizing:border-box !important;
+  }
+  h1,h2,h3,h4,p,a,span{overflow-wrap:anywhere;}
+}
+
+@media (max-width: 380px){
+  body:has(.hero-section) .hero-section{padding-top:calc(var(--navbar-height) + 10px) !important;padding-bottom:20px !important;}
+  body:has(.asymmetric-hero) .asymmetric-hero{padding-top:calc(var(--navbar-height) + 10px) !important;padding-bottom:28px !important;}
+  body:has(.amz-hero) .amz-hero{padding-top:calc(var(--navbar-height) + 8px) !important;padding-bottom:28px !important;}
+  body:has(.srv-hero) .srv-hero{padding-top:calc(var(--navbar-height) + 8px) !important;padding-bottom:26px !important;}
+  body:has(.contact-hero) .contact-hero-content{padding-top:14px !important;padding-bottom:14px !important;}
+  body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 8px) !important;padding-bottom:18px !important;}
+  body:has(.lp-hero) .lp-hero{padding-top:8px !important;padding-bottom:26px !important;}
+}
+
+/* ===== FINAL COMPACT SPACING PASS v20 ===== */
+/* Reduce oversized whitespace across every page while preserving the approved design. */
+@media (min-width: 769px){
+  /* Home */
+  body:has(.hero-section) .hero-section{min-height:500px !important;padding-top:calc(var(--navbar-height) + 24px) !important;padding-bottom:34px !important;}
+  body:has(.hero-section) .hero-tag-finkash{margin-bottom:11px !important;}
+  body:has(.hero-section) .hero-title-finkash{margin-bottom:16px !important;}
+
+  /* About */
+  body:has(.asymmetric-hero) .asymmetric-hero{padding-top:calc(var(--navbar-height) + 22px) !important;padding-bottom:40px !important;}
+  body:has(.asymmetric-hero) .stats-layout-section{padding:34px 0 !important;}
+  body:has(.asymmetric-hero) .features-layout-section,
+  body:has(.asymmetric-hero) .process-layout-section,
+  body:has(.asymmetric-hero) .profiles-layout-section{padding-top:46px !important;padding-bottom:46px !important;}
+
+  /* Marketplace detail pages */
+  body:has(.amz-hero) .amz-hero{padding-top:calc(var(--navbar-height) + 20px) !important;padding-bottom:34px !important;}
+  body:has(.amz-hero) .amz-hero-inner{gap:26px !important;}
+  body:has(.amz-hero) .amz-section-head{margin-bottom:22px !important;}
+
+  /* Services */
+  body:has(.srv-hero) .srv-hero{min-height:560px !important;padding-top:calc(var(--navbar-height) + 20px) !important;padding-bottom:34px !important;}
+  body:has(.srv-hero) .srv-hero-inner{gap:24px !important;}
+  body:has(.srv-hero) .srv-section{padding-top:48px !important;padding-bottom:48px !important;}
+  body:has(.srv-hero) .srv-section-head{margin-bottom:22px !important;}
+
+  /* Contact — remove the oversized blank hero area shown on desktop. */
+  body:has(.contact-hero) .contact-hero{min-height:320px !important;}
+  body:has(.contact-hero) .contact-hero-content{padding-top:20px !important;padding-bottom:20px !important;}
+  body:has(.contact-hero) .contact-hero-content h1{margin-bottom:10px !important;}
+  body:has(.contact-hero) .contact-hero-sub{margin-bottom:16px !important;line-height:1.55 !important;}
+  body:has(.contact-hero) .contact-hero-badges{gap:9px !important;}
+  body:has(.contact-hero) .hero-badge-item{padding:8px 13px !important;}
+  body:has(.contact-hero) .contact-body-section{padding-top:40px !important;padding-bottom:44px !important;}
+  body:has(.contact-hero) .contact-bottom-section{padding-top:40px !important;padding-bottom:44px !important;}
+
+  /* Legal / blog / careers */
+  body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 20px) !important;padding-bottom:24px !important;}
+  body:has(.legal-content-section) .legal-content-section{padding-top:36px !important;padding-bottom:40px !important;}
+
+  /* Marketplace growth */
+  body:has(.lp-hero) .lp-hero{padding-top:20px !important;padding-bottom:38px !important;}
+  body:has(.lp-hero) .lp-hero-grid{gap:22px !important;}
+  body:has(.lp-hero) .lp-section-padding,
+  body:has(.lp-hero) .comp-services-section,
+  body:has(.lp-hero) .insights-section,
+  body:has(.lp-hero) .why-choose-section,
+  body:has(.lp-hero) .process-section,
+  body:has(.lp-hero) .blog-section,
+  body:has(.lp-hero) .testimonials-section{padding-top:46px !important;padding-bottom:46px !important;}
+
+  /* Shared section rhythm */
+  body:has(.hero-section) .services-section,
+  body:has(.hero-section) .faq-section{padding-top:48px !important;padding-bottom:48px !important;}
+}
+
+@media (max-width: 768px){
+  /* Home */
+  body:has(.hero-section) .hero-section{min-height:0 !important;padding-top:calc(var(--navbar-height) + 10px) !important;padding-bottom:20px !important;}
+  body:has(.hero-section) .hero-tag-finkash{margin-bottom:7px !important;}
+  body:has(.hero-section) .hero-title-finkash{margin-bottom:10px !important;line-height:1.10 !important;}
+  body:has(.hero-section) .hero-sublinks-row{gap:3px 7px !important;line-height:1.25 !important;}
+
+  /* About */
+  body:has(.asymmetric-hero) .asymmetric-hero{padding-top:calc(var(--navbar-height) + 10px) !important;padding-bottom:26px !important;}
+  body:has(.asymmetric-hero) .hero-split-wrapper{gap:14px !important;}
+  body:has(.asymmetric-hero) .hero-badge-alt{margin-bottom:7px !important;}
+  body:has(.asymmetric-hero) .stats-layout-section{padding-top:24px !important;padding-bottom:24px !important;}
+  body:has(.asymmetric-hero) .features-layout-section,
+  body:has(.asymmetric-hero) .process-layout-section,
+  body:has(.asymmetric-hero) .profiles-layout-section{padding-top:34px !important;padding-bottom:34px !important;}
+
+  /* Marketplace detail */
+  body:has(.amz-hero) .amz-hero{padding-top:calc(var(--navbar-height) + 8px) !important;padding-bottom:26px !important;}
+  body:has(.amz-hero) .amz-hero-inner{gap:16px !important;}
+  body:has(.amz-hero) .amz-section-head{margin-bottom:18px !important;}
+
+  /* Services */
+  body:has(.srv-hero) .srv-hero{min-height:0 !important;padding-top:calc(var(--navbar-height) + 8px) !important;padding-bottom:24px !important;}
+  body:has(.srv-hero) .srv-hero-inner{gap:14px !important;}
+  body:has(.srv-hero) .srv-section{padding-top:38px !important;padding-bottom:38px !important;}
+  body:has(.srv-hero) .srv-section-head{margin-bottom:18px !important;}
+
+  /* Contact */
+  body:has(.contact-hero) .contact-hero{min-height:0 !important;}
+  body:has(.contact-hero) .contact-hero-content{padding-top:14px !important;padding-bottom:14px !important;}
+  body:has(.contact-hero) .contact-hero-content h1{margin-bottom:8px !important;line-height:1.12 !important;}
+  body:has(.contact-hero) .contact-hero-sub{margin-bottom:12px !important;line-height:1.45 !important;}
+  body:has(.contact-hero) .contact-hero-badges{gap:5px !important;}
+  body:has(.contact-hero) .hero-badge-item{padding:6px 7px !important;}
+  body:has(.contact-hero) .contact-body-section{padding-top:32px !important;padding-bottom:36px !important;}
+  body:has(.contact-hero) .contact-bottom-section{padding-top:32px !important;padding-bottom:38px !important;}
+
+  /* Legal / blog / careers */
+  body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 8px) !important;padding-bottom:18px !important;}
+  body:has(.legal-content-section) .legal-content-section{padding-top:30px !important;padding-bottom:34px !important;}
+
+  /* Marketplace growth */
+  body:has(.lp-hero) .lp-hero{padding-top:8px !important;padding-bottom:28px !important;}
+  body:has(.lp-hero) .lp-hero-grid{gap:14px !important;}
+  body:has(.lp-hero) .lp-section-padding,
+  body:has(.lp-hero) .comp-services-section,
+  body:has(.lp-hero) .insights-section,
+  body:has(.lp-hero) .why-choose-section,
+  body:has(.lp-hero) .process-section,
+  body:has(.lp-hero) .blog-section,
+  body:has(.lp-hero) .testimonials-section{padding-top:34px !important;padding-bottom:34px !important;}
+
+  /* Shared mobile section rhythm */
+  body:has(.hero-section) .services-section,
+  body:has(.hero-section) .faq-section{padding-top:36px !important;padding-bottom:36px !important;}
+}
+
+@media (max-width: 380px){
+  body:has(.hero-section) .hero-section{padding-top:calc(var(--navbar-height) + 7px) !important;padding-bottom:16px !important;}
+  body:has(.asymmetric-hero) .asymmetric-hero{padding-top:calc(var(--navbar-height) + 7px) !important;padding-bottom:22px !important;}
+  body:has(.amz-hero) .amz-hero{padding-top:calc(var(--navbar-height) + 6px) !important;padding-bottom:22px !important;}
+  body:has(.srv-hero) .srv-hero{padding-top:calc(var(--navbar-height) + 6px) !important;padding-bottom:20px !important;}
+  body:has(.contact-hero) .contact-hero-content{padding-top:10px !important;padding-bottom:10px !important;}
+  body:has(.contact-hero) .contact-body-section{padding-top:28px !important;padding-bottom:32px !important;}
+  body:has(.contact-hero) .contact-bottom-section{padding-top:28px !important;padding-bottom:34px !important;}
+  body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 6px) !important;padding-bottom:14px !important;}
+  body:has(.lp-hero) .lp-hero{padding-top:6px !important;padding-bottom:24px !important;}
+}
+/* ===== FINAL COMPACT SPACING PASS v20 ===== */
+@media (min-width:769px){
+body:has(.hero-section) .hero-section{min-height:500px!important;padding-top:calc(var(--navbar-height) + 24px)!important;padding-bottom:34px!important}
+body:has(.hero-section) .hero-tag-finkash{margin-bottom:11px!important} body:has(.hero-section) .hero-title-finkash{margin-bottom:16px!important}
+body:has(.asymmetric-hero) .asymmetric-hero{padding-top:calc(var(--navbar-height) + 22px)!important;padding-bottom:40px!important}
+body:has(.asymmetric-hero) .stats-layout-section{padding:34px 0!important} body:has(.asymmetric-hero) .features-layout-section,body:has(.asymmetric-hero) .process-layout-section,body:has(.asymmetric-hero) .profiles-layout-section{padding-top:46px!important;padding-bottom:46px!important}
+body:has(.amz-hero) .amz-hero{padding-top:calc(var(--navbar-height) + 20px)!important;padding-bottom:34px!important} body:has(.amz-hero) .amz-hero-inner{gap:26px!important} body:has(.amz-hero) .amz-section-head{margin-bottom:22px!important}
+body:has(.srv-hero) .srv-hero{min-height:560px!important;padding-top:calc(var(--navbar-height) + 20px)!important;padding-bottom:34px!important} body:has(.srv-hero) .srv-hero-inner{gap:24px!important} body:has(.srv-hero) .srv-section{padding-top:48px!important;padding-bottom:48px!important} body:has(.srv-hero) .srv-section-head{margin-bottom:22px!important}
+body:has(.contact-hero) .contact-hero{min-height:320px!important} body:has(.contact-hero) .contact-hero-content{padding-top:20px!important;padding-bottom:20px!important} body:has(.contact-hero) .contact-hero-content h1{margin-bottom:10px!important} body:has(.contact-hero) .contact-hero-sub{margin-bottom:16px!important;line-height:1.55!important} body:has(.contact-hero) .contact-hero-badges{gap:9px!important} body:has(.contact-hero) .hero-badge-item{padding:8px 13px!important} body:has(.contact-hero) .contact-body-section{padding-top:40px!important;padding-bottom:44px!important} body:has(.contact-hero) .contact-bottom-section{padding-top:40px!important;padding-bottom:44px!important}
+body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 20px)!important;padding-bottom:24px!important} body:has(.legal-content-section) .legal-content-section{padding-top:36px!important;padding-bottom:40px!important}
+body:has(.lp-hero) .lp-hero{padding-top:20px!important;padding-bottom:38px!important} body:has(.lp-hero) .lp-hero-grid{gap:22px!important} body:has(.lp-hero) .lp-section-padding,body:has(.lp-hero) .comp-services-section,body:has(.lp-hero) .insights-section,body:has(.lp-hero) .why-choose-section,body:has(.lp-hero) .process-section,body:has(.lp-hero) .blog-section,body:has(.lp-hero) .testimonials-section{padding-top:46px!important;padding-bottom:46px!important}
+body:has(.hero-section) .services-section,body:has(.hero-section) .faq-section{padding-top:48px!important;padding-bottom:48px!important}
+}
+@media (max-width:768px){
+body:has(.hero-section) .hero-section{min-height:0!important;padding-top:calc(var(--navbar-height) + 10px)!important;padding-bottom:20px!important} body:has(.hero-section) .hero-tag-finkash{margin-bottom:7px!important} body:has(.hero-section) .hero-title-finkash{margin-bottom:10px!important;line-height:1.10!important} body:has(.hero-section) .hero-sublinks-row{gap:3px 7px!important;line-height:1.25!important}
+body:has(.asymmetric-hero) .asymmetric-hero{padding-top:calc(var(--navbar-height) + 10px)!important;padding-bottom:26px!important} body:has(.asymmetric-hero) .hero-split-wrapper{gap:14px!important} body:has(.asymmetric-hero) .hero-badge-alt{margin-bottom:7px!important} body:has(.asymmetric-hero) .stats-layout-section{padding-top:24px!important;padding-bottom:24px!important} body:has(.asymmetric-hero) .features-layout-section,body:has(.asymmetric-hero) .process-layout-section,body:has(.asymmetric-hero) .profiles-layout-section{padding-top:34px!important;padding-bottom:34px!important}
+body:has(.amz-hero) .amz-hero{padding-top:calc(var(--navbar-height) + 8px)!important;padding-bottom:26px!important} body:has(.amz-hero) .amz-hero-inner{gap:16px!important} body:has(.amz-hero) .amz-section-head{margin-bottom:18px!important}
+body:has(.srv-hero) .srv-hero{min-height:0!important;padding-top:calc(var(--navbar-height) + 8px)!important;padding-bottom:24px!important} body:has(.srv-hero) .srv-hero-inner{gap:14px!important} body:has(.srv-hero) .srv-section{padding-top:38px!important;padding-bottom:38px!important} body:has(.srv-hero) .srv-section-head{margin-bottom:18px!important}
+body:has(.contact-hero) .contact-hero{min-height:0!important} body:has(.contact-hero) .contact-hero-content{padding-top:14px!important;padding-bottom:14px!important} body:has(.contact-hero) .contact-hero-content h1{margin-bottom:8px!important;line-height:1.12!important} body:has(.contact-hero) .contact-hero-sub{margin-bottom:12px!important;line-height:1.45!important} body:has(.contact-hero) .contact-hero-badges{gap:5px!important} body:has(.contact-hero) .hero-badge-item{padding:6px 7px!important} body:has(.contact-hero) .contact-body-section{padding-top:32px!important;padding-bottom:36px!important} body:has(.contact-hero) .contact-bottom-section{padding-top:32px!important;padding-bottom:38px!important}
+body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 8px)!important;padding-bottom:18px!important} body:has(.legal-content-section) .legal-content-section{padding-top:30px!important;padding-bottom:34px!important}
+body:has(.lp-hero) .lp-hero{padding-top:8px!important;padding-bottom:28px!important} body:has(.lp-hero) .lp-hero-grid{gap:14px!important} body:has(.lp-hero) .lp-section-padding,body:has(.lp-hero) .comp-services-section,body:has(.lp-hero) .insights-section,body:has(.lp-hero) .why-choose-section,body:has(.lp-hero) .process-section,body:has(.lp-hero) .blog-section,body:has(.lp-hero) .testimonials-section{padding-top:34px!important;padding-bottom:34px!important}
+body:has(.hero-section) .services-section,body:has(.hero-section) .faq-section{padding-top:36px!important;padding-bottom:36px!important}
+}
+@media (max-width:380px){body:has(.hero-section) .hero-section{padding-top:calc(var(--navbar-height) + 7px)!important;padding-bottom:16px!important} body:has(.asymmetric-hero) .asymmetric-hero{padding-top:calc(var(--navbar-height) + 7px)!important;padding-bottom:22px!important} body:has(.amz-hero) .amz-hero{padding-top:calc(var(--navbar-height) + 6px)!important;padding-bottom:22px!important} body:has(.srv-hero) .srv-hero{padding-top:calc(var(--navbar-height) + 6px)!important;padding-bottom:20px!important} body:has(.contact-hero) .contact-hero-content{padding-top:10px!important;padding-bottom:10px!important} body:has(.contact-hero) .contact-body-section{padding-top:28px!important;padding-bottom:32px!important} body:has(.contact-hero) .contact-bottom-section{padding-top:28px!important;padding-bottom:34px!important} body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 6px)!important;padding-bottom:14px!important} body:has(.lp-hero) .lp-hero{padding-top:6px!important;padding-bottom:24px!important}}
+
+/* ===== FINAL RESPONSIVE SPACING AUDIT v21 ===== */
+
+/* Keep the approved design, but remove excessive vertical whitespace. */
+@media (min-width:769px){
+  /* HOME */
+  body:has(.hero-section) .comp-services-section,
+  body:has(.hero-section) .insights-section,
+  body:has(.hero-section) .why-choose-section,
+  body:has(.hero-section) .process-section,
+  body:has(.hero-section) .services-section,
+  body:has(.hero-section) .blog-section,
+  body:has(.hero-section) .testimonials-section,
+  body:has(.hero-section) .faq-section{padding-top:42px!important;padding-bottom:42px!important}
+  body:has(.hero-section) .comp-services-header,
+  body:has(.hero-section) .blog-header,
+  body:has(.hero-section) .testimonials-header,
+  body:has(.hero-section) .faq-header{margin-bottom:28px!important}
+  body:has(.hero-section) .insights-grid,
+  body:has(.hero-section) .why-choose-grid{gap:34px!important}
+  body:has(.hero-section) .process-header{margin-bottom:34px!important}
+  body:has(.hero-section) .final-cta-section{padding-bottom:40px!important}
+
+  /* ABOUT + OUR STORY */
+  body:has(.asymmetric-hero) .asymmetric-hero{padding-top:calc(var(--navbar-height) + 16px)!important;padding-bottom:30px!important}
+  body:has(.asymmetric-hero) .stats-layout-section{padding:28px 0!important}
+  body:has(.asymmetric-hero) .features-layout-section,
+  body:has(.asymmetric-hero) .process-layout-section,
+  body:has(.asymmetric-hero) .profiles-layout-section{padding-top:40px!important;padding-bottom:40px!important}
+  body:has(.asymmetric-hero) #story .section-header-alt{margin-bottom:26px!important}
+  body:has(.asymmetric-hero) #story .features-card-grid[style]{margin-top:18px!important}
+  body:has(.asymmetric-hero) .section-header-alt{margin-bottom:28px!important}
+
+  /* SERVICES */
+  body:has(.srv-hero) .srv-hero{min-height:500px!important;padding-top:calc(var(--navbar-height) + 16px)!important;padding-bottom:28px!important}
+  body:has(.srv-hero) .srv-marketplaces,
+  body:has(.srv-hero) .srv-solutions,
+  body:has(.srv-hero) .srv-why,
+  body:has(.srv-hero) .srv-process,
+  body:has(.srv-hero) .srv-cta{padding-top:42px!important;padding-bottom:42px!important}
+  body:has(.srv-hero) .srv-section-head{margin-bottom:20px!important}
+
+  /* MARKETPLACE DETAIL PAGES */
+  body:has(.amz-hero) .amz-hero{padding-top:calc(var(--navbar-height) + 16px)!important;padding-bottom:28px!important}
+  body:has(.amz-hero) .amz-challenges,
+  body:has(.amz-hero) .amz-services,
+  body:has(.amz-hero) .amz-why,
+  body:has(.amz-hero) .amz-process,
+  body:has(.amz-hero) .amz-results,
+  body:has(.amz-hero) .amz-faq-cta{padding-top:42px!important;padding-bottom:42px!important}
+  body:has(.amz-hero) .amz-stats-bar{padding:26px 0!important}
+  body:has(.amz-hero) .amz-section-head{margin-bottom:20px!important}
+
+  /* MARKETPLACE GROWTH */
+  body:has(.lp-hero) .lp-hero{padding-top:16px!important;padding-bottom:30px!important}
+  body:has(.lp-hero) .lp-section-padding{padding-top:42px!important;padding-bottom:42px!important}
+  body:has(.lp-hero) .lp-marketplaces{padding:38px 0!important}
+  body:has(.lp-hero) .lp-hero-grid{gap:24px!important}
+
+  /* CONTACT */
+  body:has(.contact-hero) .contact-hero{min-height:300px!important}
+  body:has(.contact-hero) .contact-hero-content{padding-top:16px!important;padding-bottom:16px!important}
+  body:has(.contact-hero) .contact-hero-content h1{margin-bottom:8px!important}
+  body:has(.contact-hero) .contact-hero-sub{margin-bottom:12px!important;line-height:1.5!important}
+  body:has(.contact-hero) .contact-hero-badges{gap:7px!important}
+  body:has(.contact-hero) .hero-badge-item{padding:7px 11px!important}
+  body:has(.contact-hero) .contact-body-section{padding-top:34px!important;padding-bottom:38px!important}
+  body:has(.contact-hero) .contact-bottom-section{padding-top:34px!important;padding-bottom:38px!important}
+  body:has(.contact-hero) .contact-body-grid,
+  body:has(.contact-hero) .contact-bottom-grid{gap:24px!important}
+
+  /* LEGAL / BLOG / CAREERS */
+  body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 14px)!important;padding-bottom:20px!important}
+  body:has(.legal-content-section) .legal-content-section{padding-top:30px!important;padding-bottom:34px!important}
+  body:has(.legal-content-section) .legal-card{padding:28px!important}
+}
+
+@media (max-width:768px){
+  /* HOME */
+  body:has(.hero-section) .comp-services-section,
+  body:has(.hero-section) .insights-section,
+  body:has(.hero-section) .why-choose-section,
+  body:has(.hero-section) .process-section,
+  body:has(.hero-section) .services-section,
+  body:has(.hero-section) .blog-section,
+  body:has(.hero-section) .testimonials-section,
+  body:has(.hero-section) .faq-section{padding-top:32px!important;padding-bottom:32px!important}
+  body:has(.hero-section) .comp-services-header,
+  body:has(.hero-section) .blog-header,
+  body:has(.hero-section) .testimonials-header,
+  body:has(.hero-section) .faq-header{margin-bottom:20px!important}
+  body:has(.hero-section) .insights-grid,
+  body:has(.hero-section) .why-choose-grid{gap:24px!important}
+  body:has(.hero-section) .process-header{margin-bottom:24px!important}
+  body:has(.hero-section) .final-cta-section{padding-bottom:30px!important}
+
+  /* ABOUT + OUR STORY */
+  body:has(.asymmetric-hero) .asymmetric-hero{padding-top:calc(var(--navbar-height) + 7px)!important;padding-bottom:20px!important}
+  body:has(.asymmetric-hero) .stats-layout-section{padding:20px 0!important}
+  body:has(.asymmetric-hero) .features-layout-section,
+  body:has(.asymmetric-hero) .process-layout-section,
+  body:has(.asymmetric-hero) .profiles-layout-section{padding-top:30px!important;padding-bottom:30px!important}
+  body:has(.asymmetric-hero) #story .section-header-alt{margin-bottom:20px!important}
+  body:has(.asymmetric-hero) #story .features-card-grid[style]{margin-top:14px!important}
+  body:has(.asymmetric-hero) .section-header-alt{margin-bottom:20px!important}
+
+  /* SERVICES */
+  body:has(.srv-hero) .srv-hero{min-height:0!important;padding-top:calc(var(--navbar-height) + 6px)!important;padding-bottom:20px!important}
+  body:has(.srv-hero) .srv-marketplaces,
+  body:has(.srv-hero) .srv-solutions,
+  body:has(.srv-hero) .srv-why,
+  body:has(.srv-hero) .srv-process,
+  body:has(.srv-hero) .srv-cta{padding-top:32px!important;padding-bottom:32px!important}
+  body:has(.srv-hero) .srv-section-head{margin-bottom:18px!important}
+
+  /* MARKETPLACE DETAIL */
+  body:has(.amz-hero) .amz-hero{padding-top:calc(var(--navbar-height) + 6px)!important;padding-bottom:20px!important}
+  body:has(.amz-hero) .amz-challenges,
+  body:has(.amz-hero) .amz-services,
+  body:has(.amz-hero) .amz-why,
+  body:has(.amz-hero) .amz-process,
+  body:has(.amz-hero) .amz-results,
+  body:has(.amz-hero) .amz-faq-cta{padding-top:32px!important;padding-bottom:32px!important}
+  body:has(.amz-hero) .amz-stats-bar{padding:20px 0!important}
+  body:has(.amz-hero) .amz-section-head{margin-bottom:16px!important}
+
+  /* MARKETPLACE GROWTH */
+  body:has(.lp-hero) .lp-hero{padding-top:6px!important;padding-bottom:24px!important}
+  body:has(.lp-hero) .lp-section-padding{padding-top:32px!important;padding-bottom:32px!important}
+  body:has(.lp-hero) .lp-marketplaces{padding:28px 0!important}
+  body:has(.lp-hero) .lp-hero-grid{gap:16px!important}
+
+  /* CONTACT */
+  body:has(.contact-hero) .contact-hero{min-height:0!important}
+  body:has(.contact-hero) .contact-hero-content{padding-top:10px!important;padding-bottom:10px!important}
+  body:has(.contact-hero) .contact-hero-content h1{margin-bottom:7px!important}
+  body:has(.contact-hero) .contact-hero-sub{margin-bottom:10px!important;line-height:1.4!important}
+  body:has(.contact-hero) .contact-hero-badges{gap:5px!important}
+  body:has(.contact-hero) .hero-badge-item{padding:6px 8px!important}
+  body:has(.contact-hero) .contact-body-section{padding-top:28px!important;padding-bottom:32px!important}
+  body:has(.contact-hero) .contact-bottom-section{padding-top:28px!important;padding-bottom:32px!important}
+  body:has(.contact-hero) .contact-body-grid,
+  body:has(.contact-hero) .contact-bottom-grid{gap:18px!important}
+
+  /* LEGAL / BLOG / CAREERS */
+  body:has(.legal-hero) .legal-hero{padding-top:calc(var(--navbar-height) + 6px)!important;padding-bottom:16px!important}
+  body:has(.legal-content-section) .legal-content-section{padding-top:26px!important;padding-bottom:30px!important}
+  body:has(.legal-content-section) .legal-card{padding:20px 16px!important}
+}
+
+@media (max-width:380px){
+  body:has(.hero-section) .comp-services-section,
+  body:has(.hero-section) .insights-section,
+  body:has(.hero-section) .why-choose-section,
+  body:has(.hero-section) .process-section,
+  body:has(.hero-section) .services-section,
+  body:has(.hero-section) .blog-section,
+  body:has(.hero-section) .testimonials-section,
+  body:has(.hero-section) .faq-section{padding-top:28px!important;padding-bottom:28px!important}
+  body:has(.asymmetric-hero) .features-layout-section,
+  body:has(.asymmetric-hero) .process-layout-section,
+  body:has(.asymmetric-hero) .profiles-layout-section{padding-top:26px!important;padding-bottom:26px!important}
+  body:has(.amz-hero) .amz-challenges,
+  body:has(.amz-hero) .amz-services,
+  body:has(.amz-hero) .amz-why,
+  body:has(.amz-hero) .amz-process,
+  body:has(.amz-hero) .amz-results,
+  body:has(.amz-hero) .amz-faq-cta{padding-top:28px!important;padding-bottom:28px!important}
+  body:has(.srv-hero) .srv-marketplaces,
+  body:has(.srv-hero) .srv-solutions,
+  body:has(.srv-hero) .srv-why,
+  body:has(.srv-hero) .srv-process,
+  body:has(.srv-hero) .srv-cta{padding-top:28px!important;padding-bottom:28px!important}
+}
+
+/* HOME FINAL: reduce the gap between Comprehensive Services and Seller Account Management */
+body:has(#comp-services) #comp-services{padding-bottom:28px!important}
+body:has(#comp-services) #services{padding-top:28px!important}
+
+@media (max-width:768px){
+  body:has(#comp-services) #comp-services{padding-bottom:20px!important}
+  body:has(#comp-services) #services{padding-top:20px!important}
+}
+
+@media (max-width:480px){
+  body:has(#comp-services) #comp-services{padding-bottom:16px!important}
+  body:has(#comp-services) #services{padding-top:16px!important}
+}
+
+/* HOME FINAL: reduce the gap between Comprehensive Services and Seller Account Management */
+body:has(#comp-services) #comp-services{padding-bottom:28px!important}
+body:has(#comp-services) #services{padding-top:28px!important}
+@media (max-width:768px){body:has(#comp-services) #comp-services{padding-bottom:20px!important}body:has(#comp-services) #services{padding-top:20px!important}}
+@media (max-width:480px){body:has(#comp-services) #comp-services{padding-bottom:16px!important}body:has(#comp-services) #services{padding-top:16px!important}}
+
+
+/* V23 — Home Our Services spacing correction */
+.comp-services-section{
+  padding-top:24px !important;
+  padding-bottom:38px !important;
+}
+.comp-services-section .comp-services-header{
+  margin-top:0 !important;
+  margin-bottom:24px !important;
+  padding-top:0 !important;
+}
+.comp-services-section .comp-services-header .section-tag{
+  margin:0 0 5px !important;
+  line-height:1 !important;
+}
+.comp-services-section .comp-services-header h2{
+  margin:0 !important;
+  line-height:1.06 !important;
+}
+.comp-services-section .comp-services-header .divider-center{
+  margin:6px auto 10px !important;
+}
+.comp-services-section .comp-services-header>p{
+  margin:0 auto !important;
+  line-height:1.5 !important;
+}
+@media (max-width:900px){
+  .comp-services-section{
+    padding-top:20px !important;
+    padding-bottom:34px !important;
+  }
+}
+@media (max-width:600px){
+  .comp-services-section{
+    padding-top:16px !important;
+    padding-bottom:30px !important;
+  }
+  .comp-services-section .comp-services-header{
+    margin-bottom:18px !important;
+  }
+  .comp-services-section .comp-services-header .section-tag{
+    margin-bottom:4px !important;
+  }
+  .comp-services-section .comp-services-header h2{
+    line-height:1.08 !important;
+  }
+  .comp-services-section .comp-services-header .divider-center{
+    margin-top:5px !important;
+    margin-bottom:8px !important;
+  }
+}
+@media (max-width:380px){
+  .comp-services-section{
+    padding-top:14px !important;
+    padding-bottom:26px !important;
+  }
+}
