@@ -1,0 +1,28 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tcongs AI Assistant">
+  <defs>
+    <linearGradient id="body" x1="36" y1="28" x2="145" y2="154" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#57C8F0"/>
+      <stop offset="1" stop-color="#0B4F8A"/>
+    </linearGradient>
+    <linearGradient id="face" x1="58" y1="58" x2="122" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EAF7FC"/>
+    </linearGradient>
+    <filter id="shadow" x="12" y="14" width="156" height="154" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#061A2A" flood-opacity=".28"/>
+    </filter>
+  </defs>
+
+  <!-- Clean professional robot only: no orbit rings, oval loops or decorative circles -->
+  <g filter="url(#shadow)">
+    <path d="M67 39V27C67 23.686 69.686 21 73 21H107C110.314 21 113 23.686 113 27V39" stroke="#55D7F5" stroke-width="7" stroke-linecap="round"/>
+    <path d="M84 16L89 6L96 16" stroke="#6DE5FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="29" y="36" width="122" height="104" rx="31" fill="url(#body)"/>
+    <rect x="42" y="48" width="96" height="80" rx="24" fill="url(#face)"/>
+    <path d="M29 70H20C15.582 70 12 73.582 12 78V98C12 102.418 15.582 106 20 106H29" stroke="#3E8FC5" stroke-width="7" stroke-linecap="round"/>
+    <path d="M151 70H160C164.418 70 168 73.582 168 78V98C168 102.418 164.418 106 160 106H151" stroke="#3E8FC5" stroke-width="7" stroke-linecap="round"/>
+    <rect x="58" y="72" width="13" height="20" rx="6.5" fill="#071D30"/>
+    <rect x="109" y="72" width="13" height="20" rx="6.5" fill="#071D30"/>
+    <path d="M70 105C78 113 102 113 110 105" stroke="#071D30" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

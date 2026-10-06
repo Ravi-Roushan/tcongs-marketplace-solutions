@@ -24,7 +24,7 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <img src="assets/images/1.png" alt="TCONGS Marketplace Solutions Logo" class="nav-logo-img">
+        <img src="assets/images/tcongs-marketplace-solutions.webp" alt="TCONGS Marketplace Solutions Logo" class="nav-logo-img">
       </a>
       <ul class="nav-links">
         ${navLink('index.html', 'Home')}
@@ -36,43 +36,43 @@
                 <div class="mega-col-title">Marketplace Management</div>
                 <div class="mega-list">
                   <a href="amazon.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/amazon.png" alt="Amazon"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/amazon.webp" alt="Amazon"></div>
                     <div><div class="mega-item-text">Amazon</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                   <a href="flipkart.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/flipkart.png" alt="Flipkart"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/flipkart.webp" alt="Flipkart"></div>
                     <div><div class="mega-item-text">Flipkart</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                   <a href="ajio.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/ajio.png" alt="Ajio"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/ajio.webp" alt="Ajio"></div>
                     <div><div class="mega-item-text">Ajio</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                   <a href="myntra.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/myntra.png" alt="Myntra"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/myntra.webp" alt="Myntra"></div>
                     <div><div class="mega-item-text">Myntra</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                   <a href="nykaa.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/nykaa.png" alt="Nykaa"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/nykaa.webp" alt="Nykaa"></div>
                     <div><div class="mega-item-text">Nykaa</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                   <a href="firstcry.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/firstcry.png" alt="FirstCry"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/firstcry.webp" alt="FirstCry"></div>
                     <div><div class="mega-item-text">FirstCry</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                   <a href="meesho.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/meesho.png" alt="Meesho"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/meesho.webp" alt="Meesho"></div>
                     <div><div class="mega-item-text">Meesho</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                   <a href="jiomart.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/jiomart.png" alt="JioMart"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/jiomart.webp" alt="JioMart"></div>
                     <div><div class="mega-item-text">JioMart</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                   <a href="snapdeal.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/snapdeal.png" alt="Snapdeal"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/snapdeal.webp" alt="Snapdeal"></div>
                     <div><div class="mega-item-text">Snapdeal</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                   <a href="tatacliq.html" class="mega-item">
-                    <div class="mega-item-icon"><img src="assets/images/marketplaces/TataCLiQ.png" alt="Tata CLiQ"></div>
+                    <div class="mega-item-icon"><img src="assets/images/marketplaces/TataCLiQ.webp" alt="Tata CLiQ"></div>
                     <div><div class="mega-item-text">Tata CLiQ</div><div class="mega-item-sub">Seller Management</div></div>
                   </a>
                 </div>
@@ -133,16 +133,16 @@
       </button>
       <div class="mobile-services-submenu" id="mobileServicesSubmenu">
         <a href="services.html"><span class="mobile-service-icon all">▦</span><span>All Services</span></a>
-        <a href="amazon.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/amazon.png" alt=""></span><span>Amazon</span></a>
-        <a href="flipkart.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/flipkart.png" alt=""></span><span>Flipkart</span></a>
-        <a href="meesho.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/meesho.png" alt=""></span><span>Meesho</span></a>
-        <a href="myntra.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/myntra.png" alt=""></span><span>Myntra</span></a>
-        <a href="ajio.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/ajio.png" alt=""></span><span>AJIO</span></a>
-        <a href="nykaa.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/nykaa.png" alt=""></span><span>Nykaa</span></a>
-        <a href="jiomart.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/jiomart.png" alt=""></span><span>JioMart</span></a>
-        <a href="tatacliq.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/TataCLiQ.png" alt=""></span><span>Tata CLiQ</span></a>
-        <a href="snapdeal.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/snapdeal.png" alt=""></span><span>Snapdeal</span></a>
-        <a href="firstcry.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/firstcry.png" alt=""></span><span>FirstCry</span></a>
+        <a href="amazon.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/amazon.webp" alt=""></span><span>Amazon</span></a>
+        <a href="flipkart.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/flipkart.webp" alt=""></span><span>Flipkart</span></a>
+        <a href="meesho.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/meesho.webp" alt=""></span><span>Meesho</span></a>
+        <a href="myntra.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/myntra.webp" alt=""></span><span>Myntra</span></a>
+        <a href="ajio.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/ajio.webp" alt=""></span><span>AJIO</span></a>
+        <a href="nykaa.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/nykaa.webp" alt=""></span><span>Nykaa</span></a>
+        <a href="jiomart.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/jiomart.webp" alt=""></span><span>JioMart</span></a>
+        <a href="tatacliq.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/TataCLiQ.webp" alt=""></span><span>Tata CLiQ</span></a>
+        <a href="snapdeal.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/snapdeal.webp" alt=""></span><span>Snapdeal</span></a>
+        <a href="firstcry.html"><span class="mobile-service-icon"><img src="assets/images/marketplaces/firstcry.webp" alt=""></span><span>FirstCry</span></a>
       </div>
     </div>
     <a href="about.html"${currentPage() === 'about.html' ? ' class="active"' : ''}>About Us</a>
@@ -221,7 +221,7 @@
         <!-- CENTER: BRAND -->
         <div class="footer-brand-column">
           <a href="index.html" class="footer-brand-link">
-            <img src="assets/images/1.png" alt="TCONGS Marketplace Solutions Logo" class="footer-brand-logo">
+            <img src="assets/images/tcongs-marketplace-solutions.webp" alt="TCONGS Marketplace Solutions Logo" class="footer-brand-logo">
           </a>
           <p class="footer-brand-tagline">Your trusted partner for marketplace growth and eCommerce success. We help businesses scale across leading marketplaces with expert solutions.</p>
         </div>
@@ -270,8 +270,6 @@
     <div class="footer-copyright-strip">
       <div class="container footer-strip-flex">
         <p class="copyright-text">&copy; 2026 TCONGS Marketplace Solutions. All Rights Reserved.</p>
-        <p class="copyright-text">🛡️ Secure | Trusted | Professional</p>
-        <p class="copyright-text">Let's Grow Your Business Together! 🚀</p>
         <p class="copyright-text">Developed &amp; Managed by <a href="https://tcongsinfotech.com/index.html" target="_blank" rel="noopener noreferrer">Tcongs Infotech</a></p>
       </div>
     </div>
@@ -280,30 +278,32 @@
 
   <!-- ── TCONGS AI CHAT ASSISTANT ───────────────────────── -->
   <div class="tcongs-ai-widget" id="tcongsAiWidget">
-    <button class="tcongs-ai-launcher" id="tcongsAiLauncher" aria-label="Open TCONGS Chatbot" aria-expanded="false">
-      <span class="tcongs-ai-robot" aria-hidden="true"><img src="assets/images/chatbot.png" alt=""></span>
+    <button class="tcongs-ai-launcher" id="tcongsAiLauncher" aria-label="Open Tcongs Assistant" aria-expanded="false">
+      <span class="tcongs-ai-robot" aria-hidden="true"><img src="assets/images/tcongs-ai-professional.svg" alt=""></span>
+      <span class="tcongs-ai-launcher-status" aria-hidden="true"></span>
     </button>
 
     <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="TCONGS AI Assistant" aria-modal="false">
       <div class="tcongs-ai-header">
         <div class="tcongs-ai-brand">
-          <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-chatbot-header-logo-white-final.png" alt="TCONGS"></span>
+          <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-assistant-logo-white.webp" alt="TCONGS"></span>
           <div class="tcongs-ai-title-wrap">
-            <strong>TCONGS Assistant</strong>
-            <span class="tcongs-ai-online"><i></i> Online</span>
+            <strong>Tcongs Assistant</strong>
+            <span class="tcongs-ai-online"><i></i> <span id="tcongsAiStatus">Online</span></span>
           </div>
         </div>
         <button type="button" class="tcongs-ai-close" id="tcongsAiClose" aria-label="Close AI Assistant">×</button>
       </div>
 
       <div class="tcongs-ai-messages" id="tcongsAiMessages">
-        <div class="tcongs-ai-message bot">Hi! 👋 I'm your TCONGS AI Assistant. Ask me about marketplaces, services, or getting started.</div>
+        <div class="tcongs-ai-message bot">Hello! Welcome to Tcongs Assistant. I can help with services, marketplaces, contact details, pricing guidance, account support and project enquiries.</div>
       </div>
 
       <div class="tcongs-ai-quick" id="tcongsAiQuick">
         <button type="button" data-question="What services do you provide?">Services</button>
         <button type="button" data-question="Which marketplaces do you support?">Marketplaces</button>
-        <button type="button" data-question="How can I contact TCONGS?">Contact</button>
+        <button type="button" data-question="What is your contact number?">Contact</button>
+        <button type="button" data-question="Where is your office?">Location</button>
       </div>
 
       <form class="tcongs-ai-form" id="tcongsAiForm">
@@ -318,13 +318,13 @@
     const headerEl = document.getElementById('site-header');
     const footerEl = document.getElementById('site-footer');
 
-    if (headerEl) headerEl.innerHTML = HEADER_HTML;
-    if (footerEl) footerEl.innerHTML = FOOTER_HTML;
+    if (headerEl && !headerEl.innerHTML.trim()) headerEl.innerHTML = HEADER_HTML;
+    if (footerEl && !footerEl.innerHTML.trim()) footerEl.innerHTML = FOOTER_HTML;
 
 
     /* GLOBAL CHATBOT HEADER LOGO — latest uploaded asset */
     document.querySelectorAll('.tcongs-ai-header-logo img').forEach((img) => {
-      img.src = 'assets/images/tcongs-chatbot-header-logo-white-final.png';
+      img.src = 'assets/images/tcongs-assistant-logo-white.webp';
       img.alt = 'TCONGS';
     });
 
@@ -414,7 +414,7 @@
       handleNavbarScroll();
     }
 
-    /* ── TCONGS AI ASSISTANT ───────────────────────────────── */
+    /* ── TCONGS AI ASSISTANT — PROFESSIONAL KNOWLEDGE ASSISTANT ── */
     const aiLauncher = document.getElementById('tcongsAiLauncher');
     const aiPanel = document.getElementById('tcongsAiPanel');
     const aiClose = document.getElementById('tcongsAiClose');
@@ -422,44 +422,161 @@
     const aiInput = document.getElementById('tcongsAiInput');
     const aiMessages = document.getElementById('tcongsAiMessages');
     const aiQuick = document.getElementById('tcongsAiQuick');
+    const aiStatus = document.getElementById('tcongsAiStatus');
 
-    const aiAnswers = {
-      services: 'We support marketplace account management, product listing optimization, catalog management, advertising/PPC support, account health, brand store setup and eCommerce strategy.',
-      marketplaces: 'TCONGS supports Amazon, Flipkart, Meesho, Myntra, AJIO, Nykaa, JioMart, Tata CLiQ, Snapdeal and other major marketplaces listed on our website.',
-      contact: 'You can call +91 93210 87099, email tcongsmarketplacesolutions@gmail.com, or use the Get Free Consultation form.',
-      pricing: 'Pricing depends on your marketplace, account requirements and scope of work. Use Get Free Consultation and our team can discuss the right plan.',
-      amazon: 'For Amazon, we provide seller account management, listing optimization, account health support, advertising and marketplace growth services.',
-      flipkart: 'For Flipkart, we provide seller account management, catalog/listing optimization and marketplace support.',
-      default: 'I can help with TCONGS services, supported marketplaces, account management, listing optimization, pricing guidance and contact details. Try one of the quick options below.'
+    const TCONGS_KB = {
+      company: 'TCONGS Marketplace Solutions is an eCommerce and marketplace consulting company focused on helping brands launch, manage and grow across leading online marketplaces in India.',
+      services: 'TCONGS provides marketplace account management, seller account setup, product listing and SEO optimization, catalog management, marketplace advertising/PPC, account-health support, brand registry support, consulting and marketplace growth strategy.',
+      marketplaces: 'TCONGS supports Amazon, Flipkart, Meesho, Myntra, AJIO, Nykaa, JioMart, Tata CLiQ, FirstCry and Snapdeal, along with other marketplace requirements where applicable.',
+      contact: 'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: tcongsmarketplacesolutions@gmail.com\n• Website: tcongsmarketplacesolutions.in',
+      address: 'TCONGS office:\nAshish Building No. 24, Office No. 12, First Floor, Ratan Nagar Ln, Gharkul Society, Manish Nagar, Four Bungalows, Andheri West, Mumbai, Maharashtra 400053.',
+      hours: 'Team availability is Monday to Saturday, 10:00 AM to 7:00 PM. The website assistant can respond outside these hours, while team follow-up is handled during working hours.',
+      pricing: 'TCONGS does not publish a single fixed price because the scope varies by marketplace, account size, catalog volume, advertising requirements and support needs. Share your requirements through the consultation form for a suitable plan.',
+      listing: 'Listing support can cover keyword-aligned titles, bullet points, descriptions, A+ / Enhanced Brand Content guidance, image guidance, category and attribute mapping, and bulk listing workflows.',
+      catalog: 'Catalog management can include product data, images, variants, attributes, category mapping, size-chart setup and consistency across supported marketplaces.',
+      advertising: 'Marketplace advertising support includes campaign setup and management, Sponsored Products/Brands where supported, keyword strategy, ACoS monitoring and performance reporting.',
+      account: 'Account management can include onboarding, verification support, routine account monitoring, marketplace operations, issue escalation and performance reporting.',
+      health: 'Account-health support includes reviewing warnings and performance signals, identifying likely root causes, recommending corrective actions and helping prepare compliant responses or documentation where appropriate.',
+      brand: 'Brand support can include marketplace brand enrollment/registry guidance, storefront support, A+ content and brand-protection workflows, subject to each marketplace’s eligibility and policies.',
+      growth: 'Marketplace growth strategy can cover platform selection, pricing and competition analysis, advertising planning, seasonal preparation, brand building, expansion planning and KPI reporting.',
+      consulting: 'Yes. TCONGS can provide one-time consulting for marketplace setup, listing reviews, account issues, strategy and specific eCommerce challenges.',
+      careers: 'For career-related enquiries, please use the Contact / consultation page so the TCONGS team can review your request.',
+      privacy: 'Please do not share passwords, OTPs, payment-card details or other sensitive credentials in the chatbot. Use official TCONGS contact channels for confidential account information.',
+      fallback: 'I can help with TCONGS services, marketplaces, account management, listings, catalog, advertising, account health, pricing guidance, contact details, office location, working hours and project enquiries. If your question is outside this information, I can still guide you to the right TCONGS contact option.'
     };
 
-    function aiReply(text) {
-      const q = text.toLowerCase();
-      if (q.includes('service') || q.includes('offer') || q.includes('help')) return aiAnswers.services;
-      if (q.includes('marketplace') || q.includes('amazon') || q.includes('flipkart') || q.includes('meesho') || q.includes('myntra')) {
-        if (q.includes('amazon')) return aiAnswers.amazon;
-        if (q.includes('flipkart')) return aiAnswers.flipkart;
-        return aiAnswers.marketplaces;
+    const MARKETPLACE_DATA = {
+      amazon: 'Amazon support can include seller account management, product listing optimization, catalog operations, advertising/PPC, account-health support and marketplace growth planning.',
+      flipkart: 'Flipkart support can include seller account support, catalog and listing optimization, advertising support and marketplace operations.',
+      meesho: 'Meesho support can include catalog/listing support, seller operations, advertising support and marketplace growth guidance.',
+      myntra: 'Myntra support can include marketplace operations, catalog/listing coordination and growth support based on the brand and marketplace requirements.',
+      ajio: 'AJIO support can include marketplace operations, catalog/listing coordination and growth support based on the brand and marketplace requirements.',
+      nykaa: 'Nykaa support can include marketplace operations, catalog/listing coordination and growth support based on the brand and marketplace requirements.',
+      jiomart: 'JioMart support can include marketplace operations, catalog/listing coordination and growth support based on the brand and marketplace requirements.',
+      tatacliq: 'Tata CLiQ support can include marketplace operations, catalog/listing coordination and growth support based on the brand and marketplace requirements.',
+      firstcry: 'FirstCry is one of the marketplaces listed as supported by TCONGS. Requirements can be discussed with the team based on the account and category.',
+      snapdeal: 'Snapdeal is one of the marketplaces listed as supported by TCONGS. Requirements can be discussed with the team based on the account and category.'
+    };
+
+    const LANGUAGE_RESPONSES = {
+      en: { greeting: 'Hello! Welcome to Tcongs Assistant. How can I help you today?', thanks: 'You’re welcome. If you need anything else, I can help with TCONGS services, marketplaces or contact details.', fallback: TCONGS_KB.fallback },
+      hi: { greeting: 'नमस्ते! Tcongs Assistant में आपका स्वागत है। मैं आपकी किस तरह मदद कर सकता हूँ?', thanks: 'आपका स्वागत है। अगर आपको TCONGS की services, marketplaces या contact details चाहिए, मैं मदद कर सकता हूँ।', fallback: 'मैं TCONGS की services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact details, office location और enquiry से जुड़ी जानकारी दे सकता हूँ।' },
+      hinglish: { greeting: 'Namaste! Tcongs Assistant mein welcome hai. Aap kya jaanna chahte hain?', thanks: 'You’re welcome! TCONGS ki services, marketplaces, contact ya enquiry ke baare mein pooch sakte hain.', fallback: 'Main TCONGS ki services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact, location aur enquiry ke baare mein help kar sakta hoon.' },
+      bn: { greeting: 'নমস্কার! Tcongs Assistant-এ স্বাগতম। কীভাবে সাহায্য করতে পারি?', fallback: 'আমি TCONGS-এর services, marketplace, contact এবং enquiry সম্পর্কিত তথ্য দিতে পারি।' },
+      mr: { greeting: 'नमस्कार! Tcongs Assistant मध्ये स्वागत आहे. मी तुमची कशी मदत करू शकतो?', fallback: 'मी TCONGS च्या services, marketplaces, contact आणि enquiry बद्दल माहिती देऊ शकतो.' },
+      gu: { greeting: 'નમસ્તે! Tcongs Assistant માં આપનું સ્વાગત છે. હું તમારી કેવી રીતે મદદ કરી શકું?', fallback: 'હું TCONGS ની services, marketplaces, contact અને enquiry વિશે માહિતી આપી શકું છું.' },
+      ta: { greeting: 'வணக்கம்! Tcongs Assistant-க்கு வரவேற்கிறோம். நான் எப்படி உதவலாம்?', fallback: 'TCONGS services, marketplaces, contact மற்றும் enquiry தொடர்பான தகவல்களை வழங்க முடியும்.' },
+      te: { greeting: 'నమస్కారం! Tcongs Assistant కు స్వాగతం. నేను ఎలా సహాయం చేయగలను?', fallback: 'TCONGS services, marketplaces, contact మరియు enquiry గురించి సమాచారం ఇవ్వగలను.' },
+      kn: { greeting: 'ನಮಸ್ಕಾರ! Tcongs Assistant ಗೆ ಸ್ವಾಗತ. ನಾನು ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು?', fallback: 'TCONGS services, marketplaces, contact ಮತ್ತು enquiry ಬಗ್ಗೆ ಮಾಹಿತಿ ನೀಡಬಹುದು.' },
+      ml: { greeting: 'നമസ്കാരം! Tcongs Assistant-ലേക്ക് സ്വാഗതം. എങ്ങനെ സഹായിക്കാം?', fallback: 'TCONGS services, marketplaces, contact, enquiry എന്നിവയെക്കുറിച്ചുള്ള വിവരങ്ങൾ നൽകാം.' },
+      pa: { greeting: 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ! Tcongs Assistant ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ। ਮੈਂ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦਾ ਹਾਂ?', fallback: 'ਮੈਂ TCONGS ਦੀਆਂ services, marketplaces, contact ਅਤੇ enquiry ਬਾਰੇ ਜਾਣਕਾਰੀ ਦੇ ਸਕਦਾ ਹਾਂ.' }
+    };
+
+    function detectLanguage(text) {
+      const s = String(text || '');
+      for (const ch of s) {
+        const cp = ch.codePointAt(0);
+        if (cp >= 0x0980 && cp <= 0x09FF) return 'bn';
+        if (cp >= 0x0900 && cp <= 0x097F) return 'hi';
+        if (cp >= 0x0A80 && cp <= 0x0AFF) return 'gu';
+        if (cp >= 0x0A00 && cp <= 0x0A7F) return 'pa';
+        if (cp >= 0x0B80 && cp <= 0x0BFF) return 'ta';
+        if (cp >= 0x0C00 && cp <= 0x0C7F) return 'te';
+        if (cp >= 0x0C80 && cp <= 0x0CFF) return 'kn';
+        if (cp >= 0x0D00 && cp <= 0x0D7F) return 'ml';
       }
-      if (q.includes('contact') || q.includes('phone') || q.includes('email') || q.includes('reach')) return aiAnswers.contact;
-      if (q.includes('price') || q.includes('cost') || q.includes('charge')) return aiAnswers.pricing;
-      return aiAnswers.default;
+      const q = s.toLowerCase();
+      const hindiWords = ['kya','kaise','kaisa','chahiye','batao','btao','mujhe','aap','apka','hamara','hai','hain','kar','karo','kare','number','mobile','phone'];
+      const hit = hindiWords.filter(w => new RegExp('(^|\\s)' + w + '(\\s|$)').test(q)).length;
+      return hit >= 2 ? 'hinglish' : 'en';
     }
 
-    function addAiMessage(text, type) {
-      if (!aiMessages) return;
+    function normalize(text) {
+      return String(text || '').toLowerCase().replace(/[^\p{L}\p{N}@.+#\s-]/gu, ' ').replace(/\s+/g, ' ').trim();
+    }
+
+    function hasAny(q, words) { return words.some(w => q.includes(w)); }
+
+    function aiReply(text) {
+      const q = normalize(text);
+      const lang = detectLanguage(text);
+      if (!q) return { text: LANGUAGE_RESPONSES[lang]?.greeting || LANGUAGE_RESPONSES.en.greeting, lang };
+      if (hasAny(q, ['hello','hi','hey','namaste','good morning','good evening','good afternoon','नमस्ते'])) return { text: LANGUAGE_RESPONSES[lang]?.greeting || LANGUAGE_RESPONSES.en.greeting, lang };
+      if (hasAny(q, ['thank','thanks','धन्यवाद','shukriya','thx'])) return { text: LANGUAGE_RESPONSES[lang]?.thanks || LANGUAGE_RESPONSES.en.thanks, lang };
+      if (hasAny(q, ['who are you','what are you','tum kaun','aap kaun','about tcongs','what is tcongs','tcongs kya'])) return { text: TCONGS_KB.company, lang };
+      if (hasAny(q, ['contact','phone','mobile','number','call','email','mail','reach','connect','whatsapp','whats app','फोन','मोबाइल','नंबर'])) return { text: TCONGS_KB.contact + '\n\nWhatsApp: +91 93210 87099', lang };
+      if (hasAny(q, ['address','office','location','where are you','where is tcongs','mumbai office','map','पता','ऑफिस','लोकेशन'])) return { text: TCONGS_KB.address, lang };
+      if (hasAny(q, ['hour','timing','time','open','working','when available','समय','टाइम'])) return { text: TCONGS_KB.hours, lang };
+      if (hasAny(q, ['price','pricing','cost','charge','fee','fees','budget','rate','how much','कितना','कीमत','फीस'])) return { text: TCONGS_KB.pricing, lang };
+      if (hasAny(q, ['career','job','jobs','vacancy','hiring','work with tcongs'])) return { text: TCONGS_KB.careers, lang };
+      if (hasAny(q, ['password','otp','card','payment details','sensitive','privacy','security'])) return { text: TCONGS_KB.privacy, lang };
+      if (hasAny(q, ['service','services','offer','help','what do you do','काम','सेवा'])) return { text: TCONGS_KB.services, lang };
+      if (hasAny(q, ['marketplace','platform','platforms','which marketplaces','supported marketplace','marketplaces'])) return { text: TCONGS_KB.marketplaces, lang };
+
+      const marketplaceKeys = Object.keys(MARKETPLACE_DATA);
+      for (const key of marketplaceKeys) if (q.includes(key)) return { text: MARKETPLACE_DATA[key], lang };
+      if (q.includes('tata') && q.includes('cliq')) return { text: MARKETPLACE_DATA.tatacliq, lang };
+      if (hasAny(q, ['listing','product listing','title','bullet point','description','a+','ebc','seo listing','keyword'])) return { text: TCONGS_KB.listing, lang };
+      if (hasAny(q, ['catalog','catalogue','sku','variant','attribute','size chart'])) return { text: TCONGS_KB.catalog, lang };
+      if (hasAny(q, ['advertising','advertisement','ads','ppc','sponsored','acos','campaign'])) return { text: TCONGS_KB.advertising, lang };
+      if (hasAny(q, ['account management','seller account','account setup','onboarding','registration','gst'])) return { text: TCONGS_KB.account, lang };
+      if (hasAny(q, ['account health','suspension','suspended','warning','policy violation','poa','reinstatement'])) return { text: TCONGS_KB.health, lang };
+      if (hasAny(q, ['brand registry','brand registration','storefront','a+ content','brand protection'])) return { text: TCONGS_KB.brand, lang };
+      if (hasAny(q, ['growth','strategy','scale','scaling','revenue','expansion'])) return { text: TCONGS_KB.growth, lang };
+      if (hasAny(q, ['consulting','consultation','one time','one-time','advice'])) return { text: TCONGS_KB.consulting, lang };
+      if (hasAny(q, ['website','web','online'])) return { text: 'For TCONGS website or online marketplace requirements, the team can guide you based on your business and marketplace needs. Use the consultation form for a project-specific discussion.', lang };
+      if (hasAny(q, ['bye','goodbye','see you','later'])) return { text: 'Thank you for visiting Tcongs Assistant. Have a great day!', lang };
+      return { text: LANGUAGE_RESPONSES[lang]?.fallback || TCONGS_KB.fallback, lang };
+    }
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+    }
+
+    function renderAiText(text) {
+      let safe = escapeHtml(text);
+      safe = safe.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+      safe = safe.replace(/(\+91\s?\d{5}\s?\d{5}|\+91\s?\d{10})/g, '<a href="tel:+919321087099">$1</a>');
+      safe = safe.replace(/([\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g, '<a href="mailto:$1">$1</a>');
+      return safe;
+    }
+
+    function addAiMessage(text, type, meta) {
+      if (!aiMessages) return null;
       const msg = document.createElement('div');
       msg.className = 'tcongs-ai-message ' + type;
-      msg.textContent = text;
+      if (type === 'bot') msg.innerHTML = renderAiText(text);
+      else msg.textContent = text;
+      if (meta) msg.dataset.meta = meta;
       aiMessages.appendChild(msg);
       aiMessages.scrollTop = aiMessages.scrollHeight;
+      return msg;
+    }
+
+    function addThinking() {
+      if (!aiMessages) return null;
+      const wrap = document.createElement('div');
+      wrap.className = 'tcongs-ai-message bot tcongs-ai-thinking';
+      wrap.setAttribute('aria-label', 'Tcongs Assistant is thinking');
+      wrap.innerHTML = '<span>Thinking</span><i></i><i></i><i></i>';
+      aiMessages.appendChild(wrap);
+      aiMessages.scrollTop = aiMessages.scrollHeight;
+      return wrap;
+    }
+
+    function setAiBusy(busy) {
+      if (aiForm) aiForm.classList.toggle('is-busy', busy);
+      if (aiInput) aiInput.disabled = busy;
+      const send = aiForm?.querySelector('button[type="submit"]');
+      if (send) send.disabled = busy;
+      if (aiStatus) aiStatus.textContent = busy ? 'Thinking…' : 'Online';
     }
 
     function openAi() {
       if (!aiPanel || !aiLauncher) return;
       aiPanel.classList.add('open');
       aiLauncher.setAttribute('aria-expanded', 'true');
-      setTimeout(() => aiInput?.focus(), 120);
+      window.setTimeout(() => aiInput?.focus(), 120);
     }
 
     function closeAi() {
@@ -468,17 +585,27 @@
       aiLauncher.setAttribute('aria-expanded', 'false');
     }
 
-    aiLauncher?.addEventListener('click', () => {
-      aiPanel?.classList.contains('open') ? closeAi() : openAi();
-    });
+    aiLauncher?.addEventListener('click', () => aiPanel?.classList.contains('open') ? closeAi() : openAi());
     aiClose?.addEventListener('click', closeAi);
 
+    let aiBusy = false;
     function sendAiMessage(text) {
-      const value = text.trim();
-      if (!value) return;
+      const value = String(text || '').trim();
+      if (!value || aiBusy) return;
       addAiMessage(value, 'user');
       if (aiQuick) aiQuick.style.display = 'none';
-      setTimeout(() => addAiMessage(aiReply(value), 'bot'), 280);
+      aiBusy = true;
+      setAiBusy(true);
+      const thinking = addThinking();
+      const result = aiReply(value);
+      const delay = Math.min(1250, Math.max(620, 520 + value.length * 8));
+      window.setTimeout(() => {
+        thinking?.remove();
+        addAiMessage(result.text, 'bot', result.lang);
+        aiBusy = false;
+        setAiBusy(false);
+        aiInput?.focus();
+      }, delay);
     }
 
     aiForm?.addEventListener('submit', (e) => {
@@ -488,7 +615,6 @@
       sendAiMessage(value);
     });
 
-    /* ── Quick options: bot replies FIRST, then contextual options ── */
     function addAiOptions(title, items) {
       if (!aiMessages) return;
       const wrap = document.createElement('div');
@@ -496,58 +622,40 @@
       wrap.innerHTML = '<div class="tcongs-ai-submenu-title"></div><div class="tcongs-ai-submenu-grid"></div>';
       wrap.querySelector('.tcongs-ai-submenu-title').textContent = title;
       const grid = wrap.querySelector('.tcongs-ai-submenu-grid');
-
       items.forEach(item => {
         const a = document.createElement('a');
         a.href = item.href;
         a.textContent = item.label;
-        if (item.external) {
-          a.target = '_blank';
-          a.rel = 'noopener noreferrer';
-        }
+        if (item.external) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
         grid.appendChild(a);
       });
-
       aiMessages.appendChild(wrap);
       aiMessages.scrollTop = aiMessages.scrollHeight;
     }
 
     function showContextOptions(question) {
-      const q = String(question || '').toLowerCase();
-
+      const q = normalize(question);
       if (q.includes('service')) {
-        addAiOptions('Choose a service', [
-          {label:'Account Management', href:'services.html#account-management'},
-          {label:'Product Listing & Catalog', href:'services.html#catalog-management'},
-          {label:'Advertising / PPC', href:'services.html#advertising-ppc'},
-          {label:'Account Health', href:'services.html#account-health'},
+        addAiOptions('Explore TCONGS services', [
+          {label:'Account Management', href:'services.html#account-health-management'},
+          {label:'Product Listing', href:'services.html#listing-optimization'},
+          {label:'Catalog Management', href:'services.html#consulting-issue-resolution'},
+          {label:'Advertising / PPC', href:'services.html#ecommerce-strategy'},
           {label:'Marketplace Growth', href:'marketplace-growth.html'}
         ]);
-        return;
-      }
-
-      if (q.includes('marketplace')) {
-        addAiOptions('Choose a marketplace', [
-          {label:'Amazon', href:'amazon.html'},
-          {label:'Flipkart', href:'flipkart.html'},
-          {label:'Meesho', href:'meesho.html'},
-          {label:'Myntra', href:'myntra.html'},
-          {label:'AJIO', href:'ajio.html'},
-          {label:'Nykaa', href:'nykaa.html'},
-          {label:'JioMart', href:'jiomart.html'},
-          {label:'Tata CLiQ', href:'tatacliq.html'},
-          {label:'Snapdeal', href:'snapdeal.html'},
-          {label:'FirstCry', href:'firstcry.html'}
+      } else if (q.includes('marketplace')) {
+        addAiOptions('Explore marketplaces', [
+          {label:'Amazon', href:'amazon.html'}, {label:'Flipkart', href:'flipkart.html'},
+          {label:'Meesho', href:'meesho.html'}, {label:'Myntra', href:'myntra.html'},
+          {label:'AJIO', href:'ajio.html'}, {label:'Nykaa', href:'nykaa.html'},
+          {label:'JioMart', href:'jiomart.html'}, {label:'Tata CLiQ', href:'tatacliq.html'}
         ]);
-        return;
-      }
-
-      if (q.includes('contact')) {
-        addAiOptions('How would you like to contact TCONGS?', [
-          {label:'📞 Call TCONGS', href:'tel:+919321087099'},
-          {label:'✉️ Email TCONGS', href:'https://mail.google.com/mail/?view=cm&fs=1&to=tcongsmarketplacesolutions@gmail.com&su=Enquiry%20for%20TCONGS%20Marketplace%20Solutions', external:true},
-          {label:'📍 View Location', href:'https://www.google.com/maps/search/?api=1&query=TCONGS+Marketplace+Solutions', external:true},
-          {label:'Get Free Consultation', href:'contact.html#contact-form'}
+      } else if (hasAny(q, ['contact','phone','mobile','number','email','call','whatsapp'])) {
+        addAiOptions('Contact TCONGS', [
+          {label:'Call +91 93210 87099', href:'tel:+919321087099'},
+          {label:'WhatsApp', href:'https://wa.me/919321087099', external:true},
+          {label:'Email TCONGS', href:'mailto:tcongsmarketplacesolutions@gmail.com'},
+          {label:'Contact Page', href:'contact.html'}
         ]);
       }
     }
@@ -555,38 +663,31 @@
     aiQuick?.querySelectorAll('button').forEach(btn => {
       btn.addEventListener('click', () => {
         const question = btn.dataset.question || '';
-        addAiMessage(question, 'user');
-        if (aiQuick) aiQuick.style.display = 'none';
-
-        const reply = aiReply(question);
-        window.setTimeout(() => {
-          addAiMessage(reply, 'bot');
-          window.setTimeout(() => showContextOptions(question), 420);
-        }, 280);
+        sendAiMessage(question);
+        window.setTimeout(() => showContextOptions(question), 1500);
       });
     });
 
     /* Re-wire popup open buttons injected via header */
     document.querySelectorAll('#openPopupBtn, #mobilePopupBtn').forEach(btn => {
       btn.addEventListener('click', function (e) {
-        e.preventDefault();
         if (typeof openConsultationPopup === 'function') {
+          e.preventDefault();
           openConsultationPopup();
-        } else {
-          /* Fallback: directly toggle overlay */
-          const o = document.getElementById('popupOverlay');
-          if (o) {
-            o.classList.add('popup-visible');
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
-            const l = document.getElementById('popupCaptchaLabel');
-            if (l) {
-              const a = Math.floor(Math.random() * 9) + 1;
-              const b = Math.floor(Math.random() * 9) + 1;
-              window._tcCaptchaAns = a + b;
-              l.textContent = 'Human Verification: ' + a + ' + ' + b + ' =';
-            }
-          }
+          return;
+        }
+        const o = document.getElementById('popupOverlay');
+        if (!o) return;
+        e.preventDefault();
+        o.classList.add('popup-visible');
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+        const l = document.getElementById('popupCaptchaLabel');
+        if (l) {
+          const a = Math.floor(Math.random() * 9) + 1;
+          const b = Math.floor(Math.random() * 9) + 1;
+          window._tcCaptchaAns = a + b;
+          l.textContent = 'Human Verification: ' + a + ' + ' + b + ' =';
         }
       });
     });
@@ -601,7 +702,7 @@
   /* TCONGS CHATBOT — reveal only after the page preloader is finished */
   function revealChatbotAfterPageLoad() {
     const preloader = document.getElementById('preloader');
-    const delay = preloader ? 2500 : 80;
+    const delay = preloader ? 420 : 80;
 
     window.setTimeout(() => {
       document.documentElement.classList.add('tcongs-chatbot-ready');

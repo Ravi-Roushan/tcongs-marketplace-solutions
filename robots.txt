@@ -2,5 +2,10 @@ User-agent: *
 Allow: /
 Allow: /assets/
 Disallow: /*.json$
+Disallow: /.env
+Disallow: /.env.*
+Disallow: /vendor/
+Disallow: /composer.json
+Disallow: /composer.lock
 
 Sitemap: https://tcongsmarketplacesolutions.in/sitemap.xml

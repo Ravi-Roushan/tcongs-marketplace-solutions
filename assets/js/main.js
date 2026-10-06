@@ -4,21 +4,24 @@
    Skill Bars | FAQ Accordion | Back To Top
    ============================================================ */
 
-/* ── Preloader ────────────────────────────────────────────── */
+/* ── Fast minimal preloader ───────────────────────────────── */
 const preloaderAtStart = document.getElementById('preloader');
-if (preloaderAtStart) {
-  document.body.style.overflow = 'hidden';
+if (preloaderAtStart) document.body.style.overflow = 'hidden';
+
+function hideTcongsPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+  preloader.classList.add('hide');
+  document.body.style.overflow = '';
 }
 
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-      preloader.classList.add('hide');
-    }
-    document.body.style.overflow = '';
-  }, preloaderAtStart ? 2400 : 0);
-});
+if (preloaderAtStart) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => window.setTimeout(hideTcongsPreloader, 180), { once:true });
+  } else {
+    window.setTimeout(hideTcongsPreloader, 120);
+  }
+}
 
 
 /* ── Scroll Reveal (IntersectionObserver) ─────────────────── */

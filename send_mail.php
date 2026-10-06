@@ -1,8 +1,30 @@
 <?php
 header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: *");
+
+// Optional .env support for shared hosting. Keep the real .env outside version control and web access.
+$envFile = __DIR__ . '/.env';
+if (is_readable($envFile)) {
+    foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+        $line = trim($line);
+        if ($line === '' || $line[0] === '#') continue;
+        [$key, $value] = array_pad(explode('=', $line, 2), 2, '');
+        $key = trim($key); $value = trim($value);
+        $value = trim($value, "\"'");
+        if ($key !== '' && getenv($key) === false) putenv($key . '=' . $value);
+    }
+}
+$allowedOrigin = getenv('TCONGS_ALLOWED_ORIGIN') ?: 'https://tcongsmarketplacesolutions.in';
+$requestOrigin = $_SERVER['HTTP_ORIGIN'] ?? '';
+if ($requestOrigin && $requestOrigin !== $allowedOrigin) {
+    http_response_code(403);
+    echo json_encode(["success" => false, "message" => "Origin not allowed."]);
+    exit;
+}
+header("Access-Control-Allow-Origin: " . $allowedOrigin);
 header("Access-Control-Allow-Headers: Content-Type");
-header("Access-Control-Allow-Methods: POST");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("X-Robots-Tag: noindex, nofollow, noarchive");
+if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") { http_response_code(204); exit; }
 
 require_once 'vendor/phpmailer/phpmailer/src/Exception.php';
 require_once 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
@@ -46,15 +68,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $m->isSMTP();
         $m->Host       = 'smtp.gmail.com';
         $m->SMTPAuth   = true;
-        $m->Username   = 'tcongsmarketplacesolutions@gmail.com';
-        $m->Password   = 'ydfp whtw xvuc luga';
+        $m->Username   = getenv('TCONGS_SMTP_USER') ?: 'tcongsmarketplacesolutions@gmail.com';
+        $m->Password   = getenv('TCONGS_SMTP_PASS') ?: '';
+        if ($m->Password === '') { throw new Exception('SMTP credentials are not configured on the server.'); }
         $m->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $m->Port       = 587;
-        $m->SMTPOptions = ['ssl' => [
-            'verify_peer'       => false,
-            'verify_peer_name'  => false,
-            'allow_self_signed' => true
-        ]];
+        $m->Port       = (int)(getenv('TCONGS_SMTP_PORT') ?: 587);
         $m->setFrom('development.tcongsinfotech@gmail.com', 'TCONGS Marketplace Solutions');
         $m->isHTML(true);
         return $m;

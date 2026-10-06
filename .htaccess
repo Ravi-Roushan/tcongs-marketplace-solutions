@@ -1,0 +1,8 @@
+# TCONGS deployment hardening
+Options -Indexes
+
+<FilesMatch "^(\.env|\.env\..*|composer\.(json|lock)|README\.md)$">
+  Require all denied
+</FilesMatch>
+
+RedirectMatch 403 ^/vendor/
