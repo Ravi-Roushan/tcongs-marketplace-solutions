@@ -1,0 +1,54 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tcongs Assistant">
+  <defs>
+    <radialGradient id="body" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(73 61) rotate(48) scale(116)">
+      <stop stop-color="#123F68"/>
+      <stop offset="0.62" stop-color="#0B2B49"/>
+      <stop offset="1" stop-color="#071C31"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="36" y1="30" x2="145" y2="151" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#55D4F8"/>
+      <stop offset="1" stop-color="#2A79B2"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.10 0 0 0 0 0.56 0 0 0 0 0.82 0 0 0 .26 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <g>
+    <!-- Robot itself is circular; launcher adds no plate/background. -->
+    <circle cx="90" cy="95" r="64" fill="url(#body)" stroke="url(#rim)" stroke-width="4"/>
+
+    <!-- antenna + online light -->
+    <path d="M90 31V19" stroke="#35BCE8" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="90" cy="12" r="7" fill="#4BE18D"/>
+    <circle cx="88" cy="10" r="2.5" fill="#C8FFE1"/>
+
+    <!-- side ears -->
+    <rect x="19" y="71" width="16" height="39" rx="8" fill="#0A2945" stroke="#2BA8D8" stroke-width="3"/>
+    <rect x="145" y="71" width="16" height="39" rx="8" fill="#0A2945" stroke="#2BA8D8" stroke-width="3"/>
+
+    <!-- face screen -->
+    <rect x="48" y="59" width="84" height="65" rx="24" fill="#061726" stroke="#1D5D84" stroke-width="2.2"/>
+
+    <!-- eyes -->
+    <g>
+      <ellipse cx="70" cy="88" rx="11" ry="10" fill="#F7FDFF" class="eye eye-left"/>
+      <ellipse cx="110" cy="88" rx="11" ry="10" fill="#F7FDFF" class="eye eye-right"/>
+      <circle cx="70" cy="88" r="3.8" fill="#173149" class="pupil pupil-left"/>
+      <circle cx="110" cy="88" r="3.8" fill="#173149" class="pupil pupil-right"/>
+    </g>
+
+    <path d="M77 108C84 112 96 112 103 108" stroke="#E9F8FF" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <style>
+    .eye{transform-box:fill-box;transform-origin:center;animation:blink 4.4s infinite ease-in-out}
+    .eye-right{animation-delay:.06s}
+    @keyframes blink{
+      0%,43%,47%,100%{transform:scaleY(1)}
+      45%{transform:scaleY(.06)}
+    }
+  </style>
+</svg>

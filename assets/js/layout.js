@@ -279,7 +279,7 @@
   <!-- ── TCONGS AI CHAT ASSISTANT ───────────────────────── -->
   <div class="tcongs-ai-widget" id="tcongsAiWidget">
     <button class="tcongs-ai-launcher" id="tcongsAiLauncher" aria-label="Open Tcongs Assistant" aria-expanded="false">
-      <span class="tcongs-ai-robot" aria-hidden="true"><img src="assets/images/tcongs-ai-professional.svg" alt=""></span>
+      <span class="tcongs-ai-robot" aria-hidden="true"><img src="assets/images/tcongs-ai-robot-premium.svg" alt=""></span>
       <span class="tcongs-ai-launcher-status" aria-hidden="true"></span>
     </button>
 
@@ -292,23 +292,47 @@
             <span class="tcongs-ai-online"><i></i> <span id="tcongsAiStatus">Online</span></span>
           </div>
         </div>
-        <button type="button" class="tcongs-ai-close" id="tcongsAiClose" aria-label="Close AI Assistant">×</button>
+        <div class="tcongs-ai-header-actions">
+          <label class="tcongs-ai-language" aria-label="Choose language">
+            <span class="tcongs-ai-language-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 2.5 4 5.5 4 9s-1.4 6.5-4 9c-2.6-2.5-4-5.5-4-9s1.4-6.5 4-9Z"></path></svg></span>
+            <select id="tcongsAiLanguage" aria-label="Choose language">
+              <option value="auto">Auto</option>
+              <option value="en">English</option>
+              <option value="hinglish">Hinglish</option>
+              <option value="hi">हिन्दी</option>
+              <option value="bn">বাংলা</option>
+              <option value="mr">मराठी</option>
+              <option value="gu">ગુજરાતી</option>
+              <option value="ta">தமிழ்</option>
+              <option value="te">తెలుగు</option>
+              <option value="kn">ಕನ್ನಡ</option>
+              <option value="ml">മലയാളം</option>
+              <option value="pa">ਪੰਜਾਬੀ</option>
+            </select>
+          </label>
+          <button type="button" class="tcongs-ai-close" id="tcongsAiClose" aria-label="Minimize AI Assistant"><span class="tcongs-ai-close-arrow" aria-hidden="true"></span></button>
+        </div>
       </div>
 
       <div class="tcongs-ai-messages" id="tcongsAiMessages">
-        <div class="tcongs-ai-message bot">Hello! Welcome to Tcongs Assistant. I can help with services, marketplaces, contact details, pricing guidance, account support and project enquiries.</div>
+        <div class="tcongs-ai-message bot">Hi! 👋 Welcome to Tcongs Assistant.
+I can help you explore our services, marketplace solutions, pricing, or connect you with our team.
+How can I help you today?</div>
       </div>
 
       <div class="tcongs-ai-quick" id="tcongsAiQuick">
-        <button type="button" data-question="What services do you provide?">Services</button>
-        <button type="button" data-question="Which marketplaces do you support?">Marketplaces</button>
-        <button type="button" data-question="What is your contact number?">Contact</button>
-        <button type="button" data-question="Where is your office?">Location</button>
+        <button type="button" data-question="services">Services</button>
+        <button type="button" data-question="marketplace">Marketplace</button>
+        <button type="button" data-question="price">Pricing</button>
+        <button type="button" data-question="contact">Contact</button>
+        
       </div>
 
       <form class="tcongs-ai-form" id="tcongsAiForm">
-        <input id="tcongsAiInput" type="text" autocomplete="off" placeholder="Type your question..." aria-label="Type your question">
-        <button type="submit" aria-label="Send message">➜</button>
+        <input id="tcongsAiInput" type="text" autocomplete="off" placeholder="Message Tcongs Assistant" aria-label="Type your question">
+        <button type="submit" aria-label="Send message">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3 10.2 14.7m10.9-11.2-4.1 16.1a1 1 0 0 1-1.9.1l-4.9-5-6.3-2.2a1 1 0 0 1 .1-1.9L20.2 2.7a1 1 0 0 1 1.4.6Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </form>
     </div>
   </div>`;
@@ -414,7 +438,34 @@
       handleNavbarScroll();
     }
 
-    /* ── TCONGS AI ASSISTANT — PROFESSIONAL KNOWLEDGE ASSISTANT ── */
+    /* ── TCONGS AI ASSISTANT — NEW PREMIUM ROBOT UI ── */
+    const chatbotWidget = document.getElementById('tcongsAiWidget');
+    if (chatbotWidget) {
+      chatbotWidget.outerHTML = `
+      <div class="tcongs-ai-widget" id="tcongsAiWidget">
+        <button class="tcongs-ai-launcher" id="tcongsAiLauncher" aria-label="Open Tcongs Assistant" aria-expanded="false">
+          <span class="tcongs-ai-robot" aria-hidden="true"><img src="assets/images/tcongs-ai-robot-premium.svg" alt=""></span>
+          <span class="tcongs-ai-launcher-status" aria-hidden="true"></span>
+        </button>
+        <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="Tcongs Assistant" aria-modal="false">
+          <div class="tcongs-ai-header">
+            <div class="tcongs-ai-brand">
+              <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-assistant-logo-white.webp" alt="TCONGS"></span>
+              <div class="tcongs-ai-title-wrap"><strong>Tcongs Assistant</strong><span class="tcongs-ai-online"><i></i> <span id="tcongsAiStatus">Online</span></span></div>
+            </div>
+            <div class="tcongs-ai-header-actions">
+              <label class="tcongs-ai-language" aria-label="Choose language"><span class="tcongs-ai-language-icon" aria-hidden="true">🌐</span><select id="tcongsAiLanguage" aria-label="Choose language"><option value="auto">Auto</option><option value="en">English</option><option value="hinglish">Hinglish</option><option value="hi">हिन्दी</option><option value="bn">বাংলা</option><option value="mr">मराठी</option><option value="gu">ગુજરાતી</option><option value="ta">தமிழ்</option><option value="te">తెలుగు</option><option value="kn">ಕನ್ನಡ</option><option value="ml">മലയാളം</option><option value="pa">ਪੰਜਾਬੀ</option></select></label>
+              <button type="button" class="tcongs-ai-close" id="tcongsAiClose" aria-label="Minimize Tcongs Assistant"><span class="tcongs-ai-close-arrow" aria-hidden="true"></span></button>
+            </div>
+          </div>
+          <div class="tcongs-ai-messages" id="tcongsAiMessages"><div class="tcongs-ai-message bot">Hi! 👋 Welcome to Tcongs Assistant.
+I can help you explore our services, marketplace solutions, pricing, or connect you with our team.
+How can I help you today?</div></div>
+          <div class="tcongs-ai-quick" id="tcongsAiQuick"><button type="button" data-question="services">Services</button><button type="button" data-question="marketplace">Marketplace</button><button type="button" data-question="price">Pricing</button><button type="button" data-question="contact">Contact</button></div>
+          <form class="tcongs-ai-form" id="tcongsAiForm"><span class="tcongs-ai-emoji" aria-hidden="true">☺</span><input id="tcongsAiInput" type="text" autocomplete="off" placeholder="Message Tcongs Assistant" aria-label="Type your question"><button type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3 10.2 14.7m10.9-11.2-4.1 16.1a1 1 0 0 1-1.9.1l-4.9-5-6.3-2.2a1 1 0 0 1 .1-1.9L20.2 2.7a1 1 0 0 1 1.4.6Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
+        </div>
+      </div>`;
+    }
     const aiLauncher = document.getElementById('tcongsAiLauncher');
     const aiPanel = document.getElementById('tcongsAiPanel');
     const aiClose = document.getElementById('tcongsAiClose');
@@ -423,6 +474,7 @@
     const aiMessages = document.getElementById('tcongsAiMessages');
     const aiQuick = document.getElementById('tcongsAiQuick');
     const aiStatus = document.getElementById('tcongsAiStatus');
+    const aiLanguage = document.getElementById('tcongsAiLanguage');
 
     const TCONGS_KB = {
       company: 'TCONGS Marketplace Solutions is an eCommerce and marketplace consulting company focused on helping brands launch, manage and grow across leading online marketplaces in India.',
@@ -459,9 +511,9 @@
     };
 
     const LANGUAGE_RESPONSES = {
-      en: { greeting: 'Hello! Welcome to Tcongs Assistant. How can I help you today?', thanks: 'You’re welcome. If you need anything else, I can help with TCONGS services, marketplaces or contact details.', fallback: TCONGS_KB.fallback },
+      en: { greeting: 'Hi! 👋 Welcome to Tcongs Assistant.\nI can help you explore our services, marketplace solutions, pricing, or connect you with our team.\nHow can I help you today?', thanks: 'You’re welcome! 😊 If you need anything else, just tell me what you’re looking for.', fallback: TCONGS_KB.fallback },
       hi: { greeting: 'नमस्ते! Tcongs Assistant में आपका स्वागत है। मैं आपकी किस तरह मदद कर सकता हूँ?', thanks: 'आपका स्वागत है। अगर आपको TCONGS की services, marketplaces या contact details चाहिए, मैं मदद कर सकता हूँ।', fallback: 'मैं TCONGS की services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact details, office location और enquiry से जुड़ी जानकारी दे सकता हूँ।' },
-      hinglish: { greeting: 'Namaste! Tcongs Assistant mein welcome hai. Aap kya jaanna chahte hain?', thanks: 'You’re welcome! TCONGS ki services, marketplaces, contact ya enquiry ke baare mein pooch sakte hain.', fallback: 'Main TCONGS ki services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact, location aur enquiry ke baare mein help kar sakta hoon.' },
+      hinglish: { greeting: 'Hi! 👋 Welcome to Tcongs Assistant.\nMain services, marketplace solutions, pricing ya team se connect karne mein help kar sakta hoon.\nAapko kis cheez mein help chahiye?', thanks: 'You’re welcome! TCONGS ki services, marketplaces, contact ya enquiry ke baare mein pooch sakte hain.', fallback: 'Main TCONGS ki services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact, location aur enquiry ke baare mein help kar sakta hoon.' },
       bn: { greeting: 'নমস্কার! Tcongs Assistant-এ স্বাগতম। কীভাবে সাহায্য করতে পারি?', fallback: 'আমি TCONGS-এর services, marketplace, contact এবং enquiry সম্পর্কিত তথ্য দিতে পারি।' },
       mr: { greeting: 'नमस्कार! Tcongs Assistant मध्ये स्वागत आहे. मी तुमची कशी मदत करू शकतो?', fallback: 'मी TCONGS च्या services, marketplaces, contact आणि enquiry बद्दल माहिती देऊ शकतो.' },
       gu: { greeting: 'નમસ્તે! Tcongs Assistant માં આપનું સ્વાગત છે. હું તમારી કેવી રીતે મદદ કરી શકું?', fallback: 'હું TCONGS ની services, marketplaces, contact અને enquiry વિશે માહિતી આપી શકું છું.' },
@@ -473,6 +525,8 @@
     };
 
     function detectLanguage(text) {
+      const selected = aiLanguage?.value || 'auto';
+      if (selected && selected !== 'auto') return selected;
       const s = String(text || '');
       for (const ch of s) {
         const cp = ch.codePointAt(0);
@@ -497,21 +551,63 @@
 
     function hasAny(q, words) { return words.some(w => q.includes(w)); }
 
+    function localizeAnswer(text, lang, key) {
+      if (!text || !lang || lang === 'en' || lang === 'hinglish') return text;
+      const common = {
+        hi: {
+          company:'TCONGS Marketplace Solutions भारत में brands को online marketplaces पर launch, manage और grow करने में मदद करने वाली eCommerce consulting company है।',
+          services:'TCONGS marketplace account management, seller setup, product listing और SEO optimization, catalog management, marketplace advertising/PPC, account-health support, brand support, consulting और growth strategy देता है।',
+          marketplaces:'TCONGS Amazon, Flipkart, Meesho, Myntra, AJIO, Nykaa, JioMart, Tata CLiQ, FirstCry और Snapdeal जैसे marketplaces को support करता है।',
+          contact:'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: tcongsmarketplacesolutions@gmail.com\n• Website: tcongsmarketplacesolutions.in',
+          address:'TCONGS office:\nAshish Building No. 24, Office No. 12, First Floor, Ratan Nagar Ln, Gharkul Society, Manish Nagar, Four Bungalows, Andheri West, Mumbai, Maharashtra 400053.',
+          pricing:'TCONGS की कोई एक fixed price नहीं है। Scope marketplace, account size, catalog volume, advertising और support requirements पर depend करता है। Consultation form के जरिए अपनी requirement share करें।',
+          fallback:'मैं TCONGS की services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact details, office location और enquiries में मदद कर सकता हूँ।'
+        },
+        bn:{
+          company:'TCONGS Marketplace Solutions একটি eCommerce consulting company, যা ভারতে brands-কে online marketplaces-এ launch, manage এবং grow করতে সাহায্য করে।',
+          services:'TCONGS marketplace account management, seller setup, product listing ও SEO optimization, catalog management, advertising/PPC, account-health support, brand support, consulting এবং growth strategy প্রদান করে।',
+          marketplaces:'TCONGS Amazon, Flipkart, Meesho, Myntra, AJIO, Nykaa, JioMart, Tata CLiQ, FirstCry এবং Snapdeal-এর মতো marketplaces support করে।',
+          contact:'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: tcongsmarketplacesolutions@gmail.com\n• Website: tcongsmarketplacesolutions.in',
+          address:'TCONGS office:\nAshish Building No. 24, Office No. 12, First Floor, Ratan Nagar Ln, Gharkul Society, Manish Nagar, Four Bungalows, Andheri West, Mumbai, Maharashtra 400053.',
+          pricing:'TCONGS-এর একটি fixed price নেই। Scope marketplace, account size, catalog volume, advertising এবং support requirements-এর উপর নির্ভর করে। Consultation form-এ requirement পাঠান।',
+          fallback:'আমি TCONGS-এর services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact details, office location এবং enquiry বিষয়ে সাহায্য করতে পারি।'
+        },
+        gu:{
+          company:'TCONGS Marketplace Solutions એક eCommerce consulting company છે, જે ભારતમાં brands ને online marketplaces પર launch, manage અને grow કરવામાં મદદ કરે છે।',
+          services:'TCONGS marketplace account management, seller setup, product listing અને SEO optimization, catalog management, advertising/PPC, account-health support, brand support, consulting અને growth strategy આપે છે।',
+          marketplaces:'TCONGS Amazon, Flipkart, Meesho, Myntra, AJIO, Nykaa, JioMart, Tata CLiQ, FirstCry અને Snapdeal જેવા marketplaces support કરે છે।',
+          contact:'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: tcongsmarketplacesolutions@gmail.com\n• Website: tcongsmarketplacesolutions.in',
+          address:'TCONGS office:\nAshish Building No. 24, Office No. 12, First Floor, Ratan Nagar Ln, Gharkul Society, Manish Nagar, Four Bungalows, Andheri West, Mumbai, Maharashtra 400053.',
+          pricing:'TCONGS ની કોઈ એક fixed price નથી. Scope marketplace, account size, catalog volume, advertising અને support requirements પર આધાર રાખે છે. Consultation form માં requirement મોકલો।',
+          fallback:'હું TCONGS ની services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact details, office location અને enquiry માં મદદ કરી શકું છું.'
+        }
+      };
+      return common[lang]?.[key] || text;
+    }
+
     function aiReply(text) {
       const q = normalize(text);
       const lang = detectLanguage(text);
       if (!q) return { text: LANGUAGE_RESPONSES[lang]?.greeting || LANGUAGE_RESPONSES.en.greeting, lang };
       if (hasAny(q, ['hello','hi','hey','namaste','good morning','good evening','good afternoon','नमस्ते'])) return { text: LANGUAGE_RESPONSES[lang]?.greeting || LANGUAGE_RESPONSES.en.greeting, lang };
       if (hasAny(q, ['thank','thanks','धन्यवाद','shukriya','thx'])) return { text: LANGUAGE_RESPONSES[lang]?.thanks || LANGUAGE_RESPONSES.en.thanks, lang };
-      if (hasAny(q, ['who are you','what are you','tum kaun','aap kaun','about tcongs','what is tcongs','tcongs kya'])) return { text: TCONGS_KB.company, lang };
-      if (hasAny(q, ['contact','phone','mobile','number','call','email','mail','reach','connect','whatsapp','whats app','फोन','मोबाइल','नंबर'])) return { text: TCONGS_KB.contact + '\n\nWhatsApp: +91 93210 87099', lang };
-      if (hasAny(q, ['address','office','location','where are you','where is tcongs','mumbai office','map','पता','ऑफिस','लोकेशन'])) return { text: TCONGS_KB.address, lang };
+      if (hasAny(q, ['who are you','what are you','tum kaun','aap kaun','about tcongs','what is tcongs','tcongs kya'])) return { text: localizeAnswer(TCONGS_KB.company, lang, 'company'), lang };
+      if (hasAny(q, ['contact','phone','mobile','number','call','email','mail','reach','connect','whatsapp','whats app','फोन','मोबाइल','नंबर'])) return { text: localizeAnswer(TCONGS_KB.contact, lang, 'contact') + '\n\nWhatsApp: +91 93210 87099', lang };
+      if (hasAny(q, ['address','office','location','where are you','where is tcongs','mumbai office','map','पता','ऑफिस','लोकेशन'])) return { text: localizeAnswer(TCONGS_KB.address, lang, 'address'), lang };
       if (hasAny(q, ['hour','timing','time','open','working','when available','समय','टाइम'])) return { text: TCONGS_KB.hours, lang };
-      if (hasAny(q, ['price','pricing','cost','charge','fee','fees','budget','rate','how much','कितना','कीमत','फीस'])) return { text: TCONGS_KB.pricing, lang };
       if (hasAny(q, ['career','job','jobs','vacancy','hiring','work with tcongs'])) return { text: TCONGS_KB.careers, lang };
       if (hasAny(q, ['password','otp','card','payment details','sensitive','privacy','security'])) return { text: TCONGS_KB.privacy, lang };
-      if (hasAny(q, ['service','services','offer','help','what do you do','काम','सेवा'])) return { text: TCONGS_KB.services, lang };
-      if (hasAny(q, ['marketplace','platform','platforms','which marketplaces','supported marketplace','marketplaces'])) return { text: TCONGS_KB.marketplaces, lang };
+      if (hasAny(q, ['service','services','offer','help','what do you do','काम','सेवा'])) return { text: localizeAnswer(TCONGS_KB.services, lang, 'services'), lang };
+      if (hasAny(q, ['marketplace','platform','platforms','which marketplaces','supported marketplace','marketplaces'])) return { text: localizeAnswer(TCONGS_KB.marketplaces, lang, 'marketplaces'), lang };
+      if (/^(hi|hii|hiii|hey|hello|helo|heyy)$/.test(q)) return { text: lang === 'hinglish' ? 'Hey! 👋 Nice to meet you. How can I help you today?' : (LANGUAGE_RESPONSES[lang]?.greeting || LANGUAGE_RESPONSES.en.greeting), lang };
+      if (hasAny(q, ['website banwani hai','website banani hai','website banana hai','website chahiye','web site banwani hai','website banwana hai'])) {
+        const answer = lang === 'hinglish' ? 'Bilkul! 👍 Agar aapko business website, e-commerce website, marketplace ya custom website banwani hai, main aapko right option choose karne mein help kar sakta hoon. Aap kis type ki website chahte hain?' : 'Absolutely! 👍 If you need a business website, e-commerce website, marketplace or custom website, I can help you choose the right option. What type of website are you looking for?';
+        return { text: answer, lang };
+      }
+      if (hasAny(q, ['price','pricing','cost','charge','fee','fees','budget','rate','how much','कितना','कीमत','फीस'])) {
+        const answer = lang === 'hinglish' ? 'Price project ke type aur requirements par depend karega. Main random price nahi batana chahta. Aap batao — business website, e-commerce, marketplace ya koi custom project?' : localizeAnswer(TCONGS_KB.pricing, lang, 'pricing');
+        return { text: answer, lang };
+      }
 
       const marketplaceKeys = Object.keys(MARKETPLACE_DATA);
       for (const key of marketplaceKeys) if (q.includes(key)) return { text: MARKETPLACE_DATA[key], lang };
@@ -524,9 +620,9 @@
       if (hasAny(q, ['brand registry','brand registration','storefront','a+ content','brand protection'])) return { text: TCONGS_KB.brand, lang };
       if (hasAny(q, ['growth','strategy','scale','scaling','revenue','expansion'])) return { text: TCONGS_KB.growth, lang };
       if (hasAny(q, ['consulting','consultation','one time','one-time','advice'])) return { text: TCONGS_KB.consulting, lang };
-      if (hasAny(q, ['website','web','online'])) return { text: 'For TCONGS website or online marketplace requirements, the team can guide you based on your business and marketplace needs. Use the consultation form for a project-specific discussion.', lang };
+      if (hasAny(q, ['website','web','online'])) { const answer = lang === 'hinglish' ? 'Haan, website requirement ke liye bhi help kar sakte hain. Aap business website, e-commerce, marketplace ya custom website mein se kya banana chahte hain?' : 'Yes, I can help you with website requirements too. Are you looking for a business website, e-commerce site, marketplace or a custom website?'; return { text: answer, lang }; }
       if (hasAny(q, ['bye','goodbye','see you','later'])) return { text: 'Thank you for visiting Tcongs Assistant. Have a great day!', lang };
-      return { text: LANGUAGE_RESPONSES[lang]?.fallback || TCONGS_KB.fallback, lang };
+      return { text: localizeAnswer(LANGUAGE_RESPONSES[lang]?.fallback || TCONGS_KB.fallback, lang, 'fallback'), lang };
     }
 
     function escapeHtml(value) {
@@ -558,7 +654,7 @@
       const wrap = document.createElement('div');
       wrap.className = 'tcongs-ai-message bot tcongs-ai-thinking';
       wrap.setAttribute('aria-label', 'Tcongs Assistant is thinking');
-      wrap.innerHTML = '<span>Thinking</span><i></i><i></i><i></i>';
+      wrap.innerHTML = '<span class="tcongs-thinking-avatar" aria-hidden="true"><img src="assets/images/tcongs-ai-robot-premium.svg" alt=""></span>';
       aiMessages.appendChild(wrap);
       aiMessages.scrollTop = aiMessages.scrollHeight;
       return wrap;
@@ -569,7 +665,7 @@
       if (aiInput) aiInput.disabled = busy;
       const send = aiForm?.querySelector('button[type="submit"]');
       if (send) send.disabled = busy;
-      if (aiStatus) aiStatus.textContent = busy ? 'Thinking…' : 'Online';
+      if (aiStatus) aiStatus.textContent = busy ? 'Online' : 'Online';
     }
 
     function openAi() {
@@ -587,6 +683,14 @@
 
     aiLauncher?.addEventListener('click', () => aiPanel?.classList.contains('open') ? closeAi() : openAi());
     aiClose?.addEventListener('click', closeAi);
+    if (aiLanguage) {
+      const savedLanguage = localStorage.getItem('tcongs-ai-language');
+      if (savedLanguage && aiLanguage.querySelector(`option[value="${savedLanguage}"]`)) aiLanguage.value = savedLanguage;
+      aiLanguage.addEventListener('change', () => {
+        localStorage.setItem('tcongs-ai-language', aiLanguage.value);
+        if (aiStatus && !aiBusy) aiStatus.textContent = 'Online';
+      });
+    }
 
     let aiBusy = false;
     function sendAiMessage(text) {
@@ -598,7 +702,7 @@
       setAiBusy(true);
       const thinking = addThinking();
       const result = aiReply(value);
-      const delay = Math.min(1250, Math.max(620, 520 + value.length * 8));
+      const delay = Math.min(3900, Math.max(2200, 2050 + value.length * 16));
       window.setTimeout(() => {
         thinking?.remove();
         addAiMessage(result.text, 'bot', result.lang);
@@ -650,12 +754,30 @@
           {label:'AJIO', href:'ajio.html'}, {label:'Nykaa', href:'nykaa.html'},
           {label:'JioMart', href:'jiomart.html'}, {label:'Tata CLiQ', href:'tatacliq.html'}
         ]);
+      } else if (hasAny(q, ['price','pricing'])) {
+        addAiOptions('Let’s discuss your requirement', [
+          {label:'Enquire Now', href:'contact.html'},
+          {label:'Marketplace Growth', href:'marketplace-growth.html'},
+          {label:'Talk to Team', href:'contact.html'}
+        ]);
+      } else if (hasAny(q, ['website','web'])) {
+        addAiOptions('Choose your website type', [
+          {label:'Business Website', href:'services.html'},
+          {label:'E-commerce', href:'services.html'},
+          {label:'Marketplace', href:'marketplace-growth.html'},
+          {label:'Custom Website', href:'contact.html'}
+        ]);
+      } else if (hasAny(q, ['location','address','office'])) {
+        addAiOptions('Find TCONGS', [
+          {label:'Mumbai Office', href:'contact.html'},
+          {label:'Contact Page', href:'contact.html'}
+        ]);
       } else if (hasAny(q, ['contact','phone','mobile','number','email','call','whatsapp'])) {
-        addAiOptions('Contact TCONGS', [
+        addAiOptions('Connect with TCONGS', [
           {label:'Call +91 93210 87099', href:'tel:+919321087099'},
           {label:'WhatsApp', href:'https://wa.me/919321087099', external:true},
           {label:'Email TCONGS', href:'mailto:tcongsmarketplacesolutions@gmail.com'},
-          {label:'Contact Page', href:'contact.html'}
+          {label:'Enquire Now', href:'contact.html'}
         ]);
       }
     }
@@ -699,7 +821,9 @@
     inject();
   }
 
-  /* TCONGS CHATBOT — reveal only after the page preloader is finished */
+  /* Fresh V30 chatbot markup is injected above; no legacy chatbot normalization needed. */
+
+  /* TCONGS CHATBOT — premium assistant reveal after page preloader is finished */
   function revealChatbotAfterPageLoad() {
     const preloader = document.getElementById('preloader');
     const delay = preloader ? 420 : 80;

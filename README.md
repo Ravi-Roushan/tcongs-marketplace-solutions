@@ -13,3 +13,8 @@ For the contact/consultation forms, run the project through a PHP-capable local 
 - Rotate/revoke any SMTP credential previously exposed in older source code.
 - Configure `TCONGS_SMTP_USER`, `TCONGS_SMTP_PASS`, `TCONGS_SMTP_PORT` and `TCONGS_ALLOWED_ORIGIN` on the server.
 - Verify forms, HTTPS, Search Console, sitemap indexing and live Core Web Vitals after deployment.
+
+
+V26: compact premium chatbot, robot avatar outside bubbles, subtle thinking animation, improved natural intent responses.
+
+V34: minimize = arrow only; quick chips one row (Location removed); robot has no backdrop/hover (eye blink only); thinking = smaller spinning robot, no dots box.
