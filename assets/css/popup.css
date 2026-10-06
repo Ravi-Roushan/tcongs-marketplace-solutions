@@ -1083,3 +1083,364 @@ html body .tcongs-ai-panel .tcongs-ai-quick button{
 @media (prefers-reduced-motion:reduce){
   .tcongs-ai-thinking .tcongs-thinking-avatar img{animation-duration:2.4s!important}
 }
+
+
+/* ==========================================================
+   TCONGS ASSISTANT V40.1 — TYPING DOTS + REAL EMOJI PICKER
+   ========================================================== */
+
+/* Thinking indicator: round robot + compact typing bubble. */
+html body .tcongs-ai-panel .tcongs-ai-message.bot.tcongs-ai-thinking{
+  width:auto!important;
+  min-width:0!important;
+  max-width:190px!important;
+  height:42px!important;
+  min-height:42px!important;
+  margin-left:46px!important;
+  padding:0!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+}
+html body .tcongs-ai-panel .tcongs-ai-thinking .tcongs-thinking-avatar{
+  position:absolute!important;
+  left:-44px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  width:34px!important;
+  height:34px!important;
+  border-radius:50%!important;
+  overflow:visible!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+html body .tcongs-ai-panel .tcongs-ai-thinking .tcongs-thinking-avatar img{
+  width:34px!important;
+  height:34px!important;
+  display:block!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  animation:tcongsThinkingRobotSpin 1.8s linear infinite!important;
+  transform-origin:50% 50%!important;
+}
+@keyframes tcongsThinkingRobotSpin{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+/* Small typing bubble: no oversized box. */
+html body .tcongs-ai-panel .tcongs-thinking-dots{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:4px!important;
+  height:28px!important;
+  min-width:45px!important;
+  padding:0 9px!important;
+  border-radius:16px!important;
+  background:#fff!important;
+  border:1px solid #dce8f0!important;
+  box-shadow:0 4px 12px rgba(21,76,112,.08)!important;
+}
+html body .tcongs-ai-panel .tcongs-thinking-dots i{
+  width:5px!important;
+  height:5px!important;
+  flex:0 0 5px!important;
+  border-radius:50%!important;
+  background:#75b8d5!important;
+  display:block!important;
+  animation:tcongsTypingDot 1.25s ease-in-out infinite!important;
+}
+html body .tcongs-ai-panel .tcongs-thinking-dots i:nth-child(2){animation-delay:.16s!important}
+html body .tcongs-ai-panel .tcongs-thinking-dots i:nth-child(3){animation-delay:.32s!important}
+@keyframes tcongsTypingDot{
+  0%,60%,100%{transform:translateY(0);opacity:.42}
+  30%{transform:translateY(-3px);opacity:1}
+}
+
+/* Emoji trigger and picker. */
+html body .tcongs-ai-form{
+  position:relative!important;
+}
+html body .tcongs-ai-form .tcongs-ai-emoji-trigger{
+  appearance:none!important;
+  -webkit-appearance:none!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  cursor:pointer!important;
+  color:#66869a!important;
+  width:30px!important;
+  height:34px!important;
+  min-width:30px!important;
+  flex:0 0 30px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:8px!important;
+  padding:0!important;
+  font-size:19px!important;
+  line-height:1!important;
+  transition:background .15s ease,color .15s ease,transform .15s ease!important;
+}
+html body .tcongs-ai-form .tcongs-ai-emoji-trigger:hover,
+html body .tcongs-ai-form .tcongs-ai-emoji-trigger[aria-expanded="true"]{
+  background:#eef6fa!important;
+  color:#176e9d!important;
+  transform:none!important;
+}
+html body .tcongs-ai-emoji-panel{
+  position:absolute!important;
+  left:7px!important;
+  bottom:52px!important;
+  width:min(286px,calc(100vw - 42px))!important;
+  padding:9px!important;
+  border:1px solid #dbe7ee!important;
+  border-radius:13px!important;
+  background:rgba(255,255,255,.98)!important;
+  box-shadow:0 14px 35px rgba(13,17,23,.16)!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transform:translateY(5px)!important;
+  transition:opacity .16s ease,transform .16s ease,visibility .16s ease!important;
+  z-index:20!important;
+}
+html body .tcongs-ai-emoji-panel.open{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:translateY(0)!important;
+}
+html body .tcongs-ai-emoji-title{
+  font-size:.62rem!important;
+  font-weight:700!important;
+  color:#547184!important;
+  padding:0 3px 7px!important;
+}
+html body .tcongs-ai-emoji-grid{
+  display:grid!important;
+  grid-template-columns:repeat(8,1fr)!important;
+  gap:2px!important;
+  max-height:170px!important;
+  overflow-y:auto!important;
+}
+html body .tcongs-ai-emoji-item{
+  border:0!important;
+  background:transparent!important;
+  border-radius:7px!important;
+  min-width:0!important;
+  width:100%!important;
+  height:30px!important;
+  padding:0!important;
+  cursor:pointer!important;
+  font-size:17px!important;
+  line-height:1!important;
+  display:grid!important;
+  place-items:center!important;
+}
+html body .tcongs-ai-emoji-item:hover{
+  background:#eef6fa!important;
+}
+@media(max-width:600px){
+  html body .tcongs-ai-panel .tcongs-ai-message.bot.tcongs-ai-thinking{
+    margin-left:40px!important;
+    height:38px!important;
+    min-height:38px!important;
+  }
+  html body .tcongs-ai-panel .tcongs-ai-thinking .tcongs-thinking-avatar{
+    left:-38px!important;
+    width:31px!important;
+    height:31px!important;
+  }
+  html body .tcongs-ai-panel .tcongs-ai-thinking .tcongs-thinking-avatar img{
+    width:31px!important;
+    height:31px!important;
+  }
+  html body .tcongs-ai-panel .tcongs-thinking-dots{
+    height:26px!important;
+    min-width:43px!important;
+    padding:0 8px!important;
+  }
+  html body .tcongs-ai-form .tcongs-ai-emoji-trigger{
+    width:27px!important;
+    min-width:27px!important;
+    flex-basis:27px!important;
+    font-size:17px!important;
+  }
+  html body .tcongs-ai-emoji-panel{
+    left:4px!important;
+    bottom:48px!important;
+    width:min(270px,calc(100vw - 32px))!important;
+  }
+  html body .tcongs-ai-emoji-grid{grid-template-columns:repeat(7,1fr)!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html body .tcongs-ai-panel .tcongs-ai-thinking .tcongs-thinking-avatar img,
+  html body .tcongs-ai-panel .tcongs-thinking-dots i{
+    animation:none!important;
+  }
+}
+
+/* ==========================================================
+   TCONGS ASSISTANT V42 — WHATSAPP + MOBILE ROBOT FIX
+   ========================================================== */
+html body .tcongs-ai-emoji,
+html body .tcongs-ai-emoji-trigger,
+html body .tcongs-ai-emoji-panel{
+  display:none!important;
+}
+
+/* Keep the launcher as only the round robot. No square/circle plate behind it. */
+html body .tcongs-ai-launcher{
+  width:66px!important;
+  height:66px!important;
+  min-width:66px!important;
+  min-height:66px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  overflow:visible!important;
+  display:grid!important;
+  place-items:center!important;
+  transform:none!important;
+}
+html body .tcongs-ai-launcher:hover,
+html body .tcongs-ai-launcher:focus,
+html body .tcongs-ai-launcher:active{
+  transform:none!important;
+  box-shadow:none!important;
+}
+html body .tcongs-ai-launcher .tcongs-ai-robot,
+html body .tcongs-ai-launcher .tcongs-ai-robot img{
+  width:62px!important;
+  height:62px!important;
+  max-width:62px!important;
+  max-height:62px!important;
+  display:block!important;
+  object-fit:contain!important;
+  overflow:visible!important;
+  background:transparent!important;
+}
+html body .tcongs-ai-launcher-status{
+  width:8px!important;
+  height:8px!important;
+  right:5px!important;
+  top:5px!important;
+  border:2px solid #071d34!important;
+}
+
+/* WhatsApp sits directly beside the message/send controls. */
+html body .tcongs-ai-form{
+  display:flex!important;
+  align-items:center!important;
+  gap:6px!important;
+}
+html body .tcongs-ai-form .tcongs-ai-whatsapp{
+  width:35px!important;
+  height:35px!important;
+  min-width:35px!important;
+  flex:0 0 35px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:50%!important;
+  background:#25D366!important;
+  color:#fff!important;
+  text-decoration:none!important;
+  border:0!important;
+  box-shadow:0 5px 12px rgba(37,211,102,.18)!important;
+  transition:transform .15s ease,box-shadow .15s ease,background .15s ease!important;
+}
+html body .tcongs-ai-form .tcongs-ai-whatsapp:hover,
+html body .tcongs-ai-form .tcongs-ai-whatsapp:focus{
+  background:#20bd5b!important;
+  color:#fff!important;
+  transform:none!important;
+  box-shadow:0 6px 14px rgba(37,211,102,.24)!important;
+}
+html body .tcongs-ai-form .tcongs-ai-whatsapp svg{
+  width:19px!important;
+  height:19px!important;
+  display:block!important;
+}
+html body .tcongs-ai-form input{
+  flex:1 1 auto!important;
+  min-width:0!important;
+}
+
+/* Mobile: center the chat card so it never gets cropped against the edge. */
+@media(max-width:600px){
+  html body .tcongs-ai-widget{
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    bottom:12px!important;
+    display:flex!important;
+    justify-content:center!important;
+    pointer-events:none!important;
+  }
+  html body .tcongs-ai-widget > .tcongs-ai-launcher,
+  html body .tcongs-ai-widget > .tcongs-ai-panel{
+    pointer-events:auto!important;
+  }
+  html body .tcongs-ai-panel{
+    left:50%!important;
+    right:auto!important;
+    bottom:70px!important;
+    width:calc(100vw - 24px)!important;
+    max-width:400px!important;
+    height:min(555px,calc(100dvh - 30px))!important;
+    max-height:calc(100dvh - 30px)!important;
+    transform:translate(-50%,10px) scale(.98)!important;
+  }
+  html body .tcongs-ai-panel.open{
+    transform:translate(-50%,0) scale(1)!important;
+  }
+  html body .tcongs-ai-launcher{
+    width:62px!important;
+    height:62px!important;
+    min-width:62px!important;
+    min-height:62px!important;
+  }
+  html body .tcongs-ai-launcher .tcongs-ai-robot,
+  html body .tcongs-ai-launcher .tcongs-ai-robot img{
+    width:60px!important;
+    height:60px!important;
+    max-width:60px!important;
+    max-height:60px!important;
+  }
+  html body .tcongs-ai-form .tcongs-ai-whatsapp{
+    width:33px!important;
+    height:33px!important;
+    min-width:33px!important;
+    flex-basis:33px!important;
+  }
+  html body .tcongs-ai-form .tcongs-ai-whatsapp svg{
+    width:18px!important;
+    height:18px!important;
+  }
+}
+
+
+/* ============================================================
+   TCONGS CHATBOT V43 — SEND + WHATSAPP FINAL FIX
+   ============================================================ */
+html body .tcongs-ai-form .tcongs-ai-emoji,
+html body .tcongs-ai-form .tcongs-ai-emoji-trigger,
+html body .tcongs-ai-form .tcongs-ai-emoji-panel{
+  display:none!important;
+}
+html body .tcongs-ai-form .tcongs-ai-whatsapp{
+  cursor:pointer!important;
+  pointer-events:auto!important;
+  position:relative!important;
+  z-index:5!important;
+}
+html body .tcongs-ai-form .tcongs-ai-whatsapp svg{pointer-events:none!important}
+html body .tcongs-ai-form.is-busy button[type="submit"]{opacity:.65!important;cursor:wait!important}
