@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($m->Password === '') { throw new Exception('SMTP credentials are not configured on the server.'); }
         $m->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $m->Port       = (int)(getenv('TCONGS_SMTP_PORT') ?: 587);
-        $m->setFrom('development.tcongsinfotech@gmail.com', 'TCONGS Marketplace Solutions');
+       $m->setFrom('tcongsmarketplacesolutions@gmail.com', 'TCONGS Marketplace Solutions');
         $m->isHTML(true);
         return $m;
     }

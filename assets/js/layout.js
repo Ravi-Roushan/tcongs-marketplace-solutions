@@ -283,10 +283,10 @@
       <span class="tcongs-ai-launcher-status" aria-hidden="true"></span>
     </button>
 
-    <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="TCONGS AI Assistant" aria-modal="false">
+    <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="Tcongs AI Assistant" aria-modal="false">
       <div class="tcongs-ai-header">
         <div class="tcongs-ai-brand">
-          <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-favicon-round.webp" alt="TCONGS"></span>
+          <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-favicon-round.webp" alt="Tcongs"></span>
           <div class="tcongs-ai-title-wrap">
             <strong>Tcongs Assistant</strong>
             <span class="tcongs-ai-online"><i></i> <span id="tcongsAiStatus">Online</span></span>
@@ -329,7 +329,7 @@ How can I help you today?</div>
       </div>
 
       <form class="tcongs-ai-form" id="tcongsAiForm">
-        <a class="tcongs-ai-whatsapp" href="https://wa.me/919321087099?text=Hi%20TCONGS%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Message TCONGS on WhatsApp">
+        <a class="tcongs-ai-whatsapp" href="https://wa.me/919321087099?text=Hi%20TCONGS%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Message Tcongs on WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3.5 20l1.1-4.1A8.5 8.5 0 1 1 20.5 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.4 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-2.6-.8-4.6-2.8-5.7-5.1-5.7-1.1-.3-1.2 0-1.6Z" fill="currentColor"/></svg>
         </a>
         <input id="tcongsAiInput" type="text" autocomplete="off" placeholder="Message Tcongs Assistant" aria-label="Type your question">
@@ -453,7 +453,7 @@ How can I help you today?</div>
         <div class="tcongs-ai-panel" id="tcongsAiPanel" role="dialog" aria-label="Tcongs Assistant" aria-modal="false">
           <div class="tcongs-ai-header">
             <div class="tcongs-ai-brand">
-              <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-favicon-round.webp" alt="TCONGS"></span>
+              <span class="tcongs-ai-header-logo"><img src="assets/images/tcongs-favicon-round.webp" alt="Tcongs"></span>
               <div class="tcongs-ai-title-wrap"><strong>Tcongs Assistant</strong><span class="tcongs-ai-online"><i></i> <span id="tcongsAiStatus">Online</span></span></div>
             </div>
             <div class="tcongs-ai-header-actions">
@@ -465,10 +465,98 @@ How can I help you today?</div>
 I can help you explore our services, marketplace solutions, pricing, or connect you with our team.
 How can I help you today?</div></div>
           <div class="tcongs-ai-quick" id="tcongsAiQuick"><button type="button" data-question="services">Services</button><button type="button" data-question="marketplace">Marketplace</button><button type="button" data-question="price">Pricing</button><button type="button" data-question="contact">Contact</button></div>
-          <form class="tcongs-ai-form" id="tcongsAiForm"><a class="tcongs-ai-whatsapp" href="https://wa.me/919321087099?text=Hi%20TCONGS%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Message TCONGS on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3.5 20l1.1-4.1A8.5 8.5 0 1 1 20.5 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.4 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-2.6-.8-4.6-2.8-5.7-5.1-.3-.7-.2-1.2 0-1.6Z" fill="currentColor"/></svg></a><input id="tcongsAiInput" type="text" autocomplete="off" placeholder="Message Tcongs Assistant" aria-label="Type your question"><button type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3 10.2 14.7m10.9-11.2-4.1 16.1a1 1 0 0 1-1.9.1l-4.9-5-6.3-2.2a1 1 0 0 1 .1-1.9L20.2 2.7a1 1 0 0 1 1.4.6Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
+          <form class="tcongs-ai-form" id="tcongsAiForm"><a class="tcongs-ai-whatsapp" href="https://wa.me/919321087099?text=Hi%20TCONGS%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer" aria-label="Message Tcongs on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3.5 20l1.1-4.1A8.5 8.5 0 1 1 20.5 11.5Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.4 8.1c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2.1.4-.1.6l-.5.6c.5 1 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .5-.4.7-.4.2-1 .3-1.6.1-2.6-.8-4.6-2.8-5.7-5.1-.3-.7-.2-1.2 0-1.6Z" fill="currentColor"/></svg></a><input id="tcongsAiInput" type="text" autocomplete="off" placeholder="Message Tcongs Assistant" aria-label="Type your question"><button type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 3.3 10.2 14.7m10.9-11.2-4.1 16.1a1 1 0 0 1-1.9.1l-4.9-5-6.3-2.2a1 1 0 0 1 .1-1.9L20.2 2.7a1 1 0 0 1 1.4.6Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form>
         </div>
       </div>`;
     }
+    
+    /* =========================================================
+       TCONGS AI — MOBILE BOTTOM-RIGHT FORCE
+       Desktop layout is left untouched.
+       Inline !important wins over all legacy/mobile CSS rules.
+       ========================================================= */
+    const finalChatbotWidget = document.getElementById('tcongsAiWidget');
+
+    if (finalChatbotWidget) {
+      document.body.appendChild(finalChatbotWidget);
+
+      const applyAiMobilePosition = () => {
+        const widget = document.getElementById('tcongsAiWidget');
+        const launcher = document.getElementById('tcongsAiLauncher');
+        const panel = document.getElementById('tcongsAiPanel');
+
+        if (!widget) return;
+
+        if (window.innerWidth <= 600) {
+          widget.style.setProperty('position','fixed','important');
+          widget.style.setProperty('left','auto','important');
+          widget.style.setProperty('right','12px','important');
+          widget.style.setProperty('top','auto','important');
+          widget.style.setProperty('bottom','12px','important');
+          widget.style.setProperty('width','60px','important');
+          widget.style.setProperty('height','60px','important');
+          widget.style.setProperty('max-width','60px','important');
+          widget.style.setProperty('max-height','60px','important');
+          widget.style.setProperty('margin','0','important');
+          widget.style.setProperty('padding','0','important');
+          widget.style.setProperty('display','block','important');
+          widget.style.setProperty('transform','none','important');
+          widget.style.setProperty('box-sizing','border-box','important');
+          widget.style.setProperty('z-index','2147483647','important');
+
+          if (launcher) {
+            launcher.style.setProperty('position','absolute','important');
+            launcher.style.setProperty('left','0','important');
+            launcher.style.setProperty('right','auto','important');
+            launcher.style.setProperty('top','0','important');
+            launcher.style.setProperty('bottom','auto','important');
+            launcher.style.setProperty('width','60px','important');
+            launcher.style.setProperty('height','60px','important');
+            launcher.style.setProperty('min-width','60px','important');
+            launcher.style.setProperty('min-height','60px','important');
+            launcher.style.setProperty('margin','0','important');
+            launcher.style.setProperty('padding','0','important');
+            launcher.style.setProperty('display','flex','important');
+            launcher.style.setProperty('align-items','center','important');
+            launcher.style.setProperty('justify-content','center','important');
+            launcher.style.setProperty('transform','none','important');
+          }
+
+          if (panel) {
+            panel.style.setProperty('position','absolute','important');
+            panel.style.setProperty('left','auto','important');
+            panel.style.setProperty('right','0','important');
+            panel.style.setProperty('top','auto','important');
+            panel.style.setProperty('bottom','68px','important');
+            panel.style.setProperty('width','min(315px, calc(100vw - 20px))','important');
+            panel.style.setProperty('max-width','calc(100vw - 20px)','important');
+            panel.style.setProperty('transform-origin','bottom right','important');
+          }
+        } else {
+          /* Remove only our mobile inline overrides on desktop. */
+          [
+            'position','left','right','top','bottom','width','height',
+            'max-width','max-height','margin','padding','display',
+            'transform','box-sizing','z-index'
+          ].forEach(p => widget.style.removeProperty(p));
+
+          if (launcher) [
+            'position','left','right','top','bottom','width','height',
+            'min-width','min-height','margin','padding','display',
+            'align-items','justify-content','transform'
+          ].forEach(p => launcher.style.removeProperty(p));
+
+          if (panel) [
+            'position','left','right','top','bottom','width','max-width',
+            'transform-origin'
+          ].forEach(p => panel.style.removeProperty(p));
+        }
+      };
+
+      applyAiMobilePosition();
+      window.addEventListener('resize', applyAiMobilePosition);
+    }
+
     const aiLauncher = document.getElementById('tcongsAiLauncher');
     const aiPanel = document.getElementById('tcongsAiPanel');
     const aiClose = document.getElementById('tcongsAiClose');
@@ -633,8 +721,12 @@ How can I help you today?</div></div>
       return String(value).replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
     }
 
+    function normalizeBotBrandCase(value) {
+      return String(value ?? '').replace(/\btcongs\b/gi, 'Tcongs');
+    }
+
     function renderAiText(text) {
-      let safe = escapeHtml(text);
+      let safe = escapeHtml(normalizeBotBrandCase(text));
       safe = safe.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
       safe = safe.replace(/(\+91\s?\d{5}\s?\d{5}|\+91\s?\d{10})/g, '<a href="tel:+919321087099">$1</a>');
       safe = safe.replace(/([\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g, '<a href="mailto:$1">$1</a>');
@@ -673,6 +765,84 @@ How can I help you today?</div></div>
       if (aiStatus) aiStatus.textContent = 'Online';
     }
 
+    /* =========================================================
+       SMART CHAT SAFETY — GENUINE VS SPAM / GIBBERISH
+       Keeps the assistant helpful without pretending random text
+       is a real business enquiry.
+       ========================================================= */
+    const AI_SPAM_PATTERNS = [
+      /^(x+y+z+|x+z+|xyz+|abc+d*|abcd+|asdf+|asdfgh+|qwerty+|qwert+|zxcv+|poiuy+|lkjh+|hjkl+)$/i,
+      /^(test+|testing+|random+|blah+|lol+|aaa+|bbb+|ccc+|xxx+|yyy+|zzz+)$/i,
+      /^(1{2,}|2{2,}|3{2,}|1234+|12345+|0000+|9999+)$/,
+      /^(.)\1{3,}$/i
+    ];
+
+    const AI_SPAM_BUSINESS_WORDS = [
+      'amazon','flipkart','meesho','myntra','ajio','nykaa','jiomart','tatacliq',
+      'firstcry','snapdeal','marketplace','seller','listing','catalog','catalogue',
+      'product','ads','advertising','ppc','account','sales','growth','service',
+      'pricing','price','cost','website','ecommerce','business','brand','contact',
+      'consultation','consulting','help','order','issue','problem','suspended',
+      'suspension','gst','sku','campaign','seo','tcongs'
+    ];
+
+    function isLikelySpamText(value) {
+      const q = normalize(value);
+      if (!q) return false;
+      if (AI_SPAM_BUSINESS_WORDS.some(word => q.includes(word))) return false;
+
+      const compact = q.replace(/[\s_-]+/g, '');
+      if (AI_SPAM_PATTERNS.some(rx => rx.test(compact))) return true;
+
+      /* Very short alphabet-only gibberish such as "xkqz", "qzpm" etc. */
+      if (/^[a-z]+$/i.test(compact) && compact.length >= 3 && compact.length <= 12) {
+        const vowels = (compact.match(/[aeiou]/gi) || []).length;
+        const consonants = compact.length - vowels;
+        if (consonants >= 4 && vowels <= 1) return true;
+      }
+
+      return false;
+    }
+
+    function getSpamResponse(value) {
+      const key = 'tcongs-ai-spam-state';
+      let state = { total: 0, last: '', repeat: 0 };
+
+      try {
+        state = JSON.parse(sessionStorage.getItem(key) || JSON.stringify(state));
+      } catch (_) {}
+
+      const normalized = normalize(value);
+      const same = normalized === state.last;
+      state.repeat = same ? state.repeat + 1 : 1;
+      state.last = normalized;
+      state.total += 1;
+
+      try { sessionStorage.setItem(key, JSON.stringify(state)); } catch (_) {}
+
+      if (state.repeat >= 3 || state.total >= 5) {
+        return {
+          text: 'I’m here to help with genuine Tcongs enquiries, but I won’t keep responding to repeated or spam-style messages. 🙂\n\nIf you need help, please tell me what you actually need — for example Amazon/Flipkart support, product listing, advertising, account management, marketplace growth, pricing, or a website requirement.',
+          lang: 'en',
+          spam: true
+        };
+      }
+
+      if (state.repeat === 2) {
+        return {
+          text: 'I noticed the same random/spam-style message was sent again. 🙂\n\nIf you’re testing the chat, no problem — but I’ll be much more useful if you share a real requirement. What are you looking for help with?',
+          lang: 'en',
+          spam: true
+        };
+      }
+
+      return {
+        text: 'I’m not sure that message contains a clear requirement. 🙂\n\nYou can ask me something specific, such as “I need help with my Amazon listing”, “How does marketplace management work?”, “I need advertising support”, or “I want to contact the Tcongs team”.',
+        lang: 'en',
+        spam: true
+      };
+    }
+
     /* Reliable local assistant send flow. Keeps the UI responsive and guarantees
        the submit button actually produces a reply even without an external API. */
     async function sendAiMessage(rawValue) {
@@ -682,17 +852,22 @@ How can I help you today?</div></div>
       addAiMessage(value, 'user');
       setAiBusy(true);
       const thinking = addThinking();
-      const reply = aiReply(value);
 
-      // Natural, slightly slower thinking animation.
-      await new Promise(resolve => window.setTimeout(resolve, 2400));
+      const reply = isLikelySpamText(value)
+        ? getSpamResponse(value)
+        : aiReply(value);
+
+      // Natural thinking animation.
+      await new Promise(resolve => window.setTimeout(resolve, 1800));
 
       if (thinking && thinking.parentNode) thinking.remove();
       addAiMessage(reply.text, 'bot', reply.lang);
       setAiBusy(false);
 
-      // Show useful navigation after the reply, without duplicating the quick action itself.
-      window.setTimeout(() => showContextOptions(value), 80);
+      /* Do not add service/navigation chips for junk messages. */
+      if (!reply.spam) {
+        window.setTimeout(() => showContextOptions(value), 80);
+      }
     }
 
     function openAi() {
@@ -731,12 +906,12 @@ How can I help you today?</div></div>
       const wrap = document.createElement('div');
       wrap.className = 'tcongs-ai-submenu';
       wrap.innerHTML = '<div class="tcongs-ai-submenu-title"></div><div class="tcongs-ai-submenu-grid"></div>';
-      wrap.querySelector('.tcongs-ai-submenu-title').textContent = title;
+      wrap.querySelector('.tcongs-ai-submenu-title').textContent = normalizeBotBrandCase(title);
       const grid = wrap.querySelector('.tcongs-ai-submenu-grid');
       items.forEach(item => {
         const a = document.createElement('a');
         a.href = item.href;
-        a.textContent = item.label;
+        a.textContent = normalizeBotBrandCase(item.label);
         if (item.external) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
         grid.appendChild(a);
       });

@@ -1735,3 +1735,281 @@ html body .tcongs-ai-header .tcongs-ai-header-logo img{
     min-height:40px!important;
   }
 }
+
+/* TCONGS ENQUIRY POPUP — REMOVE HOVER EFFECTS
+   Keep fields and buttons static so labels/text never shift or overlap. */
+#popupOverlay .popup-close:hover,
+#popupOverlay .popup-close:focus,
+#popupOverlay .popup-close:active{
+  background:#f6f8fb !important;
+  border-color:#e4e9f0 !important;
+  color:#5b6b80 !important;
+  transform:none !important;
+  box-shadow:none !important;
+}
+#popupOverlay .popup-input:hover,
+#popupOverlay .popup-select:hover,
+#popupOverlay .popup-textarea:hover,
+#popupOverlay .popup-phone-row:hover,
+#popupOverlay .popup-phone-row:focus-within{
+  transform:none !important;
+}
+#popupOverlay .popup-btn-submit:hover,
+#popupOverlay .popup-btn-submit:focus,
+#popupOverlay .popup-btn-submit:active{
+  background:var(--clr-primary,#28558A) !important;
+  box-shadow:0 6px 16px rgba(40,85,138,0.25) !important;
+  transform:none !important;
+}
+#popupOverlay .popup-btn-whatsapp:hover,
+#popupOverlay .popup-btn-whatsapp:focus,
+#popupOverlay .popup-btn-whatsapp:active{
+  background:#f2fdf6 !important;
+  border-color:#25d366 !important;
+  color:#1a9b4c !important;
+  transform:none !important;
+  box-shadow:none !important;
+}
+#popupOverlay .popup-form-group:hover,
+#popupOverlay .popup-form-group:focus-within,
+#popupOverlay .popup-form-group label:hover,
+#popupOverlay .popup-captcha-label:hover{
+  transform:none !important;
+}
+
+/* V51 — enquiry popup: remove blue focus/hover treatment so labels and text never shift/overlap */
+html body #popupOverlay .popup-input:hover,
+html body #popupOverlay .popup-select:hover,
+html body #popupOverlay .popup-textarea:hover,
+html body #popupOverlay .popup-input:focus,
+html body #popupOverlay .popup-select:focus,
+html body #popupOverlay .popup-textarea:focus,
+html body #popupOverlay .popup-input:focus-visible,
+html body #popupOverlay .popup-select:focus-visible,
+html body #popupOverlay .popup-textarea:focus-visible {
+  border-color:#e2e8f0 !important;
+  background:#f7f9fc !important;
+  box-shadow:none !important;
+  outline:none !important;
+  transform:none !important;
+}
+
+html body #popupOverlay .popup-phone-row:hover,
+html body #popupOverlay .popup-phone-row:focus-within {
+  border-color:#e2e8f0 !important;
+  background:#f7f9fc !important;
+  box-shadow:none !important;
+  outline:none !important;
+  transform:none !important;
+}
+
+html body #popupOverlay .popup-close:hover,
+html body #popupOverlay .popup-close:focus,
+html body #popupOverlay .popup-close:focus-visible,
+html body #popupOverlay .popup-btn-submit:hover,
+html body #popupOverlay .popup-btn-submit:focus,
+html body #popupOverlay .popup-btn-submit:focus-visible,
+html body #popupOverlay .popup-btn-whatsapp:hover,
+html body #popupOverlay .popup-btn-whatsapp:focus,
+html body #popupOverlay .popup-btn-whatsapp:focus-visible {
+  transform:none !important;
+  outline:none !important;
+}
+
+/* ==========================================================
+   TCONGS AI — FINAL MOBILE BOTTOM-RIGHT POSITION FIX
+   Desktop is intentionally unchanged.
+   This override must remain at the very end so older
+   mobile-center rules cannot win the cascade.
+   ========================================================== */
+@media screen and (max-width:600px){
+  html body .tcongs-ai-widget{
+    position:fixed !important;
+    left:auto !important;
+    right:12px !important;
+    top:auto !important;
+    bottom:max(12px, env(safe-area-inset-bottom)) !important;
+    width:64px !important;
+    max-width:64px !important;
+    height:64px !important;
+    max-height:64px !important;
+    margin:0 !important;
+    padding:0 !important;
+    display:block !important;
+    justify-content:initial !important;
+    align-items:initial !important;
+    transform:none !important;
+    box-sizing:border-box !important;
+    z-index:2147483647 !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-launcher{
+    position:absolute !important;
+    left:0 !important;
+    right:auto !important;
+    top:0 !important;
+    bottom:auto !important;
+    margin:0 !important;
+    width:64px !important;
+    height:64px !important;
+    min-width:64px !important;
+    min-height:64px !important;
+    max-width:64px !important;
+    max-height:64px !important;
+    padding:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    transform:none !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-launcher .tcongs-ai-robot,
+  html body .tcongs-ai-widget > .tcongs-ai-launcher .tcongs-ai-robot img{
+    width:60px !important;
+    height:60px !important;
+    min-width:60px !important;
+    min-height:60px !important;
+    max-width:60px !important;
+    max-height:60px !important;
+    margin:0 !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-panel{
+    position:absolute !important;
+    left:auto !important;
+    right:0 !important;
+    top:auto !important;
+    bottom:72px !important;
+    width:min(310px, calc(100vw - 20px)) !important;
+    max-width:calc(100vw - 20px) !important;
+    transform:translateY(12px) scale(.985) !important;
+    transform-origin:bottom right !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-panel.open{
+    left:auto !important;
+    right:0 !important;
+    transform:translateY(0) scale(1) !important;
+  }
+}
+
+@media screen and (max-width:380px){
+  html body .tcongs-ai-widget{
+    right:9px !important;
+    bottom:max(9px, env(safe-area-inset-bottom)) !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-panel{
+    width:calc(100vw - 18px) !important;
+    max-width:calc(100vw - 18px) !important;
+  }
+}
+
+/* ==========================================================
+   TCONGS AI — FINAL MOBILE BOTTOM-RIGHT POSITION FIX
+   Desktop is intentionally unchanged.
+   ========================================================== */
+
+@media screen and (max-width:600px){
+
+  html body .tcongs-ai-widget{
+    position:fixed !important;
+    left:auto !important;
+    right:12px !important;
+    top:auto !important;
+    bottom:max(12px, env(safe-area-inset-bottom)) !important;
+
+    width:64px !important;
+    max-width:64px !important;
+    height:64px !important;
+    max-height:64px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+
+    display:block !important;
+    justify-content:initial !important;
+    align-items:initial !important;
+
+    transform:none !important;
+    box-sizing:border-box !important;
+
+    z-index:2147483647 !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-launcher{
+    position:absolute !important;
+    left:0 !important;
+    right:auto !important;
+    top:0 !important;
+    bottom:auto !important;
+
+    margin:0 !important;
+
+    width:64px !important;
+    height:64px !important;
+
+    min-width:64px !important;
+    min-height:64px !important;
+
+    max-width:64px !important;
+    max-height:64px !important;
+
+    padding:0 !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    transform:none !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-launcher .tcongs-ai-robot,
+  html body .tcongs-ai-widget > .tcongs-ai-launcher .tcongs-ai-robot img{
+    width:60px !important;
+    height:60px !important;
+
+    min-width:60px !important;
+    min-height:60px !important;
+
+    max-width:60px !important;
+    max-height:60px !important;
+
+    margin:0 !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-panel{
+    position:absolute !important;
+
+    left:auto !important;
+    right:0 !important;
+    top:auto !important;
+    bottom:72px !important;
+
+    width:min(310px, calc(100vw - 20px)) !important;
+    max-width:calc(100vw - 20px) !important;
+
+    transform:translateY(12px) scale(.985) !important;
+    transform-origin:bottom right !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-panel.open{
+    left:auto !important;
+    right:0 !important;
+
+    transform:translateY(0) scale(1) !important;
+  }
+}
+
+@media screen and (max-width:380px){
+
+  html body .tcongs-ai-widget{
+    right:9px !important;
+    bottom:max(9px, env(safe-area-inset-bottom)) !important;
+  }
+
+  html body .tcongs-ai-widget > .tcongs-ai-panel{
+    width:calc(100vw - 18px) !important;
+    max-width:calc(100vw - 18px) !important;
+  }
+}
