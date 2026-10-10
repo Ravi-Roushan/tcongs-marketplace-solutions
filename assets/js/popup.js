@@ -271,23 +271,50 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body:    JSON.stringify(payload),
       })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.success) {
-            showSuccess();
-          } else {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Submit Inquiry';
-            alert('Error: ' + data.message);
-          }
-        })
-        .catch(() => {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Submit Inquiry';
-          alert('Request failed. Please check your server is running.');
-        });
-    });
+//         .then((res) => res.json())
+//         .then((data) => {
+//           if (data.success) {
+//             showSuccess();
+//           } else {
+//             submitBtn.disabled = false;
+//             submitBtn.textContent = 'Submit Inquiry';
+//             alert('Error: ' + data.message);
+//           }
+//         })
+//         .catch(() => {
+//           submitBtn.disabled = false;
+//           submitBtn.textContent = 'Submit Inquiry';
+//           alert('Request failed. Please check your server is running.');
+//         });
+//     });
+//   }
+
+
+.then((res) => res.json())
+.then((data) => {
+  if (data.success) {
+    // GA4: Track only successful enquiries
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'generate_lead', {
+        currency: 'INR',
+        method: 'website_popup'
+      });
+    }
+
+    showSuccess();
+  } else {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Submit Inquiry';
+    alert('Error: ' + data.message);
   }
+})
+.catch(() => {
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Submit Inquiry';
+  alert('Request failed. Please check your server is running.');
+});
+});
+}
 
   function showSuccess() {
     const form    = document.getElementById('popupLeadForm');

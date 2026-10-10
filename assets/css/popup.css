@@ -2013,3 +2013,53 @@ html body #popupOverlay .popup-btn-whatsapp:focus-visible {
     max-width:calc(100vw - 18px) !important;
   }
 }
+
+/* ==========================================================
+   Live-style pulse dot (NDTV "Live TV" style) - GREEN
+   solid core dot + one soft ring that expands outward and fades
+   ========================================================== */
+html body .tcongs-ai-widget{--tc-live:#4be18d;--tc-live-rgb:75,225,141}
+
+/* Launcher dot (on the robot) */
+html body .tcongs-ai-widget .tcongs-ai-launcher-status,
+html body .tcongs-ai-widget .tcongs-ai-launcher:hover .tcongs-ai-launcher-status{
+  width:10px!important;height:10px!important;
+  background:var(--tc-live)!important;
+  border:1.5px solid #071d34!important;
+  box-shadow:none!important;animation:none!important;transform:none!important;
+  opacity:1!important;overflow:visible!important;z-index:2!important;
+}
+html body .tcongs-ai-widget .tcongs-ai-launcher-status::before{
+  content:""!important;display:block!important;position:absolute!important;
+  inset:-1.5px!important;border-radius:50%!important;
+  background:rgba(var(--tc-live-rgb),.6)!important;
+  pointer-events:none!important;opacity:0;
+  animation:tcongsLiveRipple 1.8s ease-out infinite!important;
+}
+html body .tcongs-ai-widget .tcongs-ai-launcher-status::after{content:none!important;display:none!important}
+
+/* Chat header "Online" dot */
+html body .tcongs-ai-online{
+  background:rgba(43,220,145,.14)!important;
+  border:1px solid rgba(105,245,180,.32)!important;
+}
+html body .tcongs-ai-online i{
+  position:relative!important;background:#4be18d!important;
+  box-shadow:none!important;animation:none!important;overflow:visible!important;
+}
+html body .tcongs-ai-online i::before{
+  content:""!important;position:absolute!important;inset:0!important;
+  border-radius:50%!important;background:rgba(75,225,141,.65)!important;
+  pointer-events:none!important;opacity:0;
+  animation:tcongsLiveRipple 1.8s ease-out infinite!important;
+}
+html body .tcongs-ai-online i::after{content:none!important;display:none!important}
+
+@keyframes tcongsLiveRipple{
+  0%{transform:scale(1);opacity:.7}
+  100%{transform:scale(3.8);opacity:0}
+}
+@media (prefers-reduced-motion:reduce){
+  html body .tcongs-ai-widget .tcongs-ai-launcher-status::before,
+  html body .tcongs-ai-online i::before{animation:none!important;opacity:0!important}
+}
