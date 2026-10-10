@@ -3100,3 +3100,48 @@ body:has(#comp-services) #services{padding-top:28px!important}
     overflow-wrap: anywhere !important;
   }
 }
+
+
+/* DESKTOP FOOTER HOVER — restore subtle interactive feedback */
+@media (min-width: 1101px) and (hover: hover) {
+  .footer-main-grid .footer-list-items a,
+  .footer-main-grid .footer-contact-details a,
+  .footer-corporate .footer-bottom a,
+  .footer-corporate .footer-copyright-strip a {
+    transition: color .2s ease, opacity .2s ease, transform .2s ease,
+                text-shadow .2s ease !important;
+  }
+
+  .footer-main-grid .footer-list-items a:hover,
+  .footer-main-grid .footer-contact-details a:hover,
+  .footer-corporate .footer-bottom a:hover,
+  .footer-corporate .footer-copyright-strip a:hover {
+    color: #f1f5f9 !important;
+    opacity: 1 !important;
+    text-decoration: none !important;
+    text-shadow: 0 0 8px rgba(180, 195, 207, .18) !important;
+  }
+
+  .footer-main-grid .footer-links-column {
+    transition: border-color .22s ease, box-shadow .22s ease,
+                background-color .22s ease !important;
+  }
+
+  .footer-main-grid .footer-links-column:hover {
+    border-color: rgba(170, 184, 196, .32) !important;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .14),
+                inset 0 1px 0 rgba(255, 255, 255, .025) !important;
+  }
+
+  .footer-main-grid .footer-accordion-toggle {
+    transition: color .2s ease !important;
+  }
+
+  .footer-main-grid .footer-links-column:hover .footer-accordion-toggle {
+    color: #ffffff !important;
+  }
+
+  .footer-main-grid .footer-brand-column a:hover {
+    opacity: .92 !important;
+  }
+}

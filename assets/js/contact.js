@@ -1,7 +1,7 @@
 /* ============================================================
    TCONGS — contact.js
    Contact Page: Form Validation & Submission
-   Sends to send_mail.php → tcongsmarketplacesolutions@gmail.com
+   Sends to send_mail.php → info@tcongsmarketplacesolutions.in
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {

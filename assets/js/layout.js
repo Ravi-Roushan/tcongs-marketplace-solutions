@@ -252,7 +252,7 @@
               <p>Ashish Building No. 24, Office No. 12,<br>First Floor, Ratan Nagar Ln, Gharkul Society,<br>Manish Nagar, Andheri West, Mumbai, 400053</p>
             </li>
             <li class="contact-detail-item"><span class="contact-item-icon">☎</span><a href="tel:+919321087099">+91 93210 87099</a></li>
-            <li class="contact-detail-item"><span class="contact-item-icon">✉</span><a href="mailto:tcongsmarketplacesolutions@gmail.com">tcongsmarketplacesolutions@gmail.com</a></li>
+            <li class="contact-detail-item"><span class="contact-item-icon">✉</span><a href="mailto:info@tcongsmarketplacesolutions.in">info@tcongsmarketplacesolutions.in</a></li>
             <li class="contact-detail-item"><span class="contact-item-icon">🌐</span><a href="https://tcongsmarketplacesolutions.in" target="_blank" rel="noopener">tcongsmarketplacesolutions.in</a></li>
             <li class="contact-detail-item"><span class="contact-item-icon">◷</span><span>Mon - Sat : 10:00 AM - 7:00 PM</span></li>
           </ul>
@@ -572,7 +572,7 @@ How can I help you today?</div></div>
       company: 'TCONGS Marketplace Solutions is an eCommerce and marketplace consulting company focused on helping brands launch, manage and grow across leading online marketplaces in India.',
       services: 'TCONGS provides marketplace account management, seller account setup, product listing and SEO optimization, catalog management, marketplace advertising/PPC, account-health support, brand registry support, consulting and marketplace growth strategy.',
       marketplaces: 'TCONGS supports Amazon, Flipkart, Meesho, Myntra, AJIO, Nykaa, JioMart, Tata CLiQ, FirstCry and Snapdeal, along with other marketplace requirements where applicable.',
-      contact: 'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: tcongsmarketplacesolutions@gmail.com\n• Website: tcongsmarketplacesolutions.in',
+      contact: 'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: info@tcongsmarketplacesolutions.in\n• Website: tcongsmarketplacesolutions.in',
       address: 'TCONGS office:\nAshish Building No. 24, Office No. 12, First Floor, Ratan Nagar Ln, Gharkul Society, Manish Nagar, Four Bungalows, Andheri West, Mumbai, Maharashtra 400053.',
       hours: 'Team availability is Monday to Saturday, 10:00 AM to 7:00 PM. The website assistant can respond outside these hours, while team follow-up is handled during working hours.',
       pricing: 'TCONGS does not publish a single fixed price because the scope varies by marketplace, account size, catalog volume, advertising requirements and support needs. Share your requirements through the consultation form for a suitable plan.',
@@ -650,7 +650,7 @@ How can I help you today?</div></div>
           company:'TCONGS Marketplace Solutions भारत में brands को online marketplaces पर launch, manage और grow करने में मदद करने वाली eCommerce consulting company है।',
           services:'TCONGS marketplace account management, seller setup, product listing और SEO optimization, catalog management, marketplace advertising/PPC, account-health support, brand support, consulting और growth strategy देता है।',
           marketplaces:'TCONGS Amazon, Flipkart, Meesho, Myntra, AJIO, Nykaa, JioMart, Tata CLiQ, FirstCry और Snapdeal जैसे marketplaces को support करता है।',
-          contact:'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: tcongsmarketplacesolutions@gmail.com\n• Website: tcongsmarketplacesolutions.in',
+          contact:'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: info@tcongsmarketplacesolutions.in\n• Website: tcongsmarketplacesolutions.in',
           address:'TCONGS office:\nAshish Building No. 24, Office No. 12, First Floor, Ratan Nagar Ln, Gharkul Society, Manish Nagar, Four Bungalows, Andheri West, Mumbai, Maharashtra 400053.',
           pricing:'TCONGS की कोई एक fixed price नहीं है। Scope marketplace, account size, catalog volume, advertising और support requirements पर depend करता है। Consultation form के जरिए अपनी requirement share करें।',
           fallback:'मैं TCONGS की services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact details, office location और enquiries में मदद कर सकता हूँ।'
@@ -659,7 +659,7 @@ How can I help you today?</div></div>
           company:'TCONGS Marketplace Solutions একটি eCommerce consulting company, যা ভারতে brands-কে online marketplaces-এ launch, manage এবং grow করতে সাহায্য করে।',
           services:'TCONGS marketplace account management, seller setup, product listing ও SEO optimization, catalog management, advertising/PPC, account-health support, brand support, consulting এবং growth strategy প্রদান করে।',
           marketplaces:'TCONGS Amazon, Flipkart, Meesho, Myntra, AJIO, Nykaa, JioMart, Tata CLiQ, FirstCry এবং Snapdeal-এর মতো marketplaces support করে।',
-          contact:'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: tcongsmarketplacesolutions@gmail.com\n• Website: tcongsmarketplacesolutions.in',
+          contact:'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: info@tcongsmarketplacesolutions.in\n• Website: tcongsmarketplacesolutions.in',
           address:'TCONGS office:\nAshish Building No. 24, Office No. 12, First Floor, Ratan Nagar Ln, Gharkul Society, Manish Nagar, Four Bungalows, Andheri West, Mumbai, Maharashtra 400053.',
           pricing:'TCONGS-এর একটি fixed price নেই। Scope marketplace, account size, catalog volume, advertising এবং support requirements-এর উপর নির্ভর করে। Consultation form-এ requirement পাঠান।',
           fallback:'আমি TCONGS-এর services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact details, office location এবং enquiry বিষয়ে সাহায্য করতে পারি।'
@@ -668,7 +668,7 @@ How can I help you today?</div></div>
           company:'TCONGS Marketplace Solutions એક eCommerce consulting company છે, જે ભારતમાં brands ને online marketplaces પર launch, manage અને grow કરવામાં મદદ કરે છે।',
           services:'TCONGS marketplace account management, seller setup, product listing અને SEO optimization, catalog management, advertising/PPC, account-health support, brand support, consulting અને growth strategy આપે છે।',
           marketplaces:'TCONGS Amazon, Flipkart, Meesho, Myntra, AJIO, Nykaa, JioMart, Tata CLiQ, FirstCry અને Snapdeal જેવા marketplaces support કરે છે।',
-          contact:'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: tcongsmarketplacesolutions@gmail.com\n• Website: tcongsmarketplacesolutions.in',
+          contact:'TCONGS contact details:\n• Mobile: +91 93210 87099\n• Email: info@tcongsmarketplacesolutions.in\n• Website: tcongsmarketplacesolutions.in',
           address:'TCONGS office:\nAshish Building No. 24, Office No. 12, First Floor, Ratan Nagar Ln, Gharkul Society, Manish Nagar, Four Bungalows, Andheri West, Mumbai, Maharashtra 400053.',
           pricing:'TCONGS ની કોઈ એક fixed price નથી. Scope marketplace, account size, catalog volume, advertising અને support requirements પર આધાર રાખે છે. Consultation form માં requirement મોકલો।',
           fallback:'હું TCONGS ની services, marketplaces, account management, listing, catalog, advertising, account health, pricing, contact details, office location અને enquiry માં મદદ કરી શકું છું.'
@@ -958,7 +958,7 @@ How can I help you today?</div></div>
         addAiOptions('Connect with TCONGS', [
           {label:'Call +91 93210 87099', href:'tel:+919321087099'},
           {label:'WhatsApp', href:'https://wa.me/919321087099', external:true},
-          {label:'Email TCONGS', href:'mailto:tcongsmarketplacesolutions@gmail.com'},
+          {label:'Email TCONGS', href:'mailto:info@tcongsmarketplacesolutions.in'},
           {label:'Enquire Now', href:'contact.html'}
         ]);
       }

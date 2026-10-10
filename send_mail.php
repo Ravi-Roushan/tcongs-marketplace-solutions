@@ -68,12 +68,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $m->isSMTP();
         $m->Host       = 'smtp.gmail.com';
         $m->SMTPAuth   = true;
-        $m->Username   = getenv('TCONGS_SMTP_USER') ?: 'tcongsmarketplacesolutions@gmail.com';
+        $m->Username   = getenv('TCONGS_SMTP_USER') ?: 'info@tcongsmarketplacesolutions.in';
         $m->Password   = getenv('TCONGS_SMTP_PASS') ?: '';
         if ($m->Password === '') { throw new Exception('SMTP credentials are not configured on the server.'); }
         $m->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $m->Port       = (int)(getenv('TCONGS_SMTP_PORT') ?: 587);
-       $m->setFrom('tcongsmarketplacesolutions@gmail.com', 'TCONGS Marketplace Solutions');
+       $m->setFrom('info@tcongsmarketplacesolutions.in', 'TCONGS Marketplace Solutions');
         $m->isHTML(true);
         return $m;
     }
@@ -181,9 +181,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ";
 
     try {
-        // ── 1. Send to tcongsmarketplacesolutions@gmail.com (primary) ──
+        // ── 1. Send to info@tcongsmarketplacesolutions.in (primary) ──
         $adminMail = makeSMTP();
-        $adminMail->addAddress('tcongsmarketplacesolutions@gmail.com', 'TCONGS Marketplace Solutions');
+        $adminMail->addAddress('info@tcongsmarketplacesolutions.in', 'TCONGS Marketplace Solutions');
         $adminMail->Subject = "🚀 New Lead: " . $service . " — " . $name;
         $adminMail->Body    = $adminBody;
         $adminMail->AltBody = "New Lead\nName: {$name}\nPhone: {$phone}\nEmail: {$userEmail}\nService: {$service}\nMessage: {$message}";
